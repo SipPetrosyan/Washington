@@ -1,4 +1,4 @@
-import PostItem from "@/components/Home/PostItem";
+import PostItem from "@/components/home/PostItem";
 
 export default function LatestArticles () {
 

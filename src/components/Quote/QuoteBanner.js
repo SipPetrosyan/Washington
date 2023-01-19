@@ -1,5 +1,5 @@
 import {useState} from "react";
-import QuoteSteps from "@/components/Quote/quoteSteps";
+import QuoteSteps from "@/components/quote/quoteSteps";
 
 export default function QuoteBanner () {
     const [activeStep, setActiveStep] = useState(0);

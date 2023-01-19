@@ -1,7 +1,7 @@
 import {Box, Button, Grid, Rating} from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2";
 import Link from "next/link";
-import ReviewsItem from "@/components/Home/ReviewsItem";
+import ReviewsItem from "@/components/home/ReviewsItem";
 
 export default function Reviews() {
 

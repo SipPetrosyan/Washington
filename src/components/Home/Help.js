@@ -7,7 +7,7 @@ import {Textarea} from "@mui/joy";
 import {formatPhoneNumber} from 'react-phone-number-input';
 import flags from "react-phone-number-input/flags";
 import Input from 'react-phone-number-input'
-import InputField from "@/components/InputField";
+import InputField from "@/components/customUI/InputField";
 
 
 export default function Help() {

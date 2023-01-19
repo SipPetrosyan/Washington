@@ -1,10 +1,10 @@
 import {Step, Stepper} from "@mui/material";
 import StepWizard from "react-step-wizard";
-import One from "@/components/Quote/quoteSteps/One";
-import Two from "@/components/Quote/quoteSteps/Two";
-import Three from "@/components/Quote/quoteSteps/Three";
+import One from "@/components/quote/quoteSteps/One";
+import Two from "@/components/quote/quoteSteps/Two";
+import Three from "@/components/quote/quoteSteps/Three";
 import {useState} from "react";
-import Four from "@/components/Quote/quoteSteps/Four";
+import Four from "@/components/quote/quoteSteps/Four";
 
 export default function QuoteSteps({activeStep, setActiveStep}) {
     const [stepWizard, setStepWizard] = useState(null);

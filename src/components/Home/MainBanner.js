@@ -1,5 +1,5 @@
 import bgImg from "../../../public/images/banner.png"
-import InputField from "@/components/InputField";
+import InputField from "@/components/customUI/InputField";
 import {Autocomplete, Button, TextField} from "@mui/material";
 import {useState} from "react";
 import Input from "react-phone-number-input";

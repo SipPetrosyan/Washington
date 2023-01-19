@@ -3,15 +3,15 @@ import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import {getHomeContent, selectHomeContent} from "@/store/slices/content";
 import {setLoader} from "@/store/slices/common";
-import MainBanner from "@/components/Home/MainBanner";
-import Reviews from "@/components/Home/Reviews";
-import Transportation from "@/components/Home/Transportation";
-import Customers from "@/components/Home/Customers";
-import Checkout from "@/components/Home/Checkout";
-import CommercialServices from "@/components/Home/CommercialServices";
-import Help from "@/components/Home/Help";
-import LatestArticles from "@/components/Home/LatestArticles";
-import SocialPanel from "@/components/Home/SocialPanel";
+import MainBanner from "@/components/home/MainBanner";
+import Reviews from "@/components/home/Reviews";
+import Transportation from "@/components/home/Transportation";
+import Customers from "@/components/home/Customers";
+import Checkout from "@/components/home/Checkout";
+import CommercialServices from "@/components/home/CommercialServices";
+import Help from "@/components/home/Help";
+import LatestArticles from "@/components/home/LatestArticles";
+import SocialPanel from "@/components/home/SocialPanel";
 
 export default function Home() {
     const dispatch = useDispatch();

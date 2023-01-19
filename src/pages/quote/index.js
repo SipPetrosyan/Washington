@@ -1,5 +1,5 @@
 import Head from "next/head";
-import QuoteBanner from "@/components/Quote/QuoteBanner";
+import QuoteBanner from "@/components/quote/QuoteBanner";
 
 export default function Quote() {
 

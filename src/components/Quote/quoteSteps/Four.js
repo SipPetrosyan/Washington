@@ -1,5 +1,5 @@
 import {Autocomplete, Button, TextField} from "@mui/material";
-import InputField from "@/components/InputField";
+import InputField from "@/components/customUI/InputField";
 import Input from "react-phone-number-input";
 import {useState} from "react";
 

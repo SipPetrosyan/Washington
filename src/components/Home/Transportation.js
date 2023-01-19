@@ -1,4 +1,4 @@
-import TransportCard from "@/components/Home/TransportCard";
+import TransportCard from "@/components/home/TransportCard";
 
 export default function Transportation() {
 

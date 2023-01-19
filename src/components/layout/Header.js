@@ -1,5 +1,5 @@
 import TopPanel from "@/components/layout/TopPanel";
-import LinkPopper from "@/components/select/LinkPopper";
+import LinkPopper from "@/components/customUI/LinkPopper";
 import {useEffect, useState} from "react";
 import Link from "next/link";
 import {Button, TextField} from "@mui/material";

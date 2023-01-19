@@ -1,4 +1,4 @@
-import CommercialCard from "@/components/Home/CommercialCard";
+import CommercialCard from "@/components/home/CommercialCard";
 
 export default function CommercialServices() {
 

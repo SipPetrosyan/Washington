@@ -1,6 +1,6 @@
 import {Autocomplete, Button, FormGroup, TextField} from "@mui/material";
 import {useState} from "react";
-import InputField from "@/components/InputField";
+import InputField from "@/components/customUI/InputField";
 
 export default function Two(props) {
     const [vehicle, setVehicle] = useState(1);
