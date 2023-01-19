@@ -1,0 +1,183 @@
+@import "index";
+
+.quoteBanner {
+  padding: 117px 5.5%;
+  min-height: 848px;
+  position: relative;
+  background-color: #09265EB2;
+
+  .bgImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+
+  //     OPEN THE COMMENT WHEN IMG WILL BE COME FROM BACK-END
+  //.filter{
+  //  position: absolute;
+  //  width: 100%;
+  //  height: 100%;
+  //  left: 0;
+  //  top: 0;
+  //  //background-color: rgba(9, 38, 94, 0.3);
+  //  z-index: -1;
+  //}
+  .MuiStepper-root {
+    .MuiStep-root {
+      padding-left: 20px;
+      padding-right: 20px;
+
+      .indicator {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        &.active {
+          & > span {
+            width: 80px;
+            height: 48px;
+            background: #E53E29;
+            border: 2px solid rgba(9, 38, 94, 0.6);
+            border-radius: 25px;
+            color: $white;
+          }
+
+          & > p {
+            color: $red;
+          }
+        }
+
+        & > span {
+          width: 80px;
+          height: 48px;
+          background: #FDFDFF;
+          border-radius: 25px;
+          color: $blue;
+          font-size: 24px;
+          font-weight: 900;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        & > p {
+          font-weight: 700;
+          font-size: 24px;
+          color: #FDFDFF;
+        }
+      }
+
+      &.Mui-completed {
+        .indicator {
+          & > span {
+            width: 80px;
+            height: 48px;
+            background: $red;
+            border: 2px solid rgba(9, 38, 94, 0.6);
+            border-radius: 25px;
+            color: $white;
+          }
+
+          & > p {
+            color: $red;
+          }
+        }
+
+        & + .MuiStepConnector-root span {
+          border-top: 2px solid $red;
+        }
+      }
+
+      & + .MuiStepConnector-root span {
+        border-top: 2px solid $white;
+      }
+    }
+  }
+}
+
+.stepsController {
+  display: flex;
+  justify-content: center;
+
+  .rsw_2Y, .rsw_2f {
+    width: 100%;
+    max-width: 760px;
+  }
+}
+
+.stepForm {
+  max-width: 760px;
+  margin-top: 66px;
+  width: 100%;
+  background-color: #F4F7FB99;
+  border: 1px solid rgba(9, 38, 94, 0.4);
+  border-radius: 10px;
+
+  .inputs {
+    padding: 40px 57px 0;
+
+  }
+
+  .fromTo {
+    margin-top: 50px;
+  }
+
+  .time {
+    justify-content: center;
+  }
+
+  .inputField {
+    width: 100%;
+    max-width: 260px;
+
+    input {
+      border: none;
+    }
+  }
+
+  .indicator {
+    border: none;
+    background-color: $gray-bg;
+  }
+
+  .continueBtn {
+    width: 100%;
+    max-width: 100%;
+    background-color: $red;
+    height: 80px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  &.step2 {
+    .time {
+      justify-content: space-between;
+      padding: 0 20px 40px;
+    }
+  }
+
+  &.step4 {
+    .inputs {
+      padding: 112px 36px 0;
+
+      .contacts {
+        margin-top: 30px;
+      }
+
+      .time {
+        margin-top: 30px;
+        margin-bottom: 44px;
+      }
+    }
+  }
+
+  &.confirmation {
+    .inputs {
+      padding: 40px 40px 0 57px;
+    }
+  }
+}
+

@@ -1,0 +1,228 @@
+@import "index";
+
+.top-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10.45% 20px 31.3%;
+  background-color: $gray-bg;
+
+  .get-quote a {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    color: $red;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .icon-chevron-thin-right {
+      background-color: $red;
+      color: $white;
+      border-radius: 50%;
+      padding: 6px;
+      font-weight: bold;
+    }
+  }
+
+  .new-item {
+    a {
+      color: $blue-60;
+      font-weight: 700;
+      font-size: 20px;
+    }
+  }
+
+}
+
+.operator a {
+  max-width: 222px;
+  background-color: $red;
+  padding: 4px 10px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  .icon-Operator-icon-1 {
+    font-size: 32px;
+  }
+
+  .phone {
+    color: $white;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+}
+
+//              HEADER     !!!!!!!!!!
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 10.5%;
+  background-color: $white;
+  //      FOR    STICKY HEADER  !
+  //position: sticky;
+  //top: 0;
+  //left: 0;
+  //width: 100%;
+  .header-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+
+    .MuiButtonBase-root {
+      white-space: nowrap;
+      font-weight: 700;
+      font-size: 24px;
+      text-transform: none !important;
+      color: $blue;
+    }
+  }
+
+  .header-search {
+    position: relative;
+    height: 48px;
+    max-width: 260px;
+
+    input {
+      height: 100%;
+      width: 100%;
+      padding: 16px 48px 20px 16px;
+      font-size: 20px;
+      background: #F4F7FB;
+      border: 2px solid rgba(150, 158, 160, 0.4);
+      border-radius: 5px;
+      color: $blue;
+
+      &::placeholder {
+        color: rgba(9, 38, 94, 0.4);
+      }
+    }
+
+    button {
+      font-size: 20px;
+      padding: 14px 24px;
+      background-color: $red;
+      color: $white;
+      border: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+.MuiPaper-root {
+  .MuiList-root {
+    li {
+      padding: 12px 30px;
+
+      a {
+        color: rgba(5, 47, 90, 0.6);
+      }
+    }
+  }
+}
+
+//      FOOTER
+
+
+footer {
+  background-color: $blue;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .topContent, .bottomContent {
+    gap: 20px;
+    border-bottom: 2px solid #F4F7FB99;
+    margin-bottom: 60px;
+    padding-bottom: 60px;
+  }
+
+  .contentItem {
+    h2 {
+      margin-bottom: 30px;
+      height: 28px;
+    }
+
+    p, a {
+      margin-bottom: 15px;
+      font-size: 20px;
+      color: $white;
+      display: block;
+      transition: 0.3s;
+
+      &:hover {
+        color: $gray-bg;
+        text-shadow: 4px 3px 5px #FFFFFF;
+        transform: scale(1.02);
+      }
+
+      a {
+        color: $white;
+      }
+    }
+
+    &.info {
+      img {
+        margin-bottom: 30px;
+        max-width: 348px;
+      }
+    }
+  }
+
+  .ending {
+    position: relative;
+    text-align: center;
+
+    .links {
+      gap: 30px;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      a {
+        color: $white;
+      }
+    }
+  }
+}
+
+//       SOCIAL  LINKS PANEL
+.socialPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: fixed;
+  top: 17.5%;
+  right: 20px;
+
+  a {
+    transition: 0.3s;
+    border-radius: 50%;
+
+    span {
+      font-size: 80px;
+    }
+
+    &:hover {
+      box-shadow: 5px 0 15px $blue;
+      transform: scale(1.05);
+    }
+  }
+}
+
+
+
+
+

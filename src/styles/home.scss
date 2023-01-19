@@ -1,0 +1,872 @@
+@import "index";
+
+
+//       MAIN BANNER
+.mainBanner {
+  width: 100%;
+  min-height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  gap: 26px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.welcomePart {
+  width: 48%;
+
+  h1 {
+    font-size: 64px;
+  }
+
+  & > p {
+    margin-top: 32px;
+  }
+}
+
+.quoteForm {
+
+  &.homeQuoteForm{
+    width: 51%;
+    padding: 31px 59px;
+    background: rgba(9, 38, 94, 0.85);
+    box-shadow: 5px 5px 5px rgba(9, 38, 94, 0.35);
+    border-radius: 20px;
+  }
+
+
+  .formTitle {
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 24px;
+    color: $white;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #FFFFFF;
+
+    span {
+      color: $red;
+    }
+  }
+
+  .fromTo {
+    margin-top: 40px;
+    gap: 23px;
+  }
+
+  .vehicle-container {
+    max-height: 253px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background: #c9cacc;
+    }
+
+    &::-webkit-scrollbar-track:hover {
+      background: #78797a;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #3d5585;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #01143b;
+    }
+  }
+
+  .vehicle {
+    margin-top: 40px;
+
+    align-items: flex-end;
+    gap: 23px;
+
+    & > div {
+      width: 100%;
+    }
+
+  }
+
+  .addVehicle {
+    margin: 40px 0;
+    text-align: center;
+
+    .plusIcon {
+      background-color: $red;
+      padding: 5px;
+      border-radius: 50%;
+      margin-right: 5px;
+
+      & + span {
+        font-weight: 700;
+        font-size: 20px;
+        color: $white;
+      }
+    }
+  }
+
+  .time {
+    display: flex;
+    gap: 23px;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .inputField .helper > span:first-of-type {
+      font-size: 24px;
+    }
+
+    .inputField {
+      max-width: 260px;
+      width: 100%;
+    }
+
+    .MuiFormLabel-filled {
+      display: none;
+    }
+
+    .method {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 25px;
+      height: 100%;
+
+      .title {
+        white-space: nowrap;
+
+        & > span:first-of-type {
+          margin-right: 7px;
+        }
+      }
+
+      .selectMethod {
+        color: $white;
+        font-weight: bold;
+        gap: 5px;
+
+        label {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+
+        input {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+
+  .contacts {
+    gap: 23px;
+    margin-top: 40px;
+
+    .inputField {
+      input {
+        padding: 12px 15px !important;
+      }
+    }
+  }
+  .inputField.phoneMask {
+    .PhoneInputCountry {
+      display: none !important;
+    }
+  }
+
+  .quoteBtn {
+    margin-top: 40px;
+    text-align: center;
+
+    button {
+      font-weight: 900;
+      font-size: 20px;
+      color: $white;
+      width: 100%;
+      max-width: 480px;
+      background-color: $red;
+      border-radius: 10px;
+    }
+  }
+}
+
+//    REVIEWS BANNER
+
+.reviewsBanner {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $blue;
+
+  .reviewsMain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .content {
+    max-width: 660px;
+
+    h1 {
+      font-weight: 900;
+      font-size: 32px;
+      margin: 20px 0;
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 40px;
+      color: $white;
+    }
+  }
+
+  .reviewsContainer {
+    display: flex;
+    gap: 20px;
+
+    .common {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      h1 {
+        font-size: 64px;
+        color: $gold;
+      }
+
+      .MuiRating-root {
+        gap: 12px;
+
+        .MuiRating-decimal {
+          svg {
+            fill: $gold;
+          }
+        }
+      }
+
+      button {
+        width: 260px;
+        height: 48px;
+        background: #E53E29;
+        border-radius: 10px;
+
+        a {
+          color: #FDFDFF;
+          font-weight: 900;
+        }
+      }
+    }
+
+    .partial {
+
+      .reviewsMain {
+        display: flex;
+        gap: 10px;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 21px;
+        color: $white;
+        font-size: 20px;
+
+        .from {
+          width: 120px;
+          height: 24px;
+          position: relative;
+          background: #FFFFFF;
+          border-radius: 5px;
+        }
+
+        .total {
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          background-color: $gold;
+          border-radius: 5px;
+
+        }
+
+        svg {
+          width: 20px;
+          fill: $gold;
+        }
+
+      }
+
+      button {
+        margin-top: 28px;
+        width: 225px;
+        height: 48px;
+        background: #FDFDFF;
+        border-radius: 10px;
+
+        a {
+          font-weight: 900;
+          color: #09265E;
+        }
+      }
+    }
+  }
+}
+
+//       TRANSPORTATION !
+
+.transportation {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #F4F7FB;
+
+  & > h1 {
+    margin: 60px 0 50px;
+    font-weight: 900;
+  }
+
+  .mainContent {
+    display: flex;
+    justify-content: space-between;
+    gap: 3%;
+  }
+
+  .contentItem {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    & > h3 {
+      max-width: 640px;
+      line-height: 30px;
+    }
+
+  }
+
+  .transportCard {
+    max-width: 463px;
+    width: 100%;
+    min-height: 312px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: $white;
+    box-shadow: 5px 5px 5px rgba(9, 38, 94, 0.35);
+    border-radius: 20px;
+    padding: 40px;
+    gap: 20px;
+    transition: 0.3s;
+
+
+    & > p {
+      font-size: 20px;
+      line-height: 46px;
+      color: $blue;
+    }
+
+    button {
+      width: 160px;
+      height: 48px;
+      background: #E53E29;
+      border-radius: 10px;
+
+      & + span {
+        font-size: 60px;
+        color: $blue;
+      }
+    }
+
+    &:hover {
+      box-shadow: 5px 5px 15px rgba(9, 38, 94, 0.35);
+    }
+
+  }
+}
+
+//      OUR CUSTOMERS
+
+.customersSection {
+  .customersSays {
+    padding: 60px 0 30px 10.5%;
+
+    display: flex;
+    gap: 4%;
+    justify-content: space-between;
+
+    .content {
+      width: 36%;
+
+      & > h1 {
+        font-weight: 900;
+        margin-top: 60px;
+      }
+
+      & > p {
+        padding-right: 30px;
+        margin-top: 30px;
+        font-size: 24px;
+        color: $blue;
+        line-height: 38px;
+      }
+    }
+
+
+  }
+
+  .customersImg {
+    width: 60%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .customerExample {
+    padding: 90px 10.5% 70px;
+    display: flex;
+    background-color: $blue;
+    justify-content: center;
+
+    .exampleContent {
+      max-width: 894px;
+      position: relative;
+
+
+      .start {
+        line-height: 0;
+        position: absolute;
+        left: -80px;
+        top: -20px;
+        font-size: 128px;
+        font-weight: 900;
+        color: $white;
+        transform: matrix(1, 0, 0, -1, 0, 0);
+      }
+
+      > p {
+        font-size: 20px;
+        line-height: 30px;
+        color: #FDFDFF;
+      }
+
+      .info {
+        margin-top: 40px;
+        align-items: center;
+
+        img {
+          width: 69px;
+        }
+
+        .author {
+          color: $white;
+        }
+
+        & > div {
+          display: flex;
+          gap: 15px;
+          align-items: center;
+        }
+
+        .MuiRating-root svg {
+          fill: $white;
+        }
+      }
+
+      .end {
+        line-height: 0;
+        position: absolute;
+        right: -80px;
+        bottom: 80px;
+        font-size: 128px;
+        font-weight: 900;
+        color: $white;
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}
+
+
+.checkOutReviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  gap: 60px;
+  background: $white;
+
+  & > h1 {
+    color: $blue-60;
+    line-height: 24px;
+  }
+
+  .socs {
+    gap: 70px;
+
+    .socItem {
+      & > div > span:first-of-type {
+        font-size: 62px;
+      }
+
+      .name {
+        font-size: 32px;
+        color: #09265E;
+        text-align: center;
+        margin-top: 60px;
+      }
+    }
+
+    .MuiRating-root {
+      gap: 12px;
+
+      .MuiRating-decimal {
+        svg {
+          fill: $gold;
+        }
+      }
+    }
+  }
+
+  button.MuiButtonBase-root {
+    a {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      color: $red;
+    }
+  }
+}
+
+//     COMMERCIAL SERVICES
+
+.commercialServices {
+  padding-bottom: 60px;
+  background: $white;
+
+  > h1 {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .container {
+    gap: 15%;
+
+    .part {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+
+      .content {
+        p {
+          color: $blue;
+          font-size: 24px;
+          margin-bottom: 15px;
+          line-height: 30px;
+        }
+      }
+
+      .commercialCard {
+        max-width: 550px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        min-height: 340px;
+        background: #F4F7FB;
+        box-shadow: 5px 5px 5px rgba(9, 38, 94, 0.35);
+        border-radius: 20px;
+        padding: 40px;
+        transition: .3s;
+
+        &.transformed {
+          margin-left: 14%;
+        }
+
+
+        &:hover {
+          box-shadow: 5px 5px 15px rgba(9, 38, 94, 0.35);
+        }
+
+
+        button {
+          width: 160px;
+          height: 48px;
+          background: #E53E29;
+          border-radius: 10px;
+        }
+
+
+      }
+    }
+  }
+}
+
+.help {
+  background-color: $gray-bg;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .getConsultation {
+    padding-left: 5%;
+
+    .head {
+      padding: 26px 0 0 38px;
+      position: relative;
+    }
+
+    .square {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 70px;
+      height: 70px;
+      border-top: 5px solid $red;
+      border-left: 5px solid $red;
+    }
+
+    .else {
+      padding: 11px 0 40px 38px;
+    }
+
+    .or {
+      display: flex;
+      justify-content: left;
+      gap: 20px;
+      align-items: center;
+      color: rgba(9, 38, 94, 0.6);
+      margin-bottom: 40px;
+
+      hr {
+        width: 124px;
+        border: 1px solid rgba(9, 38, 94, 0.6);
+        height: 1px;
+      }
+    }
+
+    .operator {
+      margin-left: 45px;
+    }
+
+  }
+
+  .contacts {
+    .personal {
+
+      gap: 14px;
+      padding: 10px 10px 15px;
+      background-color: $white;
+      min-height: 160px;
+
+      .namePhone {
+        min-width: 240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .phoneNumber {
+          & > span {
+            font-size: 12px;
+            color: rgba(9, 38, 94, 0.85);
+            margin-left: 50px;
+          }
+        }
+      }
+
+      .MuiFormControl-root {
+        label {
+          color: rgba(9, 38, 94, 0.85);
+          font-size: 14px;
+        }
+
+        .MuiInputBase-root {
+          &:before, &:after {
+            color: $blue-60;
+            border-color: $blue-60;
+          }
+
+          input {
+            color: $blue;
+            font-size: 14px;
+          }
+        }
+      }
+
+      .PhoneInput {
+        .PhoneInputCountry {
+          .PhoneInputCountryIcon {
+            border-radius: 4px;
+          }
+        }
+
+        input {
+          height: 32px;
+          border: none;
+          padding: 5px;
+          color: $blue;
+          border-bottom: 1px solid $blue-60;
+          font-size: 14px;
+          box-sizing: border-box;
+
+          &:hover, &:active, &:focus {
+            border-bottom: 2px solid $blue-60;
+            padding-bottom: 4px;
+          }
+        }
+      }
+
+      .message {
+        min-width: 240px;
+
+        padding-top: 9px;
+
+        & > span {
+          font-size: 14px;
+          color: $blue;
+        }
+
+        .JoyTextarea-root {
+          height: calc(100% - 18px);
+          border: none;
+          padding-left: 0;
+          border-bottom: 1px solid $blue-60;
+          border-radius: 0;
+
+          textarea {
+            font-size: 14px;
+            color: $blue;
+          }
+
+          &:hover, &:active, &:focus {
+            border-bottom: 2px solid $blue-60;
+            padding-bottom: 4px;
+          }
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+
+    }
+
+    .email {
+      gap: 17px;
+      padding-top: 35px;
+
+      .MuiFormControl-root {
+        width: 100%;
+        max-width: 356px;
+
+        label {
+          color: $blue-60;
+          background-color: transparent;
+        }
+
+        input {
+          background-color: $white;
+          color: $blue;
+        }
+
+        fieldset {
+          border-color: rgba(229, 62, 41, 0.6);
+        }
+      }
+
+      button {
+        width: 100%;
+        max-width: 155px;
+        font-weight: 900;
+        background-color: $red;
+      }
+    }
+  }
+}
+
+//          LATEST    ARTICLES
+
+.latestArticles {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  > h1 {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .container {
+    gap: 10%;
+  }
+
+  .posts {
+    width: 100%;
+
+    & > h2 {
+      margin-bottom: 30px;
+    }
+
+    .self {
+      gap: 10%;
+
+    }
+
+    .postItem {
+      width: 100%;
+      max-width: 304px;
+      background-color: $white;
+
+      .content {
+        padding: 10px 14px;
+
+        > h1 {
+          line-height: 30px;
+          margin-bottom: 10px;
+          min-height: 90px;
+        }
+
+        > p {
+          line-height: 20px;
+          text-align: center;
+          min-height: 100px;
+        }
+
+        .btn {
+          text-align: center;
+          padding-top: 17px;
+
+          button a {
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+          }
+
+          span {
+            font-weight: 700;
+          }
+        }
+      }
+
+      .img {
+        height: 200px;
+
+        img {
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+
+      .info {
+        margin-bottom: 10px;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
