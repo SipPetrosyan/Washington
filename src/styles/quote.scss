@@ -212,9 +212,10 @@
 }
 
 .reviewsItemsWithSlider {
-  &>h1{
+  & > h1 {
     text-align: center;
   }
+
   .slick-slider {
 
     .slick-arrow {
@@ -366,14 +367,28 @@
   }
 }
 
-.CalculationInfo{
-  &>h1{
+
+
+.calculationInfo {
+  & > h2 {
     text-align: center;
   }
-  .calculationPhases{
+
+  .calculationPhases {
     gap: 3%;
-    .calculationPhase{
+    margin-bottom: 60px;
+
+    .calculationPhase {
       padding: 35px;
+      width: 340px;
+      height: 200px;
+      background: $gray-bg;
+      box-shadow: 5px 5px 5px rgba(9, 38, 94, 0.35);
+      border-radius: 20px;
+      transition: .3s;
+      &:hover{
+        box-shadow: 5px 5px 15px rgba(9, 38, 94, 0.35);
+      }
     }
   }
 }

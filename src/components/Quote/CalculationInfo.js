@@ -1,7 +1,10 @@
+import Link from "next/link";
+import {Button} from "@mui/material";
+
 export default function CalculationInfo() {
 
     return (
-        <div className="m-padding CalculationInfo">
+        <div className="m-padding calculationInfo">
             <h2 className="m-60 blue font-32 bolder">How we calculated your transport fee </h2>
             <div className="flex-between calculationPhases">
                 <div className="calculationPhase">
@@ -41,6 +44,11 @@ export default function CalculationInfo() {
                     <p className="blue bold font-24">The condition of your vehicle</p>
                 </div>
             </div>
+            <Button>
+                <Link href="/faq" className="white">
+                    FAQ
+                </Link>
+            </Button>
         </div>
     )
 }

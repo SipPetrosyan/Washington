@@ -2,7 +2,6 @@ import {useState} from "react";
 import QuoteSteps from "@/components/quote/quoteSteps";
 
 export default function QuoteBanner () {
-    const [activeStep, setActiveStep] = useState(0);
 
     return(
         <div className="quoteBanner" >
@@ -10,7 +9,7 @@ export default function QuoteBanner () {
             <div className="filter"></div>
             <div className="stepIndexes">
             </div>
-            <QuoteSteps activeStep={activeStep} setActiveStep={setActiveStep}  />
+            <QuoteSteps   />
         </div>
     )
 }
