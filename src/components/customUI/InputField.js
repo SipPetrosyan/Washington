@@ -1,4 +1,4 @@
-export default function InputField({className, element, select, value, onChange, label, placeholder, id, name, error}) {
+export default function InputField({className, element,onBlur, select, value, onChange, label, placeholder, id, name, error}) {
 
     return (
         <div className={`inputField ${className || ''}`}>
@@ -8,6 +8,7 @@ export default function InputField({className, element, select, value, onChange,
                     value={value}
                     onChange={onChange}
                     id={id}
+                    onBlur={onBlur}
                     name={name}
                     placeholder={placeholder}
                 />}

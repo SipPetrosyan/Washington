@@ -1,27 +1,25 @@
-import {Autocomplete, Button, FormGroup, TextField} from "@mui/material";
-import {useState} from "react";
+import {Autocomplete, Button, TextField} from "@mui/material";
 import InputField from "@/components/customUI/InputField";
 
 export default function One(props) {
-    const [info1, setInfo1] = useState({});
-    const [error, setError] = useState("");
-
-    const onInputChanged = (event) => {
-        const targetName = event.target.name;
-        const targetValue = event.target.value;
-
-        setInfo1((info1) => ({
-            ...info1,
-            [targetName]: targetValue
-        }));
-    };
+    const {formik} = props;
 
     const validate = () => {
-        if (!info1.name) setError("Name is mandatory field");
-        else {
-            setError("");
+        const errors = {};
+        if (formik.values.from && formik.values.to && formik.values.time) {
             props.nextStep();
-            props.userCallback(info1);
+        }else{
+            !formik.values.from ? errors.from = "From is required": "";
+            !formik.values.to ? errors.to = "To is required": "";
+            !formik.values.time ? errors.time = "Time is required": "";
+            formik.setErrors({
+                ...formik.errors,
+                ...errors
+            });
+            formik.setTouched({
+                ...formik.touched,
+                ...errors
+            })
         }
     };
 
@@ -31,6 +29,12 @@ export default function One(props) {
                 <p className="formTitle">Get real <span>Quote</span> now : Car Shipping Cost</p>
                 <div className="flex-between fromTo">
                     <InputField
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.from}
+                        error={formik.touched.from && formik.errors.from}
+                        id="from"
+                        name="from"
                         placeholder="City,State or ZIP"
                         label={<>
                             <span className="icon-location-icon"><span className="path1"></span><span
@@ -39,8 +43,13 @@ export default function One(props) {
                             className="path3"></span></span>
                         </>}
                     />
-
                     <InputField
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.to}
+                        error={formik.touched.to && formik.errors.to}
+                        id="to"
+                        name="to"
                         placeholder="City,State or ZIP"
                         label={<>
                             <span className="icon-location-icon to-icon"><span className="path1"></span><span
@@ -55,6 +64,7 @@ export default function One(props) {
                 <div className="time m-60">
                     <InputField
                         className="inputField"
+                        error={formik.touched.time && formik.errors.time}
                         label={<>
                             <span className="icon-Vector-3"></span> Time <span className="icon-Gide-Icon"><span
                             className="path1"></span><span className="path2"></span><span
@@ -62,30 +72,23 @@ export default function One(props) {
                         </>}
                         select={true}
                         element={<Autocomplete
-                            disablePortal
-                            id="combo-box-demo"
-                            options={[{label: 'The Shawshank Redemption', year: 1994},
-                                {label: 'The Godfather', year: 1972}]}
+                            onChange={(e, time) => {
+                                formik.setValues({
+                                    ...formik.values,
+                                    time: time || ""
+                                })
+                            }}
+                            onBlur={formik.handleBlur}
+                            value={formik.values.time}
+                            id="time"
+                            name="time"
+                            options={["As soon as possible", "Within 1 week", "Within 2 weeks", "Within 30 days", "More than 30 days"]}
                             renderInput={(params) => <TextField {...params} label="Pick up Date"/>}
                         />}
                     />
                 </div>
             </div>
-
-            {/*<span style={{ color: "red" }}>{error}</span>*/}
-            {/*<h1>This is step 1 content</h1>*/}
-            {/*<FormGroup>*/}
-            {/*    <label>Name: </label>*/}
-            {/*    <input*/}
-            {/*        type="text"*/}
-            {/*        name="name"*/}
-            {/*        placeholder="Enter your name"*/}
-            {/*        onChange={onInputChanged}*/}
-            {/*    />*/}
-            {/*</FormGroup>*/}
-            {/*<br />*/}
-            <Button className="continueBtn font-32 white bolder" onClick={props.nextStep}>Continue</Button>
-            {/*<ActionButtons {...props} nextStep={validate} />*/}
+            <Button className="continueBtn font-32 white bolder" onClick={validate}>Continue</Button>
         </div>
     );
 };

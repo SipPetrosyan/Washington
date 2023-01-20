@@ -5,29 +5,42 @@ import Two from "@/components/quote/quoteSteps/Two";
 import Three from "@/components/quote/quoteSteps/Three";
 import {useState} from "react";
 import Four from "@/components/quote/quoteSteps/Four";
+import * as yup from "yup"
+import {useFormik} from "formik";
+import {quoteInitialValues} from "@/utils/helper";
 
-export default function QuoteSteps({activeStep, setActiveStep}) {
-    const [stepWizard, setStepWizard] = useState(null);
-    const [user, setUser] = useState({});
+export const quoteSchema = yup.object({
+    from: yup.string().required("From is required"),
+    to: yup.string().required("To is required"),
+    time: yup.string().required("Time is required"),
+    method: yup.string().required("Method is required"),
+    operable: yup.string().required("required"),
+    name: yup.string().required("required"),
+    email: yup.string().email().required("required"),
+    phone: yup.string().required("required"),
+});
 
-    const assignStepWizard = (instance) => {
-        setStepWizard(instance);
-    };
 
-    const assignUser = (val) => {
-        setUser((user) => ({
-            ...user,
-            ...val
-        }));
-    };
+export default function QuoteSteps({activeStep}) {
+    const [vehicle, setVehicle] = useState([{
+        year:"",
+        make: "",
+        model:""
+    }])
 
-    const handleStepChange = (e) => {
-        setActiveStep(e.activeStep - 1);
-    };
-
-    const handleComplete = () => {
-        alert("You r done. TQ");
-    };
+    const formik = useFormik({
+        initialValues: quoteInitialValues,
+        onSubmit: (values, {resetForm}) => {
+            alert(JSON.stringify(values));
+            resetForm(quoteInitialValues);
+            setVehicle([{
+                year:"",
+                make: "",
+                model:""
+            }])
+        },
+        validationSchema: quoteSchema
+    });
 
     return (
         <div>
@@ -37,11 +50,11 @@ export default function QuoteSteps({activeStep, setActiveStep}) {
                 <Step label="Confirmation" children={<div className={`indicator ${activeStep===2 && "active"}`}><span>3</span> <p>Confirmation</p></div>}/>
                 <Step label="Four" children={<div className={`indicator ${activeStep===3 && "active"}`}><span>4</span> <p>Finish</p></div>}/>
             </Stepper>
-            <StepWizard className="stepsController" instance={assignStepWizard} onStepChange={handleStepChange}>
-                <One userCallback={assignUser}/>
-                <Two user={user} userCallback={assignUser}/>
-                <Three user={user}/>
-                <Four user={user} completeCallback={handleComplete} setActiveStep={setActiveStep}/>
+            <StepWizard className="stepsController" >
+                <One formik={formik}  />
+                <Two vehicle={vehicle} setVehicle={setVehicle} formik={formik} />
+                <Three vehicle={vehicle} user={formik.values}  />
+                <Four formik={formik} />
             </StepWizard>
         </div>
     );
