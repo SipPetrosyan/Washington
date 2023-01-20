@@ -5,6 +5,7 @@ import ReviewsSlider from "@/components/quote/ReviewsSlider";
 import VehicleAdvertising from "@/components/quote/VehicleAdvertising";
 import Services from "@/components/quote/Services";
 import CalculationInfo from "@/components/quote/CalculationInfo";
+import SendMessage from "@/components/quote/SendMessage";
 
 export default function Quote() {
 
@@ -25,6 +26,7 @@ export default function Quote() {
                 <VehicleAdvertising/>
                 <Services/>
                 <CalculationInfo/>
+                <SendMessage/>
             </main>
         </>
     )

@@ -368,7 +368,6 @@
 }
 
 
-
 .calculationInfo {
   & > h2 {
     text-align: center;
@@ -376,23 +375,116 @@
 
   .calculationPhases {
     gap: 3%;
-    margin-bottom: 60px;
 
     .calculationPhase {
-      padding: 35px;
+      padding: 20px;
       width: 340px;
-      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      min-height: 200px;
       background: $gray-bg;
       box-shadow: 5px 5px 5px rgba(9, 38, 94, 0.35);
       border-radius: 20px;
       transition: .3s;
-      &:hover{
+
+      &:hover {
         box-shadow: 5px 5px 15px rgba(9, 38, 94, 0.35);
       }
+
+      .phaseIcon {
+        border-radius: 50%;
+        background-color: #09265E4D;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+          font-size: 32px;
+        }
+      }
+
+      &.distancePhase {
+        .phaseIcon {
+          span {
+            font-size: 16px;
+
+            .path1:before {
+              color: $blue;
+            }
+          }
+        }
+      }
+
     }
+  }
+
+  .MuiButtonBase-root {
+    width: 225px;
+    height: 48px;
+    background: $red;
+    border-radius: 10px;
   }
 }
 
+.sendMessage {
+  background-color: $gray-bg;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  &>h1{
+    margin-bottom: 40px;
+  }
+
+  .container {
+    gap: 10%;
+
+    .sendMessageForm {
+       width: 47%;
+      &>h1{
+        margin-bottom: 40px;
+      }
+      .JoyTextarea-root{
+        min-height: 180px;
+      }
+      .commentForm .inputs > div:first-of-type {
+        width: 100%;
+        padding-right: 0;
+      }
+      .buttonPart{
+        justify-content: flex-end;
+        .btn button{
+          border-radius: 5px;
+          .icon-Arrow-5{
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+    .pricing{
+      width: 48%;
+      padding-top: 120px;
+      &>h2{
+        margin-bottom: 40px;
+      }
+      p{
+        line-height: 38px;
+      }
+      .offer{
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+      .operator{
+        margin-left: 40px;
+      }
+    }
+
+
+  }
+}
 
 
 
