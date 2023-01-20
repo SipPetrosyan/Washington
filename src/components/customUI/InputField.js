@@ -1,7 +1,7 @@
 export default function InputField({className, element, select, value, onChange, label, placeholder, id, name, error}) {
 
     return (
-        <div className={`inputField ${className}`}>
+        <div className={`inputField ${className || ''}`}>
             <label>
                 <p className="helper">{label}</p>
                 {element || <input

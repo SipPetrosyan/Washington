@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?b9a3bx');
-  src:  url('fonts/icomoon.eot?b9a3bx#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?b9a3bx') format('truetype'),
-    url('fonts/icomoon.woff?b9a3bx') format('woff'),
-    url('fonts/icomoon.svg?b9a3bx#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?avveeg');
+  src:  url('fonts/icomoon.eot?avveeg#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?avveeg') format('truetype'),
+    url('fonts/icomoon.woff?avveeg') format('woff'),
+    url('fonts/icomoon.svg?avveeg#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-Linkedin-Icon:before {
+  content: "\e94c";
+  color: #09265e;
+}
+.icon-Facebbok-Icon:before {
+  content: "\e94d";
+  color: #09265e;
+}
+.icon-Twiter-Icon:before {
+  content: "\e94e";
+  color: #09265e;
+}
 .icon-Edit-Icon:before {
   content: "\e94b";
   color: #e53e29;

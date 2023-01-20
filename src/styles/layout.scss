@@ -101,7 +101,7 @@ header {
       color: $blue;
 
       &::placeholder {
-        color: rgba(9, 38, 94, 0.4);
+        color: $blue-40;
       }
     }
 
