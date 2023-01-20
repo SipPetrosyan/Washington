@@ -1,0 +1,84 @@
+@import "index";
+
+
+.companyPage {
+  padding-bottom: 60px;
+  h1 {
+    margin: 40px 0;
+  }
+  .companyContent {
+    p {
+      line-height: 38px;
+      margin-bottom: 40px;
+    }
+    .img {
+      width: 100%;
+      img {
+        width: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+    }
+    .subTopic {
+      margin-top: 40px;
+      >h1 {
+        margin-bottom: 40px;
+      }
+    }
+
+  }
+  .titleSection {
+    margin-bottom: 40px;
+    .iconArrow {
+      vertical-align: middle;
+    }
+  }
+
+}
+
+.pricingPart {
+  display: flex;
+  justify-content: center;
+}
+.pricingBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  width: 50%;
+  min-width: 765px;
+  h1 {
+    margin: 0;
+  }
+  p {
+    line-height: 38px;
+  }
+  .orPart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    hr {
+      width: 125px;
+      border-color: $blue-60;
+    }
+  }
+  .btn {
+    text-align: center;
+    button {
+      height: 40px;
+      font-weight: 900;
+      font-size: 20px;
+      color: #FDFDFF;
+      width: 100%;
+      background-color: #E53E29;
+      border-radius: 10px;
+      width: 222px;
+    }
+    a {
+      letter-spacing: initial;
+      margin-left: 10px;
+    }
+  }
+}

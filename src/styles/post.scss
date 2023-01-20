@@ -41,6 +41,14 @@
           >span:first-of-type {
             margin-right: 10px;
           }
+          .shareTo {
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover {
+              box-shadow: 5px 0 15px $blue;
+              transform: scale(1.05);
+            }
+          }
         }
       }
     }

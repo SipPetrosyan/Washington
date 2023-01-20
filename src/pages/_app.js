@@ -4,6 +4,8 @@ import '@/styles/home.scss';
 import '@/styles/quote.scss';
 import '@/styles/blogs.scss';
 import '@/styles/post.scss';
+import '@/styles/contact.scss';
+import '@/styles/aboutCompany.scss';
 import '../../public/icons/icomoon/style.css'
 import 'react-phone-number-input/style.css'
 import {Provider} from "react-redux";
