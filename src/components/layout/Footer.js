@@ -35,7 +35,6 @@ export default function Footer() {
                 <div className="contentItem info">
                     <img src="/images/footer-logo.png" alt="footer-logo" />
                     <h2>WASHINGTON DC AUTO TRANSPORT</h2>
-                    <a>7300 Georgia Ave NW, Washington, DC 20012</a>
                     <p><a href="tel:( 202 ) 930 8005">( 202 ) 930 - 8005</a></p>
                     <p><a href="mailto:info@washingtondcautotransport.com">info@washingtondcautotransport.com</a></p>
                 </div>

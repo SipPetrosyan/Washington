@@ -1,37 +1,65 @@
-import {Autocomplete, Button, FormGroup, TextField} from "@mui/material";
-import {useState} from "react";
+import {Autocomplete, Button, TextField} from "@mui/material";
+import { useState} from "react";
 import InputField from "@/components/customUI/InputField";
 
 export default function Two(props) {
-    const [vehicle, setVehicle] = useState(1);
-    const [info2, setInfo2] = useState({});
-    const [error, setError] = useState("");
-
-    const onInputChanged = (event) => {
-        const targetName = event.target.name;
-        const targetValue = event.target.value;
-
-        setInfo2((info2) => ({
-            ...info2,
-            [targetName]: targetValue
-        }));
-    };
+    const {formik, vehicle, setVehicle} = props;
+    const [errors, setErrors] = useState([{}]);
+    const {method, operable} = formik.values;
 
     const validate2 = () => {
-        if (!info2.age) setError("Age is mandatory field");
-        else {
-            setError("");
+        const errorsArr = [];
+        vehicle.forEach((vh, index) => {
+            const allErrors = [...errors];
+            Object.keys(vh).forEach((prop, i) => {
+                if (!vh[prop]) {
+                    allErrors[index][prop] = "required";
+                    errorsArr.push([index, i])
+                }
+            })
+            setErrors(allErrors)
+        })
+        if (!method || !operable) {
+            formik.setErrors({
+                ...formik.errors,
+                method: method ? "" : "required",
+                operable: operable ? "" : "required"
+            })
+            formik.setTouched({
+                ...formik.touched,
+                method: !method,
+                operable: !operable
+            })
+        }
+        if(errorsArr.length === 0 && method && operable){
             props.nextStep();
-            props.userCallback(info2);
         }
     };
+
+    console.log(formik.errors, 'errros')
+    console.log(formik.touched, 'touched')
+
+    const handleAddVehicle = () => {
+        setVehicle([
+            ...vehicle,
+            {
+                year: "",
+                make: "",
+                model: ""
+            }
+        ]);
+        setErrors([
+            ...errors,
+            {}
+        ])
+    }
 
     return (
         <div className="stepForm quoteForm step2">
             <div className="inputs">
                 <p className="formTitle">Get real <span>Quote</span> now : Car Shipping Cost</p>
                 <div className="vehicle-container">
-                    {Array.from(Array(vehicle).keys()).map((item, i) => (
+                    {vehicle.map((item, i) => (
                         <div key={i} className="vehicle flex-between">
                             <InputField
                                 label={<>
@@ -40,44 +68,76 @@ export default function Two(props) {
                                     className="path1"></span><span className="path2"></span><span
                                     className="path3"></span></span>
                                 </>}
+                                error={errors[i].year}
                                 select={true}
                                 element={<Autocomplete
                                     disablePortal
-                                    id="combo-box-demo"
-                                    options={[{label: '1994', year: 1994},
-                                        {label: '1972', year: 1972}]}
+                                    onChange={(e, year) => {
+                                        setVehicle((prev) => {
+                                            prev[i].year = year || "";
+                                            return [...prev];
+                                        });
+                                        setErrors((prev) => {
+                                            prev[i].year = year ? "" : "required";
+                                            return [...prev]
+                                        })
+                                    }}
+                                    value={vehicle[i].year}
+                                    id="year"
+                                    name="year"
+                                    options={["1994", "1985", "1989"]}
                                     renderInput={(params) => <TextField {...params} label="Year"/>}
                                 />}
                             />
                             <InputField
                                 select={true}
+                                error={errors[i].make}
                                 element={<Autocomplete
-                                    indicator={<div>sdf</div>}
                                     disablePortal
-                                    id="combo-box-demo"
-                                    options={[{label: 'The Shawshank Redemption', year: 1994},
-                                        {label: 'The Godfather', year: 1972}]}
+                                    onChange={(e, make) => {
+                                        setVehicle((prev) => {
+                                            prev[i].make = make;
+                                            return [...prev]
+                                        })
+                                        setErrors((prev) => {
+                                            prev[i].make = make ? "" : "required";
+                                            return [...prev]
+                                        })
+                                    }}
+                                    value={vehicle[i].make || null}
+                                    id="make"
+                                    name="make"
+                                    options={["make", "make1", "make2"]}
                                     renderInput={(params) => <TextField {...params} label="Make"/>}
                                 />}
                             />
                             <InputField
                                 select={true}
+                                error={errors[i].model}
                                 element={<Autocomplete
                                     disablePortal
-                                    id="combo-box-demo"
-                                    options={[{label: 'The Shawshank Redemption', year: 1994},
-                                        {label: 'The Godfather', year: 1972}]}
+                                    onChange={(e, model) => {
+                                        setVehicle((prev) => {
+                                            prev[i].model = model;
+                                            return [...prev]
+                                        })
+                                        setErrors((prev) => {
+                                            prev[i].model = model ? "" : "required";
+                                            return [...prev]
+                                        })
+                                    }}
+                                    value={vehicle[i].model || null}
+                                    id="model"
+                                    name="model"
+                                    options={["model", "model2", "model3"]}
                                     renderInput={(params) => <TextField {...params} label="Model"/>}
                                 />}
                             />
                         </div>
                     ))}
-
                     <div className="addVehicle">
                         <Button
-                            onClick={() => {
-                                setVehicle(vehicle + 1)
-                            }}
+                            onClick={handleAddVehicle}
                         >
                             <span className="icon-Vector-2 plusIcon"></span>
                             <span> Add Multiple Vehicle</span>
@@ -99,6 +159,7 @@ export default function Two(props) {
                                     value="1"
                                     type="radio"
                                     name="method"
+                                    onChange={formik.handleChange}
                                 />
                                 Open
                             </label>
@@ -107,9 +168,11 @@ export default function Two(props) {
                                     value="2"
                                     type="radio"
                                     name="method"
+                                    onChange={formik.handleChange}
                                 />
                                 Enclosed
                             </label>
+                            <p className="err-message">{formik.touched.method && formik.errors.method}</p>
                         </div>
                     </div>
 
@@ -126,6 +189,7 @@ export default function Two(props) {
                                     value="1"
                                     type="radio"
                                     name="operable"
+                                    onChange={formik.handleChange}
                                 />
                                 Yes
                             </label>
@@ -134,9 +198,11 @@ export default function Two(props) {
                                     value="2"
                                     type="radio"
                                     name="operable"
+                                    onChange={formik.handleChange}
                                 />
                                 No
                             </label>
+                            <p className="err-message">{formik.touched.operable && formik.errors.operable}</p>
                         </div>
                     </div>
                 </div>
@@ -154,7 +220,7 @@ export default function Two(props) {
             {/*    />*/}
             {/*</FormGroup>*/}
             {/*<br />*/}
-            <Button className="continueBtn font-32 white bolder" onClick={props.nextStep}>Continue</Button>
+            <Button className="continueBtn font-32 white bolder" onClick={validate2}>Continue</Button>
             {/*<ActionButtons {...props} nextStep={validate} />*/}
         </div>
     );

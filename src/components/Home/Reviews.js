@@ -1,7 +1,7 @@
 import {Box, Button, Grid, Rating} from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2";
 import Link from "next/link";
-import ReviewsItem from "@/components/home/ReviewsItem";
+import ReviewsGraphicItem from "@/components/home/ReviewsGraphicItem";
 
 export default function Reviews() {
 
@@ -36,11 +36,11 @@ export default function Reviews() {
                     </div>
                     <div className="partial">
                         <div className="graphics">
-                            <ReviewsItem from={177} total={5}/>
-                            <ReviewsItem from={9} total={4}/>
-                            <ReviewsItem from={6} total={3}/>
-                            <ReviewsItem from={0} total={2}/>
-                            <ReviewsItem from={7} total={1}/>
+                            <ReviewsGraphicItem from={177} total={5}/>
+                            <ReviewsGraphicItem from={9} total={4}/>
+                            <ReviewsGraphicItem from={6} total={3}/>
+                            <ReviewsGraphicItem from={0} total={2}/>
+                            <ReviewsGraphicItem from={7} total={1}/>
                         </div>
                         <Button>
                             <Link href="/reviews">

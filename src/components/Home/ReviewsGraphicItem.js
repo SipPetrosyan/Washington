@@ -1,4 +1,4 @@
-export default function ReviewsItem ({from, total}){
+export default function ReviewsGraphicItem ({from, total}){
 
     return(
         <div className="reviewsMain">
