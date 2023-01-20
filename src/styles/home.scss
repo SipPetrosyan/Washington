@@ -643,20 +643,7 @@
       padding: 11px 0 40px 38px;
     }
 
-    .or {
-      display: flex;
-      justify-content: left;
-      gap: 20px;
-      align-items: center;
-      color: rgba(9, 38, 94, 0.6);
-      margin-bottom: 40px;
 
-      hr {
-        width: 124px;
-        border: 1px solid rgba(9, 38, 94, 0.6);
-        height: 1px;
-      }
-    }
 
     .operator {
       margin-left: 45px;
@@ -720,6 +707,20 @@
         background-color: $red;
       }
     }
+  }
+}
+.or {
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+  align-items: center;
+  color: rgba(9, 38, 94, 0.6);
+  margin-bottom: 40px;
+
+  hr {
+    width: 124px;
+    border: 1px solid rgba(9, 38, 94, 0.6);
+    height: 1px;
   }
 }
 

@@ -8,26 +8,25 @@ export default function CalculationInfo() {
             <h2 className="m-60 blue font-32 bolder">How we calculated your transport fee </h2>
             <div className="flex-between calculationPhases">
                 <div className="calculationPhase">
-                        <span className="icon-Enclosed-Hauler-Icon"><span className="path1"></span><span
-                            className="path2"></span><span className="path3"></span><span className="path4"></span><span
-                            className="path5"></span><span className="path6"></span><span className="path7"></span><span
-                            className="path8"></span><span className="path9"></span><span
-                            className="path10"></span><span className="path11"></span><span
-                            className="path12"></span><span className="path13"></span><span
-                            className="path14"></span><span className="path15"></span></span>
+                    <div className="phaseIcon">
+                        <span className="icon-Car"><span className="path1"></span><span className="path2"></span><span
+                            className="path3"></span><span className="path4"></span><span className="path5"></span><span
+                            className="path6"></span></span>
+                    </div>
                     <p className="blue bold font-24">The size and weight of your vehicle</p>
                 </div>
-                <div className="calculationPhase">
-                        <span className="icon-Enclosed-Hauler-Icon"><span className="path1"></span><span
-                            className="path2"></span><span className="path3"></span><span className="path4"></span><span
-                            className="path5"></span><span className="path6"></span><span className="path7"></span><span
-                            className="path8"></span><span className="path9"></span><span
-                            className="path10"></span><span className="path11"></span><span
-                            className="path12"></span><span className="path13"></span><span
-                            className="path14"></span><span className="path15"></span></span>
+                <div className="calculationPhase distancePhase">
+                    <div className="phaseIcon">
+                        <span className="icon-location-icon"><span className="path1"></span><span
+                            className="path2"></span></span>
+                        <span className="white bold">...</span>
+                        <span className="icon-location-icon"><span className="path1"></span><span
+                            className="path2"></span></span>
+                    </div>
                     <p className="blue bold font-24">Distance between vehicle pickup and delivery </p>
                 </div>
                 <div className="calculationPhase">
+                    <div className="phaseIcon">
                         <span className="icon-Enclosed-Hauler-Icon"><span className="path1"></span><span
                             className="path2"></span><span className="path3"></span><span className="path4"></span><span
                             className="path5"></span><span className="path6"></span><span className="path7"></span><span
@@ -35,20 +34,25 @@ export default function CalculationInfo() {
                             className="path10"></span><span className="path11"></span><span
                             className="path12"></span><span className="path13"></span><span
                             className="path14"></span><span className="path15"></span></span>
+                    </div>
                     <p className="blue bold font-24">Choosing open or enclosed car transport</p>
                 </div>
                 <div className="calculationPhase">
+                    <div className="phaseIcon">
                         <span className="icon-Exotic-Car-Transport-Icon"><span className="path1"></span><span
-                            className="path2"></span><span className="path3"></span><span className="path4"></span><span
+                            className="path2"></span><span className="path3 blue"></span><span className="path4"></span><span
                             className="path5"></span></span>
+                    </div>
                     <p className="blue bold font-24">The condition of your vehicle</p>
                 </div>
             </div>
-            <Button>
-                <Link href="/faq" className="white">
-                    FAQ
-                </Link>
-            </Button>
+            <div className="flex-center m-60">
+                <Button>
+                    <Link href="/faq" className="white bolder">
+                        FAQ
+                    </Link>
+                </Button>
+            </div>
         </div>
     )
 }
