@@ -1,3 +1,93 @@
+export const aboutSubLinks = [
+    {
+        name: "About Our Company",
+        slug: "about-our-company"
+    },
+    {
+        name: "History",
+        slug: "history"
+    },
+    {
+        name: "Reviews",
+        slug: "reviews"
+    },
+    {
+        name: "Career",
+        slug: "career"
+    },
+    {
+        name: "Terms And Conditions",
+        slug: "terms-and-conditions"
+    },
+    {
+        name: "Privacy Policy",
+        slug: "privacy-policy"
+    }
+];
+
+export const servicesSubLinks = [
+    {
+        name: "All",
+        slug: "services"
+    },
+    {
+        name: "Door to Door Car Shipping",
+        slug: ""
+    },
+    {
+        name: "Enclosed Auto Shipping",
+        slug: ""
+    },
+    {
+        name: "Expedited Auto Transport",
+        slug: ""
+    },
+    {
+        name: "Exotic Vehicle Shipping",
+        slug: ""
+    },
+    {
+        name: "Military Automobile Shipping",
+        slug: ""
+    },
+    {
+        name: "Open Car Moving",
+        slug: ""
+    },
+    {
+        name: "Snowbird Auto Moving",
+        slug: ""
+    }
+];
+
+export const commercialServicesSubLinks = [
+    {
+        name: "All",
+        slug: "commercial-services"
+    },
+    {
+        name: "Auction Car Shipping",
+        slug: "commercial-services"
+    },
+    {
+        name: "Corporate Relocation",
+        slug: "commercial-services"
+    },
+    {
+        name: "Commercial Vehicle Transport   ",
+        slug: "commercial-services"
+    },
+    {
+        name: "Dealer Car Moving Services",
+        slug: "commercial-services"
+    },
+    {
+        name: "Military Heavy Equipment Shipping",
+        slug: "commercial-services"
+    },
+]
+
+
 export const quoteInitialValues = {
     from: "",
     to: "",

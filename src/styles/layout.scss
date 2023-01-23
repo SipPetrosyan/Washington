@@ -122,6 +122,19 @@ header {
   }
 }
 
+
+.headerMenuPopUp{
+  .MuiPaper-root{
+    li.MuiButtonBase-root{
+      padding: 0;
+      a{
+        width: 100%;
+        padding: 12px 30px;
+      }
+    }
+  }
+}
+
 .MuiPaper-root {
   .MuiList-root {
     li {

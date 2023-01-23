@@ -22,30 +22,7 @@ export default function Customers() {
                     <img src="/images/customers.png" alt="customers"/>
                 </div>
             </div>
-            <div className="customerExample">
-                <div className="exampleContent">
-                    <span className="start">“</span>
-                    <p>
-                        When I needed my car transported, I was shopping around looking for the lowest quote but when I
-                        called Washington dc auto transport, they informed me never to go with the lowest quote because
-                        that would most probably be a scam! Well, I am glad I went with these guys because even though I
-                        paid an extra $100 than the average quote, these guys took care of me and I worked with their 3
-                        day pick up window so everything went perfect. 5 stars!!
-                    </p>
-                    <div className="info flex-between">
-                        <p className="author">Review By Ammara T. </p>
-                        <div>
-                            <img src="/images/yelp.png" alt="yelp" />
-                            <Rating
-                                name="text-feedback"
-                                value={5}
-                                readOnly
-                            />
-                        </div>
-                    </div>
-                    <span className="end">“</span>
-                </div>
-            </div>
+
         </section>
     )
 }

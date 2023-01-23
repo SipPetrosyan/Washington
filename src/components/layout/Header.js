@@ -1,29 +1,12 @@
 import TopPanel from "@/components/layout/TopPanel";
 import LinkPopper from "@/components/customUI/LinkPopper";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import Link from "next/link";
-import {Button, TextField} from "@mui/material";
+import {aboutSubLinks, commercialServicesSubLinks, servicesSubLinks} from "@/utils/helper";
 
-const aboutSubLinks = [
-    {
-        name: "About Our Company",
-        slug: "about-our-company"
-    },
-    {
-        name: "About Our Company",
-        slug: "about-our-company"
-    },
-    {
-        name: "About Our Company",
-        slug: "about-our-company"
-    },
-    {
-        name: "About Our Company",
-        slug: "about-our-company"
-    },
-]
 
-export default function Header () {
+
+export default function Header() {
     const [anchorEl, setAnchorEl] = useState(null);
     const handleClick = (event) => {
         setAnchorEl(anchorEl === event.currentTarget ? null : event.currentTarget);
@@ -32,20 +15,13 @@ export default function Header () {
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popper' : undefined;
 
-useEffect(()=> {
-    const date = new Date();
 
-
-
-}, [])
-
-
-    return(
+    return (
         <>
             <TopPanel/>
             <header>
                 <Link href="/" className="header-logo">
-                    <img src="/images/logo.png" alt="logo" />
+                    <img src="/images/logo.png" alt="logo"/>
                 </Link>
                 <nav className="header-nav">
                     <LinkPopper
@@ -62,7 +38,7 @@ useEffect(()=> {
                         anchorEl={anchorEl}
                         handleClick={handleClick}
                         link="Services"
-                        subLinks={aboutSubLinks}
+                        subLinks={servicesSubLinks}
                     />
                     <LinkPopper
                         id={id}
@@ -70,13 +46,13 @@ useEffect(()=> {
                         anchorEl={anchorEl}
                         handleClick={handleClick}
                         link="Commercial Services"
-                        subLinks={aboutSubLinks}
+                        subLinks={commercialServicesSubLinks}
                     />
                 </nav>
                 <div className="header-search">
-                   <input
+                    <input
                         placeholder="Search"
-                   />
+                    />
                     <button><span className="icon-search"></span></button>
                 </div>
             </header>

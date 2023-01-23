@@ -1,0 +1,96 @@
+@import "index";
+
+.allServices {
+  padding-top: 60px;
+  padding-bottom: 200px;
+
+  .servicesCards {
+    display: flex;
+    gap: 50px;
+
+    .rightSide {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+    }
+  }
+  .commercialServicesCards{
+    padding-bottom: 76px;
+    .topSide{
+      display: flex;
+      gap: 5%;
+    }
+    .bottomSide{
+      gap: 5%;
+      display: flex;
+      .card1{
+        margin-top: 36px;
+      }
+    }
+  }
+
+  .card1 {
+    max-width: 660px;
+    height: 280px;
+    padding: 40px 60px;
+  }
+
+  .card2 {
+    padding: 39px 35px;
+    max-width: 330px;
+    height: 400px;
+  }
+
+  .card2s {
+    display: flex;
+    gap: 50px;
+  }
+
+  .card1, .card2 {
+    overflow: hidden;
+    border-radius: 10px;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 60px;
+
+    button a {
+      display: flex;
+      align-items: center;
+
+      span {
+        font-weight: 900;
+      }
+    }
+
+    & > h1 {
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 40px;
+    }
+
+    & > p {
+      line-height: 20px;
+    }
+
+    &.gbBlue {
+      background: rgba(9, 38, 94, 0.7);
+    }
+
+    &.bgRed {
+      background: rgba(229, 62, 41, 0.7);
+    }
+
+    &.bgGreen {
+      background: rgba(163, 202, 42, 0.7);
+    }
+  }
+  .servicesInfo{
+    background: #FFFFFF;
+    border: 2px solid rgba(9, 38, 94, 0.4);
+    border-radius: 10px;
+    padding: 40px 60px;
+  }
+}
