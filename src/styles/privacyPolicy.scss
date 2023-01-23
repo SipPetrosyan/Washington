@@ -1,0 +1,37 @@
+.privacyPage {
+  padding-bottom: 160px;
+  >h1 {
+    text-align: center;
+    margin: 40px 0;
+  }
+  .hrField {
+    display: flex;
+    justify-content: center;
+  }
+  p {
+    line-height: 38px;
+    margin-bottom: 40px;
+  }
+  ul {
+    padding-left:0;
+    list-style-position:inside;
+    margin-bottom: 40px;
+    li {
+      line-height: 38px;
+      margin-bottom: 20px;
+    }
+  }
+  h3 {
+    line-height: 24px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  h2 {
+    line-height: 48px;
+    margin-bottom: 10px;
+    text-decoration-line: underline;
+  }
+  .separatedText {
+    margin-top: 80px;
+  }
+}

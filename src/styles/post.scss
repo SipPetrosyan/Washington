@@ -12,16 +12,18 @@
     padding-bottom: 20px;
     margin-bottom: 30px;
     padding-top: 100px;
-    border-bottom: 2px solid $blue-40;
     .leftPart {
-      .img {
-        margin-bottom: 24px;
-        height: 486px;
-        img {
-          object-fit: cover;
-          width: 100%;
-          height: 100%;
-          border-radius: 10px;
+      width: 72%;
+      .imgAndShare {
+        .img {
+          margin-bottom: 24px;
+          height: 486px;
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+          }
         }
       }
       .bottomPart {
@@ -43,19 +45,18 @@
           }
           .shareTo {
             cursor: pointer;
-            transition: 0.3s;
-            &:hover {
-              box-shadow: 5px 0 15px $blue;
-              transform: scale(1.05);
-            }
           }
         }
+      }
+      .imgAndShare {
+        padding-bottom: 20px;
+        border-bottom: 2px solid rgba(9, 38, 94, 0.4);
       }
     }
   }
   .postContent {
+    margin-top: 30px;
     .postTopic {
-      width: 72%;
       .postTitle {
         margin-bottom: 30px;
       }
@@ -103,6 +104,7 @@
   .postComment {
     h1 {
       font-weight: 400;
+      margin-bottom: 18px;
     }
     .commentForm {
 
@@ -126,7 +128,7 @@
           }
           >div {
             &:not(:first-of-type) {
-              margin-top: 10px;
+              margin-top: 38px;
             }
           }
         }

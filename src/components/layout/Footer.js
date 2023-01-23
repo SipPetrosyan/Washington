@@ -81,8 +81,8 @@ export default function Footer() {
             <div className="ending">
                 <p className="rights">© 2023 - Washington DC Auto Transport. All Rights Reserved.</p>
                 <div className="flex-between links">
-                    <Link href=""> Terms And Conditions</Link>
-                    <Link href="">Privacy Policy</Link>
+                    <Link href="/terms-and-conditions"> Terms And Conditions</Link>
+                    <Link href="/privacy-policy">Privacy Policy</Link>
                 </div>
             </div>
         </footer>

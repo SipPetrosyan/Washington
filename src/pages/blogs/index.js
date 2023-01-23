@@ -5,7 +5,7 @@ const Blogs = () => {
     // const arr = [1,2,3]
 
     return (
-        <PostsPage title='Our Blog' postsData={arr} />
+        <PostsPage title='Our Blog' latestTitle='Latest News' postsData={arr} />
     );
 };
 

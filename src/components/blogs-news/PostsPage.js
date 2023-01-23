@@ -2,9 +2,9 @@ import React from 'react';
 import Head from "next/head";
 import PostItem from "@/components/Home/PostItem";
 import Pagination from "@/components/customUI/Pagination";
-import GetQuote from "@/components/Quote/GetQuote";
+import LatestPosts from "@/components/blogs-news/LatestPosts";
 
-const PostsPage = ({title, postsData}) => {
+const PostsPage = ({title, latestTitle, postsData}) => {
     return (
         <>
             <Head>
@@ -16,7 +16,7 @@ const PostsPage = ({title, postsData}) => {
                     <hr className="hr" />
                 </div>
                 <div className="blogPage">
-                    <div className='w-100'>
+                    <div>
                         <h1 className='font-32 blue'>{title}</h1>
                         <div className='postsList'>
                             {postsData.map((post, idx) => {
@@ -27,7 +27,7 @@ const PostsPage = ({title, postsData}) => {
                         </div>
                         <Pagination count={postsData.length}/>
                     </div>
-                    <GetQuote />
+                    <LatestPosts title={latestTitle}/>
                 </div>
             </main>
         </>

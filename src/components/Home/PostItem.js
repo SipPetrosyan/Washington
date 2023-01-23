@@ -23,9 +23,7 @@ export default function PostItem({btnName, desc}) {
                     Pickup
                 </h1>
                 {desc !==false ? (<p className="blue-80 desc">
-                    All the other car companies are occupied with creating the latest and the greatest in automobiles
-                    and electric motors.
-                </p>) : null}
+                    There's a senior official that is seen in Mayor Bowser's administration who is unfortunately under fire once she's been fired. This is followed by the aftermath of ethics investigation.</p>) : null}
                 {btnName ? (<div className="btn">
                     <Button>
                         <Link href="" className="red bold">

@@ -1,0 +1,32 @@
+@import "index";
+
+.termsPage {
+  padding-bottom: 160px;
+  >h1 {
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  .hrField {
+    display: flex;
+    justify-content: center;
+  }
+  p, li {
+    line-height: 38px;
+    margin-bottom: 40px;
+  }
+  h3 {
+    line-height: 24px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  ol {
+    padding-left:0;
+    list-style-position:inside;
+    >h2 {
+      line-height: 48px;
+      margin-bottom: 10px;
+      text-decoration-line: underline;
+    }
+  }
+}

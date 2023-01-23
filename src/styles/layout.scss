@@ -161,13 +161,6 @@ footer {
       color: $white;
       display: block;
       transition: 0.3s;
-
-      &:hover {
-        color: $gray-bg;
-        text-shadow: 4px 3px 5px #FFFFFF;
-        transform: scale(1.02);
-      }
-
       a {
         color: $white;
       }
