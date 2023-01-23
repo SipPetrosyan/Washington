@@ -286,13 +286,22 @@
   }
 }
 
-
 .vehicleAdvertising {
-  padding: 80px 14.5% 60px 20%;
-  display: flex;
-  justify-content: center;
-  gap: 7.5%;
+  padding: 40px 14.5% 60px 20%;
   background-color: $blue;
+
+  & > div {
+    display: flex;
+    justify-content: center;
+    gap: 7.5%;
+    position: relative;
+
+    & > .hr {
+      position: absolute;
+      left: -14%;
+      top: -20%;
+    }
+  }
 
   .img {
     max-width: 460px;
@@ -403,6 +412,11 @@
         justify-content: center;
         align-items: center;
 
+
+        .icon-Car, .icon-Car span {
+          font-size: 22px;
+        }
+
         span {
           font-size: 32px;
         }
@@ -435,7 +449,8 @@
   background-color: $white;
   padding-top: 60px;
   padding-bottom: 60px;
-  &>h1{
+
+  & > h1 {
     margin-bottom: 40px;
   }
 
@@ -443,41 +458,52 @@
     gap: 10%;
 
     .sendMessageForm {
-       width: 47%;
-      &>h1{
+      width: 47%;
+
+      & > h1 {
         margin-bottom: 40px;
       }
-      .JoyTextarea-root{
+
+      .JoyTextarea-root {
         min-height: 180px;
       }
+
       .commentForm .inputs > div:first-of-type {
         width: 100%;
         padding-right: 0;
       }
-      .buttonPart{
+
+      .buttonPart {
         justify-content: flex-end;
-        .btn button{
+
+        .btn button {
           border-radius: 5px;
-          .icon-Arrow-5{
+
+          .icon-Arrow-5 {
             margin-left: 5px;
           }
         }
       }
     }
-    .pricing{
+
+    .pricing {
       width: 48%;
       padding-top: 120px;
-      &>h2{
+
+      & > h2 {
         margin-bottom: 40px;
       }
-      p{
+
+      p {
         line-height: 38px;
       }
-      .offer{
+
+      .offer {
         margin-top: 40px;
         margin-bottom: 40px;
       }
-      .operator{
+
+      .operator {
         margin-left: 40px;
       }
     }

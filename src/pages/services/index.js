@@ -9,7 +9,8 @@ export default function Services() {
             <h2 className="blue-80 font-24 text-center mb-60">Check out our car shipping options</h2>
             <div className="servicesCards">
                 <div className="leftSide">
-                    <div className="card1 gbBlue">
+                    <div className="card1" style={{backgroundImage: "url(/images/post.png)"}}>
+                        <div className="filter bgBlue"></div>
                         <h1>Door to Door Car Shipping</h1>
                         <p>Do you need to get your car from one place to another but don’t want to drive? If so, our
                             door-to-door car shipping service can assist you with this. </p><p> Why put extra miles on
@@ -22,8 +23,9 @@ export default function Services() {
                             </Link>
                         </Button>
                     </div>
-                    <div className="card2s">
-                        <div className="card2 bgGreen">
+                    <div className="card2s" >
+                        <div className="card2" style={{backgroundImage: "url(/images/post.png)"}}>
+                            <div className="filter bgGreen"></div>
                             <h1>Exotic Vehicle Shipping</h1>
                             <p>Certain things need to be considered when shipping an exotic vehicle, especially when the
                                 distance is long. After all, an exotic car truly deserves special treatment.</p>
@@ -36,7 +38,8 @@ export default function Services() {
                                 </Link>
                             </Button>
                         </div>
-                        <div className="card2 bgGreen">
+                        <div className="card2 " style={{backgroundImage: "url(/images/post.png)"}}>
+                            <div className="filter bgGreen"></div>
                             <h1>Military Automobile Shipping</h1>
                             <p>Relocation is not an easy process. Especially, when PCS season is upon you. In fact, you
                                 might require some assistance to handle the load. That’s why we provide military
@@ -56,7 +59,8 @@ export default function Services() {
                 {/* .leftSide*/}
                 <div className="rightSide">
                     <div className="card2s">
-                        <div className="card2 bgRed">
+                        <div className="card2 " style={{backgroundImage: "url(/images/post.png)"}}>
+                            <div className="filter bgRed"></div>
                             <h1>Enclosed Auto Shipping</h1>
                             <p>There are two main car shipping methods a customer can choose from when booking vehicle
                                 transport service. The most common is Open Car Transport.</p><p>This option is more
@@ -70,7 +74,8 @@ export default function Services() {
                             </Button>
 
                         </div>
-                        <div className="card2 bgRed">
+                        <div className="card2 " style={{backgroundImage: "url(/images/post.png)"}}>
+                            <div className="filter bgRed"></div>
                             <h1>Expedited Auto Transport</h1>
                             <p>We live in a hectic, fast-paced world. We want and often need things to get done in a
                                 hurry.
@@ -86,7 +91,8 @@ export default function Services() {
 
                         </div>
                     </div>
-                    <div className="card1 gbBlue">
+                    <div className="card1 " style={{backgroundImage: "url(/images/post.png)"}}>
+                        <div className="filter bgBlue"></div>
                         <h1>Open Car Moving</h1>
                         <p>The most popular method of auto transport is Open Car Moving. Enclosed Auto Shipping is
                             great
@@ -104,7 +110,8 @@ export default function Services() {
                 {/*    .rightSide*/}
             </div>
             <div className="flex-center">
-                <div className="card1 gbBlue">
+                <div className="card1 " style={{backgroundImage: "url(/images/post.png)"}}>
+                    <div className="filter bgBlue"></div>
                     <h1>Snowbird Auto Moving</h1>
                     <p>A Snowbird is someone who moves to warmer states for the winter instead of dealing with cold
                         weather. This can be seen as a mini-relocation.</p><p> For most snowbirds, this process also
