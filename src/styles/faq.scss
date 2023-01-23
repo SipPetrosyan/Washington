@@ -1,0 +1,55 @@
+@import "index";
+
+.faqPage {
+  .faqHeaders{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+  }
+  .faqsContainer {
+    padding: 60px 15.75% 200px;
+
+    .expandIcon{
+      width: 42px;
+      height: 42px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: aliceblue;
+      border: 1px solid $blue-60;
+      span{
+        font-size: 32px;
+      }
+    }
+
+    .MuiAccordion-root {
+      margin-bottom: 60px;
+      border-radius: 20px;
+      &::before{
+        display: none;
+      }
+      &.Mui-expanded{
+        border-radius: 30px 30px 10px 10px;
+      }
+
+      .MuiAccordionSummary-root {
+        height: 102px !important;
+        padding: 0 40px;
+        border-radius: 20px;
+        color: $blue;
+
+        &.Mui-expanded{
+          color: $white;
+          background-color: $blue;
+        }
+      }
+      .MuiAccordionDetails-root{
+        padding: 30px 10.75%;
+      }
+    }
+
+  }
+}

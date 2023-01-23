@@ -26,6 +26,7 @@ export default function LinkPopper({link, subLinks}) {
                 <span className="icon-keyboard_arrow_down"></span>
             </Button>
             <Menu
+                className="headerMenuPopUp"
                 id="basic-menu"
                 anchorEl={anchorEl}
                 open={open}

@@ -7,7 +7,7 @@ export default function SendMessage() {
 
     return (
         <div className="sendMessage m-padding">
-            <h1 className="red font-36 bolder">Send Us a Message</h1>
+            <h1 className="red font-36 bolder">Submit Now</h1>
             <div className="flex-between container">
                 <SendMessageForm/>
                 <div className="pricing">

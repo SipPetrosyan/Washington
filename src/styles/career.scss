@@ -1,0 +1,32 @@
+@import "index";
+
+.careerPage{
+  .ourReviews{
+    align-items: center;
+  }
+  .mainContent{
+    h1{
+      font-weight: 900;
+      font-size: 32px;
+      line-height: 24px;
+      color: $blue;
+      margin-bottom: 40px;
+    }
+    &>p, &>span{
+      font-size: 24px;
+      line-height: 38px;
+      margin-bottom: 40px;
+      color: $blue;
+    }
+  }
+  .toContact{
+    a{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      span{
+        font-weight: bold;
+      }
+    }
+  }
+}

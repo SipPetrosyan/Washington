@@ -1,0 +1,52 @@
+@import "index";
+
+.historyPage {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  & > h1 {
+    margin: 40px 0;
+  }
+
+  .content {
+    & > p, & > span {
+      color: $blue;
+      margin-bottom: 40px;
+      line-height: 38px;
+      font-size: 24px;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .toServices {
+    margin-bottom: 40px;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    span {
+      font-weight: bolder;
+    }
+  }
+
+  .description {
+
+    display: flex;
+    justify-content: center;
+
+    & > div {
+      width: 100%;
+      max-width: 765px;
+    }
+    .operator{
+      margin-top: 40px;
+    }
+  }
+}
