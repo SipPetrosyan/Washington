@@ -1,6 +1,5 @@
 @import "index";
 
-
 .hrField {
   padding-top: 60px;
 }
@@ -17,7 +16,6 @@
       width: 72%;
     }
   }
-
 }
 
 .postsList {
@@ -30,7 +28,6 @@
   grid-column-gap: 50px;
   margin-top: 40px;
   grid-row-gap: 60px;
-
 }
 .postItem {
   max-width: 330px;
@@ -132,7 +129,6 @@
       &.Mui-selected {
         color: $blue;
         background: rgba(9, 38, 94, 0.3);
-
       }
       &.lastPage {
         font-size: 20px;

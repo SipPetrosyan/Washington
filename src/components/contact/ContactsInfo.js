@@ -26,11 +26,11 @@ const ContactsInfo = () => {
                 <h3 className='font-24 blue bolder'>Contacts</h3>
                 <div className='font-20 bold blue'>
                     <span>Phone: </span>
-                    <span className='red'> ( 202 ) 930 - 8005</span>
+                    <a href="tel:( 202 ) 930 - 8005" className='red'> ( 202 ) 930 - 8005</a>
                 </div>
                 <div className='font-20 bold blue'>
                     <span>Email: </span>
-                    <span className='red'> info@washingtondcautotransport.com</span>
+                    <a href = "mailto: info@washingtondcautotransport.com" className='red'> info@washingtondcautotransport.com</a>
                 </div>
             </div>
         </div>
