@@ -6,14 +6,14 @@ import {useFormik} from "formik";
 import {quoteInitialValues} from "@/utils/helper";
 import {quoteSchema} from "@/components/quote/quoteSteps";
 
-export default function QuoteForm({handleClose}) {
+export default function QuoteForm({formik, vehicle, setVehicle}) {
     const [errors, setErrors] = useState([{}]);
     const [vehicleErrors, setVehicleErrors] = useState([]);
-    const [vehicle, setVehicle] = useState([{
-        year: "",
-        make: "",
-        model: ""
-    }]);
+    // const [vehicle, setVehicle] = useState([{
+    //     year: "",
+    //     make: "",
+    //     model: ""
+    // }]);
 
     const onVehicleChange = (e, i) => {
         setVehicle((prev) => {
@@ -41,25 +41,25 @@ export default function QuoteForm({handleClose}) {
         ])
     }
 
-    const formik = useFormik({
-        initialValues: quoteInitialValues,
-        onSubmit: (values, {resetForm}) => {
-            if(vehicleErrors.length === 0){
-                alert(JSON.stringify({
-                    ...values,
-                    vehicle
-                }));
-                resetForm(quoteInitialValues);
-                setVehicle([{
-                    year: "",
-                    make: "",
-                    model: ""
-                }]);
-                handleClose && handleClose();
-            }
-        },
-        validationSchema: quoteSchema
-    });
+    // const formik = useFormik({
+    //     initialValues: quoteInitialValues,
+    //     onSubmit: (values, {resetForm}) => {
+    //         if(vehicleErrors.length === 0){
+    //             alert(JSON.stringify({
+    //                 ...values,
+    //                 vehicle
+    //             }));
+    //             resetForm(quoteInitialValues);
+    //             setVehicle([{
+    //                 year: "",
+    //                 make: "",
+    //                 model: ""
+    //             }]);
+    //             handleClose && handleClose();
+    //         }
+    //     },
+    //     validationSchema: quoteSchema
+    // });
 
     return (
         <form className="quoteForm homeQuoteForm">

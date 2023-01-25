@@ -1,10 +1,10 @@
 import Link from "next/link";
 
-export default function TopPanel () {
+export default function TopPanel ({quotePopup, setQuotePopUp}) {
     return(
         <div className="top-panel">
             <div className="get-quote">
-                <Link href="/quote">
+                <Link onClick={()=>{setQuotePopUp(!quotePopup)}} href="">
                     <span>Get Quote</span>
                     <span className="icon-chevron-thin-right"></span>
                 </Link>

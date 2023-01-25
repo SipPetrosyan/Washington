@@ -21,34 +21,17 @@ export const quoteSchema = yup.object({
 });
 
 
-export default function QuoteSteps() {
+export default function QuoteSteps({formik, vehicle, setVehicle}) {
     const [activeStep, setActiveStep] = useState(0);
-    const [vehicle, setVehicle] = useState([{
-        year:"",
-        make: "",
-        model:""
-    }])
 
-    const formik = useFormik({
-        initialValues: quoteInitialValues,
-        onSubmit: (values, {resetForm}) => {
-            alert(JSON.stringify(values));
-            resetForm(quoteInitialValues);
-            setVehicle([{
-                year:"",
-                make: "",
-                model:""
-            }])
-        },
-        validationSchema: quoteSchema
-    });
+
 
     const handleStepChange = (e) => {
         setActiveStep(e.activeStep - 1);
     };
 
     return (
-        <div>
+        <div className="quoteStepper">
             <Stepper activeStep={activeStep} >
                 <Step label="Select a Rout" className={`${activeStep===0 && "active"}`} children={<div className={`indicator ${activeStep===0 && "active"}`}><span>1</span> <p>Select a Rout</p></div>}/>
                 <Step label="Select an Options" className={`${activeStep===1 && "active"}`} children={<div className={`indicator ${activeStep===1 && "active"}`}><span>2</span> <p>Select an Options</p></div>}/>

@@ -1,7 +1,7 @@
 import {useDispatch, useSelector} from "react-redux";
 import {selectLoader, setLoader} from "@/store/slices/common";
 import {Button, CircularProgress} from "@mui/material";
-import {useEffect, useRef} from "react";
+import {useEffect, useRef, useState} from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SocialPanel from "@/components/home/SocialPanel";
@@ -10,6 +10,7 @@ export default function Layout({children}) {
     const toTopRef = useRef(null);
     const dispatch = useDispatch();
     const loader = useSelector(selectLoader);
+    const [quotePopup, setQuotePopUp] = useState(false)
 
     const handleScroll = () => {
         const position = window.pageYOffset;
@@ -37,9 +38,9 @@ export default function Layout({children}) {
                     <CircularProgress/>
                 </div> : null
             }
-            <Header/>
+            <Header quotePopup={quotePopup} setQuotePopUp={setQuotePopUp}/>
             {children}
-            <SocialPanel/>
+            <SocialPanel quotePopup={quotePopup} setQuotePopUp={setQuotePopUp}/>
             <Button
                 ref={toTopRef}
                 onClick={() => {
