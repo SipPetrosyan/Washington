@@ -113,12 +113,12 @@
   max-width: 760px;
   margin-top: 66px;
   width: 100%;
-  background-color: #F4F7FB99;
+  background-color: rgba(9, 38, 94, 0.85);
   border: 1px solid $blue-40;
   border-radius: 10px;
 
   .inputs {
-    padding: 40px 57px 0;
+    padding: 40px ;
 
   }
 
@@ -126,9 +126,6 @@
     margin-top: 50px;
   }
 
-  .time {
-    justify-content: center;
-  }
 
   .inputField {
     width: 100%;
@@ -148,8 +145,8 @@
     width: 100%;
     max-width: 100%;
     background-color: $red;
-    height: 80px;
-    border-radius: 0 0 10px 10px;
+    height: 48px;
+    border-radius:10px 10px;
   }
 
   &.step2 {
@@ -176,7 +173,7 @@
 
   &.confirmation {
     .inputs {
-      padding: 40px 40px 0 57px;
+      padding: 40px ;
 
       .headTitle {
         .icon-Edit-Icon {
@@ -378,6 +375,9 @@
 
 
 .calculationInfo {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $white;
   & > h2 {
     text-align: center;
   }

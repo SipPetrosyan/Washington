@@ -1,12 +1,18 @@
-import {Box, Button, Grid, Rating} from "@mui/material";
-import Grid2 from "@mui/material/Unstable_Grid2";
+import {Button,  Rating} from "@mui/material";
 import Link from "next/link";
 import ReviewsGraphicItem from "@/components/home/ReviewsGraphicItem";
 
-export default function Reviews() {
+export default function Reviews({welcome}) {
 
     return (
         <div className="m-padding reviewsBanner">
+            {welcome && <div className="welcomePart">
+                <h1>
+                    <span className="red">Welcome to </span>
+                    <span className="white">Washington DC Auto Transport </span>
+                    <span className="red font-36 bold"> #1 Car Shipper and Auto Mover in the US </span>
+                </h1>
+            </div>}
             <hr className="hr"/>
             <div className="reviewsMain">
                 <div className="content">
@@ -28,11 +34,6 @@ export default function Reviews() {
                             precision={0.5}
                         />
                         <p className="white font-32 bold">199 Review</p>
-                        <Button>
-                            <Link href="/reviews">
-                                Give us your feedback
-                            </Link>
-                        </Button>
                     </div>
                     <div className="partial">
                         <div className="graphics">
@@ -42,6 +43,13 @@ export default function Reviews() {
                             <ReviewsGraphicItem from={0} total={2}/>
                             <ReviewsGraphicItem from={7} total={1}/>
                         </div>
+                    </div>
+                    <div className="buttons">
+                        <Button>
+                            <Link href="/reviews">
+                                Give us your feedback
+                            </Link>
+                        </Button>
                         <Button>
                             <Link href="/reviews">
                                 Read Reviews

@@ -1,4 +1,5 @@
 import PostItem from "@/components/home/PostItem";
+import Link from "next/link";
 
 export default function LatestArticles () {
 
@@ -9,14 +10,14 @@ export default function LatestArticles () {
             <h1 className="font-32 blue bolder">Our Latest Articles</h1>
             <div className="container flex-between">
                 <div className="posts">
-                    <h2 className="bolder blue font-20">Latest Blogs</h2>
+                    <Link href="blogs" className="bolder blue font-20">Latest Blogs</Link>
                     <div className="flex-between self ">
                         <PostItem btnName="Read More"/>
                         <PostItem btnName="Read More"/>
                     </div>
                 </div>
                 <div className="posts">
-                    <h2 className="bolder blue font-20">Latest News</h2>
+                    <Link href="news" className="bolder blue font-20">Latest News</Link>
                     <div className="flex-between self">
                         <PostItem btnName="Read More"/>
                         <PostItem btnName="Read More"/>

@@ -12,7 +12,7 @@ body {
 }
 
 //   UNIVERSAL
-.hr{
+.hr {
   border-radius: 10px;
   width: 140px;
   border: 5px solid $red;
@@ -51,7 +51,7 @@ a {
   text-decoration: none;
 }
 
-.text-center{
+.text-center {
   text-align: center;
 }
 
@@ -59,11 +59,13 @@ a {
   display: flex;
   justify-content: space-between;
 }
-.flex-center{
+
+.flex-center {
   display: flex;
   justify-content: center;
 }
-.align-center{
+
+.align-center {
   align-items: center;
 }
 
@@ -77,15 +79,15 @@ a {
   color: $red;
 }
 
-.blue-60{
+.blue-60 {
   color: $blue-60;
 }
 
-.blue-80{
+.blue-80 {
   color: $blue-80;
 }
 
-.blue-90{
+.blue-90 {
   color: $blue-90;
 }
 
@@ -93,7 +95,7 @@ a {
   color: $blue;
 }
 
-.white{
+.white {
   color: $white;
 }
 
@@ -136,33 +138,40 @@ a {
 .font-20 {
   font-size: 20px;
 }
+
 .font-18 {
   font-size: 18px;
 }
+
 .font-16 {
   font-size: 16px;
 }
 
 //  Margin
 
-.m-60{
+.m-60 {
   margin-top: 60px;
   margin-bottom: 60px;
 }
-.m-40{
+
+.m-40 {
   margin-top: 40px;
   margin-bottom: 40px;
 }
-.mb-20{
+
+.mb-20 {
   margin-bottom: 20px;
 }
-.mb-30{
+
+.mb-30 {
   margin-bottom: 30px;
 }
-.mb-40{
+
+.mb-40 {
   margin-bottom: 40px;
 }
-.mb-60{
+
+.mb-60 {
   margin-bottom: 60px;
 }
 
@@ -175,23 +184,10 @@ a {
   margin-bottom: 5px;
   gap: 10px;
 
-  & > span:first-of-type {
-    font-size: 28px;
-  }
-
-  .to-icon {
-    position: absolute;
-    left: -6px;
-    z-index: 2;
-
-    & + span {
-      font-size: 28px;
-    }
-  }
 }
+
 .inputField {
   position: relative;
-
 
 
   input {
@@ -206,7 +202,8 @@ a {
     color: rgba(5, 47, 90, 0.6);
     font-size: 16px;
   }
-  .err-message{
+
+  .err-message {
     position: absolute;
     font-size: 14px;
     left: 0;
@@ -281,10 +278,60 @@ a {
   background: $gray-bg;
 }
 
+//         MUI
 
-
- //         MUI
-
-.MuiButtonBase-root{
+.MuiButtonBase-root {
   text-transform: none;
 }
+
+
+@media screen and (max-width: 1536px) {
+
+  .m-padding {
+    padding-left: 4.75%;
+    padding-right: 4.75%;
+  }
+
+  .font-36 {
+    font-size: 32px;
+  }
+
+  .font-32 {
+    font-size: 30px;
+  }
+
+  .font-30 {
+    font-size: 38px;
+  }
+
+  .font-28 {
+    font-size: 26px;
+  }
+
+  .font-24 {
+    font-size: 22px;
+  }
+
+  .font-22 {
+    font-size: 20px;
+  }
+
+  .font-20 {
+    font-size: 18px;
+  }
+  .font-18 {
+    font-size: 18px;
+  }
+  .font-16 {
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+
+
+
+

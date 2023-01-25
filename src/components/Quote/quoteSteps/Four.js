@@ -58,7 +58,7 @@ export default function Four(props) {
                 </div>
             </div>
             <Button
-                className="continueBtn font-32 white bolder"
+                className="continueBtn font-24 white bolder"
                 onClick={() => {
                     formik.handleSubmit();
                     if (formik.values.name && formik.values.email && formik.values.phone) {

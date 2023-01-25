@@ -20,7 +20,7 @@ export default function Checkout() {
                             precision={0.5}
                         />
                     </div>
-                    <p className="name">Google</p>
+                    <p className="name white">Google</p>
                 </div>
                 <div className="socItem">
                     <div className="flex-between align-center">
@@ -33,7 +33,7 @@ export default function Checkout() {
                             precision={0.5}
                         />
                     </div>
-                    <p className="name">YellowPages</p>
+                    <p className="name white">YellowPages</p>
                 </div>
                 <div className="socItem">
                     <div className="flex-between align-center">
@@ -45,7 +45,7 @@ export default function Checkout() {
                             precision={0.5}
                         />
                     </div>
-                    <p className="name">Yelp</p>
+                    <p className="name white">Yelp</p>
                 </div>
             </div>
             <Button>

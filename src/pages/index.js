@@ -3,20 +3,22 @@ import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import {getHomeContent, selectHomeContent} from "@/store/slices/content";
 import {setLoader} from "@/store/slices/common";
-import MainBanner from "@/components/home/MainBanner";
 import Reviews from "@/components/home/Reviews";
 import Transportation from "@/components/home/Transportation";
 import Customers from "@/components/home/Customers";
 import Checkout from "@/components/home/Checkout";
 import CommercialServices from "@/components/home/CommercialServices";
-import Help from "@/components/home/Help";
 import LatestArticles from "@/components/home/LatestArticles";
-import SocialPanel from "@/components/home/SocialPanel";
+import CalculationInfo from "@/components/quote/CalculationInfo";
+import bgImg from "../../public/images/banner.png";
+import QuoteForm from "@/components/home/QuoteForm";
+import {useWindowSize} from "@/utils/hooks";
+import QuoteSteps from "@/components/quote/quoteSteps";
 
 export default function Home() {
     const dispatch = useDispatch();
+    const {width} = useWindowSize();
     const content = useSelector(selectHomeContent);
-
 
     useEffect(() => {
         dispatch(setLoader(true));
@@ -34,15 +36,17 @@ export default function Home() {
                 <link rel="stylesheet" href="/css/react-phone-number-input/style.css"/>
             </Head>
             <main className="page-main">
-                <MainBanner/>
-                <Reviews/>
+                <div className="mainBanner m-padding" style={{backgroundImage: `url(${bgImg.src})`}}>
+                    {width <= 768 ? <QuoteSteps/> : <QuoteForm/>}
+                </div>
+                <Reviews welcome={true}/>
                 <Transportation/>
+                <CalculationInfo/>
                 <Customers/>
                 <Checkout/>
                 <CommercialServices/>
-                <Help/>
+                {/*<Help/>*/}
                 <LatestArticles/>
-                <SocialPanel/>
             </main>
         </>
     )

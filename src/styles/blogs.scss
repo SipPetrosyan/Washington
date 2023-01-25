@@ -4,6 +4,7 @@
 .hrField {
   padding-top: 60px;
 }
+
 .blogPage {
   margin-top: 40px;
   padding-bottom: 92px;
@@ -12,9 +13,62 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 70px;
-  >div {
+
+  > div {
     &:first-of-type {
       width: 72%;
+    }
+  }
+
+
+  .postItem {
+    max-width: 330px;
+    background: #FDFDFF;
+    border: 1px solid $blue-40;
+    border-radius: 10px;
+
+    .img {
+      height: 204px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+      }
+    }
+
+    .content {
+      padding: 12px 35px 20px;
+      text-align: center;
+
+      h1 {
+        line-height: 30px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        height: 90px;
+      }
+
+      .info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+
+      .desc {
+        margin: 10px 0 20px;
+        line-height: 20px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        height: 100px;
+      }
     }
   }
 
@@ -26,86 +80,49 @@
   justify-content: space-between;
   flex-wrap: wrap;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px , 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-column-gap: 50px;
   margin-top: 40px;
   grid-row-gap: 60px;
 
 }
-.postItem {
-  max-width: 330px;
-  background: #FDFDFF;
-  border: 1px solid $blue-40;
-  border-radius: 10px;
-  .img {
-    height: 204px;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 10px 10px 0 0;
-    }
-  }
 
-  .content {
-    padding: 12px 35px 20px;
-    text-align: center;
-    h1 {
-      line-height: 30px;
-      overflow: hidden;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      height: 90px;
-    }
-    .info {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-    .desc {
-      margin: 10px 0 20px;
-      line-height: 20px;
-      overflow: hidden;
-      display: -webkit-box;
-      -webkit-line-clamp: 5;
-      -webkit-box-orient: vertical;
-      height: 100px;
-    }
-  }
-}
 
 .getQuoteForm {
   width: 360px;
   background: rgba(9, 38, 94, 0.1);
   border: 1px solid $blue-40;
   border-radius: 10px;
+
   .inputs {
     padding: 20px 50px 0;
+
     .inputField:not(:last-of-type) {
       width: 260px;
       margin-bottom: 20px;
     }
+
     .inputField:last-of-type {
       width: 200px;
     }
+
     .helper {
-      //margin-bottom: 10px;
       color: $blue;
       font-weight: 700;
     }
+
     input, .indicator {
       border: none;
     }
+
     .indicator {
       background-color: $gray-bg;
     }
   }
+
   .quoteBtn {
     margin-top: 20px;
+
     button {
       height: 60px;
     }
@@ -115,8 +132,10 @@
 .pagination {
   margin-top: 60px;
   text-align: center;
+
   .MuiPagination-ul {
     justify-content: center;
+
     button, .MuiPaginationItem-ellipsis {
       min-width: 80px;
       height: 48px;
@@ -129,20 +148,24 @@
       font-weight: 900;
       font-size: 24px;
       line-height: 20px;
+
       &.Mui-selected {
         color: $blue;
         background: rgba(9, 38, 94, 0.3);
 
       }
+
       &.lastPage {
         font-size: 20px;
       }
     }
+
     button {
       &:last-of-type {
         font-size: 20px;
       }
     }
+
     .MuiPaginationItem-ellipsis {
       line-height: 30px;
     }
@@ -153,18 +176,22 @@
   display: flex;
   flex-direction: column;
   width: 304px;
-  >h1 {
+
+  > h1 {
     margin-bottom: 30px;
     line-height: 30px;
   }
-  >.postItem {
+
+  > .postItem {
     background-color: unset;
     border: none;
     border-radius: unset;
+
     &:not(:last-of-type) {
       border-bottom: 1px solid $blue-60;
       margin-bottom: 23px;
     }
+
     .btn {
       button {
         padding: 0;
