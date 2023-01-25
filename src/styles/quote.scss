@@ -113,12 +113,12 @@
   max-width: 760px;
   margin-top: 66px;
   width: 100%;
-  background-color: #F4F7FB99;
+  background-color: rgba(9, 38, 94, 0.85);
   border: 1px solid $blue-40;
   border-radius: 10px;
 
   .inputs {
-    padding: 40px 57px 0;
+    padding: 40px ;
 
   }
 
@@ -126,9 +126,6 @@
     margin-top: 50px;
   }
 
-  .time {
-    justify-content: center;
-  }
 
   .inputField {
     width: 100%;
@@ -148,8 +145,8 @@
     width: 100%;
     max-width: 100%;
     background-color: $red;
-    height: 80px;
-    border-radius: 0 0 10px 10px;
+    height: 48px;
+    border-radius:10px 10px;
   }
 
   &.step2 {
@@ -176,7 +173,7 @@
 
   &.confirmation {
     .inputs {
-      padding: 40px 40px 0 57px;
+      padding: 40px ;
 
       .headTitle {
         .icon-Edit-Icon {
@@ -286,13 +283,22 @@
   }
 }
 
-
 .vehicleAdvertising {
-  padding: 80px 14.5% 60px 20%;
-  display: flex;
-  justify-content: center;
-  gap: 7.5%;
+  padding: 40px 14.5% 60px 20%;
   background-color: $blue;
+
+  & > div {
+    display: flex;
+    justify-content: center;
+    gap: 7.5%;
+    position: relative;
+
+    & > .hr {
+      position: absolute;
+      left: -14%;
+      top: -20%;
+    }
+  }
 
   .img {
     max-width: 460px;
@@ -369,6 +375,9 @@
 
 
 .calculationInfo {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $white;
   & > h2 {
     text-align: center;
   }
@@ -403,6 +412,11 @@
         justify-content: center;
         align-items: center;
 
+
+        .icon-Car, .icon-Car span {
+          font-size: 22px;
+        }
+
         span {
           font-size: 32px;
         }
@@ -435,7 +449,8 @@
   background-color: $white;
   padding-top: 60px;
   padding-bottom: 60px;
-  &>h1{
+
+  & > h1 {
     margin-bottom: 40px;
   }
 
@@ -443,41 +458,52 @@
     gap: 10%;
 
     .sendMessageForm {
-       width: 47%;
-      &>h1{
+      width: 47%;
+
+      & > h1 {
         margin-bottom: 40px;
       }
-      .JoyTextarea-root{
+
+      .JoyTextarea-root {
         min-height: 180px;
       }
+
       .commentForm .inputs > div:first-of-type {
         width: 100%;
         padding-right: 0;
       }
-      .buttonPart{
+
+      .buttonPart {
         justify-content: flex-end;
-        .btn button{
+
+        .btn button {
           border-radius: 5px;
-          .icon-Arrow-5{
+
+          .icon-Arrow-5 {
             margin-left: 5px;
           }
         }
       }
     }
-    .pricing{
+
+    .pricing {
       width: 48%;
       padding-top: 120px;
-      &>h2{
+
+      & > h2 {
         margin-bottom: 40px;
       }
-      p{
+
+      p {
         line-height: 38px;
       }
-      .offer{
+
+      .offer {
         margin-top: 40px;
         margin-bottom: 40px;
       }
-      .operator{
+
+      .operator {
         margin-left: 40px;
       }
     }

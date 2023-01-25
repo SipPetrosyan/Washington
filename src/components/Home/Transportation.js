@@ -4,12 +4,24 @@ export default function Transportation() {
 
     return (
         <div className="transportation m-padding">
-            <hr className="hr"/>
-            <h1 className="font-32 blue">Auto Transport Made Easy</h1>
+            <hr className="hr mb-60"/>
             <div className="mainContent">
                 <div className="contentItem">
-                    <h3 className="font-22 blue">Washington DC Auto Transport can help move your car to the destination of your choice. Whether
+                    <h1 className="font-32 blue">Auto Transport Made Easy</h1>
+                    <h3 className="font-22 blue">Washington DC Auto Transport can help move your car to the destination
+                        of your choice. Whether
                         you are moving to or from Washington DC, we ship cars nationwide. </h3>
+                    <h3 className="font-22 blue">Once you choose us as your vehicle transporter, you are assigned a
+                        personal coordinator to help
+                        you through the paperwork, scheduling and billing processes.</h3>
+                    <h3 className="font-22 blue">Washington DC Auto Transport can help move your car to the destination
+                        of your choice. Whether
+                        you are moving to or from Washington DC, we ship cars nationwide. </h3>
+                    <h3 className="font-22 blue">Once you choose us as your vehicle transporter, you are assigned a
+                        personal coordinator to help
+                        you through the paperwork, scheduling and billing processes.</h3>
+                </div>
+                <div className="contentItem cards">
                     <TransportCard
                         title="Open Car Transport"
                         text="The most popular method of auto transport is Open Car Moving."
@@ -34,13 +46,11 @@ export default function Transportation() {
                             className="path5"></span></span>
                         }
                     />
-                    <h3 className="font-22 blue">Once you choose us as your vehicle transporter, you are assigned a personal coordinator to help
-                        you through the paperwork, scheduling and billing processes.</h3>
+
                 </div>
 
-                <div className="contentItem">
-                    <h3 className="font-22 blue">Washington DC Auto Transport can help move your car to the destination of your choice. Whether
-                        you are moving to or from Washington DC, we ship cars nationwide. </h3>
+                <div className="contentItem cards">
+
                     <TransportCard
                         title="Open Car Transport"
                         text="The most popular method of auto transport is Open Car Moving."
@@ -61,8 +71,7 @@ export default function Transportation() {
                         icon={<span className="icon-Door-to-Door-Icon"></span>
                         }
                     />
-                    <h3 className="font-22 blue">Once you choose us as your vehicle transporter, you are assigned a personal coordinator to help
-                        you through the paperwork, scheduling and billing processes.</h3>
+
                 </div>
 
             </div>

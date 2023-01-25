@@ -9,7 +9,8 @@ export default function CommercialServices() {
             <h2 className="blue-80 font-24 text-center mb-60">Check out our car commercial shipping options</h2>
             <div className="commercialServicesCards">
                 <div className="topSide">
-                    <div className="card1 gbBlue">
+                    <div className="card1" style={{backgroundImage: "url(/images/post.png)"}}>
+                        <div className="filter bgBlue"></div>
                         <h1>Auction Car Shipping</h1>
                         <p> An auction is a good place to get a good deal on a car or even to find that hard to locate
                             exotic car. But whichever group you fall into, there’s still the matter of getting the
@@ -22,7 +23,8 @@ export default function CommercialServices() {
                             </Link>
                         </Button>
                     </div>
-                    <div className="card1 bgRed">
+                    <div className="card1" style={{backgroundImage: "url(/images/post.png)"}}>
+                        <div className="filter bgRed"></div>
                         <h1>Corporate Relocation</h1>
                         <p>Moving a business is not easy. There are lots of things to coordinate and plan. Plus, like
                             anything else, timing is everything.</p>
@@ -36,7 +38,8 @@ export default function CommercialServices() {
                     </div>
                 </div>
                 <div className="flex-between bottomSide">
-                    <div className="card2 bgGreen">
+                    <div className="card2" style={{backgroundImage: "url(/images/post.png)"}}>
+                        <div className="filter bgGreen"></div>
                         <h1>Commercial Vehicle Transport</h1>
                         <p> For many companies, commercial vehicles are a vital part of their business. They are counted
                             on a great deal. When they need to be moved a long distance, it must be done professionally
@@ -45,12 +48,14 @@ export default function CommercialServices() {
                         vehicles. Therefore, it’s
                     </p>
                         <Button>
-                            <Link href="/commercial-services/commercial-vehicle-transport" className="white bolder font-20">
+                            <Link href="/commercial-services/commercial-vehicle-transport"
+                                  className="white bolder font-20">
                                 Continue Reading <span className="icon-chevron-thin-right"></span>
                             </Link>
                         </Button>
                     </div>
-                    <div className="card1 gbBlue">
+                    <div className="card1" style={{backgroundImage: "url(/images/post.png)"}}>
+                        <div className="filter bgBlue"></div>
                         <h1>Dealer Car Moving Services</h1>
                         <p> When buying a car, you generally start your search with local dealerships. This is the most
                             convenient way to scout out the car of your dreams.
@@ -58,12 +63,14 @@ export default function CommercialServices() {
                         head. Maybe the make and model is in stock but...
                     </p>
                         <Button>
-                            <Link href="/commercial-services/dealer-car-moving-services" className="white bolder font-20">
+                            <Link href="/commercial-services/dealer-car-moving-services"
+                                  className="white bolder font-20">
                                 Continue Reading <span className="icon-chevron-thin-right"></span>
                             </Link>
                         </Button>
                     </div>
-                    <div className="card2 bgGreen">
+                    <div className="card2" style={{backgroundImage: "url(/images/post.png)"}}>
+                        <div className="filter bgGreen"></div>
                         <h1>Military Heavy Equipment Shipping</h1>
                         <p> Military Heavy Equipment Shipping is one of our premium vehicle moving services. It takes
                             the knowledge of a professional crew with lots of experience to perform this type of vehicle
@@ -72,7 +79,8 @@ export default function CommercialServices() {
                         don’t always...
                     </p>
                         <Button>
-                            <Link href="/commercial-services/millitary-heavy-equipment-shipping" className="white bolder font-20">
+                            <Link href="/commercial-services/millitary-heavy-equipment-shipping"
+                                  className="white bolder font-20">
                                 Continue Reading <span className="icon-chevron-thin-right"></span>
                             </Link>
                         </Button>

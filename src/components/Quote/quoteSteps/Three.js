@@ -64,7 +64,7 @@ export default function Three(props) {
                     </div>
                 </div>
             </div>
-            <Button className="continueBtn font-32 white bolder" onClick={props.nextStep}>Continue</Button>
+            <Button className="continueBtn font-24 white bolder" onClick={props.nextStep}>Continue</Button>
         </div>
     );
 };

@@ -36,9 +36,6 @@ export default function Two(props) {
         }
     };
 
-    console.log(formik.errors, 'errros')
-    console.log(formik.touched, 'touched')
-
     const handleAddVehicle = () => {
         setVehicle([
             ...vehicle,
@@ -220,7 +217,7 @@ export default function Two(props) {
             {/*    />*/}
             {/*</FormGroup>*/}
             {/*<br />*/}
-            <Button className="continueBtn font-32 white bolder" onClick={validate2}>Continue</Button>
+            <Button className="continueBtn font-24 white bolder" onClick={validate2}>Continue</Button>
             {/*<ActionButtons {...props} nextStep={validate} />*/}
         </div>
     );

@@ -5,8 +5,8 @@ export default function CalculationInfo() {
 
     return (
         <div className="m-padding calculationInfo">
-            <h2 className="m-60 blue font-32 bolder">How we calculated your transport fee </h2>
-            <div className="flex-between calculationPhases">
+            <h2 className="mb-60 blue font-32 bolder">How we calculated your transport fee </h2>
+            <div className="flex-between calculationPhases mb-60">
                 <div className="calculationPhase">
                     <div className="phaseIcon">
                         <span className="icon-Car"><span className="path1"></span><span className="path2"></span><span
@@ -46,7 +46,7 @@ export default function CalculationInfo() {
                     <p className="blue bold font-24">The condition of your vehicle</p>
                 </div>
             </div>
-            <div className="flex-center m-60">
+            <div className="flex-center ">
                 <Button>
                     <Link href="/faq" className="white bolder">
                         FAQ

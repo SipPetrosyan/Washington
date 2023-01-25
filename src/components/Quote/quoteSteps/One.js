@@ -27,7 +27,7 @@ export default function One(props) {
         <div className="stepForm quoteForm">
             <div className="inputs">
                 <p className="formTitle">Get real <span>Quote</span> now : Car Shipping Cost</p>
-                <div className="flex-between fromTo">
+                <div className="fromTo">
                     <InputField
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
@@ -36,9 +36,7 @@ export default function One(props) {
                         id="from"
                         name="from"
                         placeholder="City,State or ZIP"
-                        label={<>
-                            <span className="icon-location-icon"><span className="path1"></span><span
-                                className="path2"></span></span> From <span className="icon-Gide-Icon"><span
+                        label={<>From <span className="icon-Gide-Icon"><span
                             className="path1"></span><span className="path2"></span><span
                             className="path3"></span></span>
                         </>}
@@ -51,22 +49,17 @@ export default function One(props) {
                         id="to"
                         name="to"
                         placeholder="City,State or ZIP"
-                        label={<>
-                            <span className="icon-location-icon to-icon"><span className="path1"></span><span
-                                className="path2"></span></span>
-                            <span className="icon-location-icon"><span className="path1"></span><span
-                                className="path2"></span></span>To <span className="icon-Gide-Icon"><span
+                        label={<>To <span className="icon-Gide-Icon"><span
                             className="path1"></span><span className="path2"></span><span
                             className="path3"></span></span>
                         </>}
                     />
                 </div>
-                <div className="time m-60">
+                <div className="time">
                     <InputField
                         className="inputField"
                         error={formik.touched.time && formik.errors.time}
-                        label={<>
-                            <span className="icon-Vector-3"></span> Time <span className="icon-Gide-Icon"><span
+                        label={<>Time <span className="icon-Gide-Icon"><span
                             className="path1"></span><span className="path2"></span><span
                             className="path3"></span></span>
                         </>}
@@ -88,7 +81,7 @@ export default function One(props) {
                     />
                 </div>
             </div>
-            <Button className="continueBtn font-32 white bolder" onClick={validate}>Continue</Button>
+            <Button className="continueBtn font-24 white bolder" onClick={validate}>Continue</Button>
         </div>
     );
 };

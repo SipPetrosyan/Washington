@@ -85,49 +85,59 @@ header {
     }
   }
 
-  .header-search {
-    position: relative;
-    height: 48px;
-    max-width: 260px;
+  .operator {
+    display: none;
+  }
 
-    input {
-      height: 100%;
-      width: 100%;
-      padding: 16px 48px 20px 16px;
-      font-size: 20px;
-      background: #F4F7FB;
-      border: 2px solid rgba(150, 158, 160, 0.4);
-      border-radius: 5px;
-      color: $blue;
+  .burgerMenu {
+    display: none;
+  }
+}
 
-      &::placeholder {
-        color: $blue-40;
-      }
+.header-search {
+  position: relative;
+  height: 48px;
+  max-width: 260px;
+
+  input {
+    height: 100%;
+    width: 100%;
+    padding: 16px 48px 20px 16px;
+    font-size: 20px;
+    background: #F4F7FB;
+    border: 2px solid rgba(150, 158, 160, 0.4);
+    border-radius: 5px;
+    color: $blue;
+
+    &::placeholder {
+      color: $blue-40;
     }
+  }
 
-    button {
-      font-size: 20px;
-      padding: 14px 24px;
-      background-color: $red;
-      color: $white;
-      border: none;
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 100%;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-      cursor: pointer;
-    }
+
+  button {
+    font-size: 20px;
+    padding: 14px 24px;
+    background-color: $red;
+    color: $white;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
   }
 }
 
 
-.headerMenuPopUp{
-  .MuiPaper-root{
-    li.MuiButtonBase-root{
+.headerMenuPopUp {
+  .MuiPaper-root {
+    li.MuiButtonBase-root {
       padding: 0;
-      a{
+
+      a {
         width: 100%;
         padding: 12px 30px;
       }
@@ -146,6 +156,98 @@ header {
     }
   }
 }
+
+//   GET QUOTE POPUP
+
+.getQuotePopUp {
+  & > .MuiDialog-container > .MuiPaper-root {
+    max-width: 760px;
+    border-radius: 20px !important;
+    background-color: $blue;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+      margin-right: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background: #c9cacc;
+    }
+
+    &::-webkit-scrollbar-track:hover {
+      background: #78797a;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #3d5585;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #01143b;
+    }
+  }
+}
+
+button.openGetQuote {
+  border: none;
+  background-color: transparent !important;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  color: $red;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  vertical-align: top;
+  transform: rotate(7deg);
+  -ms-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  width: 60px;
+  min-width: 0;
+  height: 175px;
+
+
+  span {
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .quoteIcon {
+    min-width: 60px;
+    width: 60px;
+    height: 60px;
+    background-color: $red;
+    color: $white;
+    border-radius: 50%;
+    padding: 6px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+
+    .MuiTouchRipple-root {
+      display: none;
+    }
+  }
+
+  .icon-chevron-thin-right {
+    font-size: 32px;
+  }
+
+  &:hover {
+    .quoteIcon {
+      box-shadow: 5px 0 15px $blue;
+      transform: scale(1.05);
+    }
+  }
+}
+
 
 //      FOOTER
 
@@ -174,6 +276,7 @@ footer {
       color: $white;
       display: block;
       transition: 0.3s;
+
       a {
         color: $white;
       }
@@ -210,7 +313,7 @@ footer {
   flex-direction: column;
   gap: 15px;
   position: fixed;
-  top: 17.5%;
+  top: 10%;
   right: 20px;
 
   a {
@@ -228,7 +331,153 @@ footer {
   }
 }
 
+.btnToTop.MuiButtonBase-root {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  background-color: $red;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.6s;
 
+  .icon-chevron-thin-right {
+    transform: rotate(-90deg);
+    color: $white;
+    font-size: 26px;
+    font-weight: 900;
 
+  }
 
+  &.available {
+    opacity: 1;
+  }
+}
 
+@media screen and (max-width: 1536px) {
+  .top-panel {
+    padding: 14px 10.5%;
+  }
+  header {
+    padding: 20px 4.75%;
+
+    .header-logo img {
+      width: 200px;
+    }
+
+    .MuiButtonBase-root {
+      & > span {
+        font-size: 18px;
+      }
+    }
+
+    .header-nav {
+      gap: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .top-panel {
+    justify-content: center;
+
+    .new-item {
+      display: none;
+    }
+
+    .get-quote {
+      .icon-chevron-thin-right {
+        transform: rotate(90deg);
+      }
+    }
+
+    .operator {
+      display: none;
+    }
+  }
+  header {
+    .header-nav, & > .header-search {
+      display: none;
+    }
+
+    .operator {
+      display: block;
+    }
+
+    .burgerMenu {
+      width: 20px;
+      display: block;
+
+      span {
+        color: $red;
+        font-size: 20px;
+      }
+      .icon-cancel-circle{
+        font-size: 24px;
+      }
+    }
+  }
+  .socialPanel {
+    display: none;
+  }
+  .mobileMenuDrawer {
+    .MuiBackdrop-root {
+      //top: 160px;
+      background-color: transparent;
+    }
+
+    .MuiPaper-root {
+      width: 50%;
+      padding: 20px;
+      top: 160px;
+      background-color: $blue;
+
+      nav.JoyList-root {
+        .icon-chevron-thin-right{
+          color: $white;
+          font-weight: 900;
+          margin-left: 5px;
+          &.more{
+            transform: rotate(90deg);
+          }
+          &.less{
+            transform: rotate(-90deg);
+          }
+        }
+        & > .JoyListItemButton-root {
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header{
+    .operator {
+      display: none;
+    }
+    .mobileOperator{
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+
+      align-items: center;
+      .icon-Operator-icon-2{
+        font-size: 22px;
+      }
+    }
+  }
+  .mobileMenuDrawer {
+    .MuiPaper-root {
+      width: 100%;
+    }
+  }
+}

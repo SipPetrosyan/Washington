@@ -50,10 +50,10 @@ export default function QuoteSteps() {
     return (
         <div>
             <Stepper activeStep={activeStep} >
-                <Step label="Step 1" children={<div className={`indicator ${activeStep===0 && "active"}`}><span>1</span> <p>Select a Rout</p></div>}/>
-                <Step label="Personal Detail" children={<div className={`indicator ${activeStep===1 && "active"}`}><span>2</span> <p>Select an Options</p></div>}/>
-                <Step label="Confirmation" children={<div className={`indicator ${activeStep===2 && "active"}`}><span>3</span> <p>Confirmation</p></div>}/>
-                <Step label="Four" children={<div className={`indicator ${activeStep===3 && "active"}`}><span>4</span> <p>Finish</p></div>}/>
+                <Step label="Select a Rout" className={`${activeStep===0 && "active"}`} children={<div className={`indicator ${activeStep===0 && "active"}`}><span>1</span> <p>Select a Rout</p></div>}/>
+                <Step label="Select an Options" className={`${activeStep===1 && "active"}`} children={<div className={`indicator ${activeStep===1 && "active"}`}><span>2</span> <p>Select an Options</p></div>}/>
+                <Step label="Confirmation" className={`${activeStep===2 && "active"}`} children={<div className={`indicator ${activeStep===2 && "active"}`}><span>3</span> <p>Confirmation</p></div>}/>
+                <Step label="Four" className={`${activeStep===3 && "active"}`} children={<div className={`indicator ${activeStep===3 && "active"}`}><span>4</span> <p>Finish</p></div>}/>
             </Stepper>
             <StepWizard className="stepsController" onStepChange={handleStepChange} >
                 <One formik={formik} setActive  />

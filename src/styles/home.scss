@@ -8,28 +8,100 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 26px;
   padding-top: 50px;
   padding-bottom: 50px;
-}
+  .MuiStepper-root {
+    .MuiStep-root {
+      padding-left: 20px;
+      padding-right: 20px;
 
-.welcomePart {
-  width: 48%;
+      &:not(&.active, &.active+.MuiStepConnector-root+.MuiStep-root){
+        display: none;
+      }
 
-  h1 {
-    font-size: 64px;
-  }
+      &.active+.MuiStepConnector-root+.MuiStep-root .indicator p{
+        display: none;
+      }
 
-  & > p {
-    margin-top: 32px;
+      &.active+.MuiStepConnector-root{
+        display: block;
+      }
+
+      .indicator {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        &.active {
+          & > span {
+            width: 80px;
+            height: 48px;
+            background: #E53E29;
+            border: 2px solid rgba(9, 38, 94, 0.6);
+            border-radius: 25px;
+            color: $white;
+          }
+
+          & > p {
+            color: $red;
+          }
+        }
+
+        & > span {
+          width: 80px;
+          height: 48px;
+          background: #FDFDFF;
+          border-radius: 25px;
+          color: $blue;
+          font-size: 24px;
+          font-weight: 900;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        & > p {
+          font-weight: 700;
+          font-size: 24px;
+          color: #FDFDFF;
+        }
+      }
+
+      &.Mui-completed {
+        .indicator {
+          & > span {
+            width: 80px;
+            height: 48px;
+            background: $red;
+            border: 2px solid rgba(9, 38, 94, 0.6);
+            border-radius: 25px;
+            color: $white;
+          }
+          & > p {
+            color: $red;
+          }
+        }
+        & + .MuiStepConnector-root span {
+          border-top: 2px solid $red;
+        }
+      }
+
+      & + .MuiStepConnector-root span {
+        border-top: 2px solid $blue;
+      }
+    }
+    .MuiStepConnector-root{
+      display: none;
+    }
   }
 }
 
 .quoteForm {
 
-  &.homeQuoteForm{
-    width: 51%;
+  &.homeQuoteForm {
+    max-width: 760px;
     padding: 31px 59px;
     background: rgba(9, 38, 94, 0.85);
     box-shadow: 5px 5px 5px rgba(9, 38, 94, 0.35);
@@ -113,11 +185,6 @@
   }
 
   .time {
-    display: flex;
-    gap: 23px;
-    justify-content: space-between;
-    align-items: flex-start;
-
     .inputField .helper > span:first-of-type {
       font-size: 24px;
     }
@@ -152,7 +219,7 @@
         font-weight: bold;
         gap: 5px;
 
-        .err-message{
+        .err-message {
           position: absolute;
           font-size: 14px;
           left: 0;
@@ -180,11 +247,26 @@
     margin-top: 40px;
 
     .inputField {
+      width: 100%;
+
       input {
         padding: 12px 15px !important;
       }
+
+      &.name {
+        max-width: 199px;
+      }
+
+      &.email {
+        max-width: 252px;
+      }
+
+      &.phoneMask {
+        max-width: 150px;
+      }
     }
   }
+
   .inputField.phoneMask {
     .PhoneInputCountry {
       display: none !important;
@@ -210,9 +292,23 @@
 //    REVIEWS BANNER
 
 .reviewsBanner {
-  padding-top: 60px;
+  padding-top: 40px;
   padding-bottom: 60px;
   background-color: $blue;
+
+  .welcomePart {
+    display: flex;
+    justify-content: center;
+    padding: 0 11% 60px;
+
+    h1 {
+      font-size: 64px;
+    }
+
+    & > p {
+      margin-top: 32px;
+    }
+  }
 
   .reviewsMain {
     display: flex;
@@ -238,7 +334,7 @@
 
   .reviewsContainer {
     display: flex;
-    gap: 20px;
+    gap: 30px;
 
     .common {
       display: flex;
@@ -260,17 +356,7 @@
         }
       }
 
-      button {
-        width: 260px;
-        height: 48px;
-        background: #E53E29;
-        border-radius: 10px;
 
-        a {
-          color: #FDFDFF;
-          font-weight: 900;
-        }
-      }
     }
 
     .partial {
@@ -283,6 +369,10 @@
         margin-bottom: 21px;
         color: $white;
         font-size: 20px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
 
         .from {
           width: 120px;
@@ -309,17 +399,41 @@
 
       }
 
-      button {
-        margin-top: 28px;
-        width: 225px;
-        height: 48px;
-        background: #FDFDFF;
-        border-radius: 10px;
 
-        a {
-          font-weight: 900;
-          color: #09265E;
+    }
+
+    .buttons {
+      max-width: 225px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      button {
+        &:first-of-type {
+          width: 260px;
+          height: 48px;
+          background: #E53E29;
+          border-radius: 10px;
+
+          a {
+            color: #FDFDFF;
+            font-weight: 900;
+          }
         }
+
+        &:last-of-type {
+          margin-top: 28px;
+          width: 225px;
+          height: 48px;
+          background: #FDFDFF;
+          border-radius: 10px;
+
+          a {
+            font-weight: 900;
+            color: #09265E;
+          }
+        }
+
       }
     }
   }
@@ -348,8 +462,12 @@
     flex-direction: column;
     gap: 60px;
 
+    &.cards{
+      width: 35%;
+    }
+
     & > h3 {
-      max-width: 640px;
+      max-width: 554px;
       line-height: 30px;
     }
 
@@ -400,7 +518,7 @@
 .customersSection {
   .customersSays {
     padding: 60px 0 30px 10.5%;
-
+    background-color: $white;
     display: flex;
     gap: 4%;
     justify-content: space-between;
@@ -421,8 +539,6 @@
         line-height: 38px;
       }
     }
-
-
   }
 
   .customersImg {
@@ -442,10 +558,10 @@
   padding-top: 60px;
   padding-bottom: 60px;
   gap: 60px;
-  background: $white;
+  background: $blue;
 
   & > h1 {
-    color: $blue-60;
+    color: rgba(253, 253, 255, 0.6);
     line-height: 24px;
   }
 
@@ -459,7 +575,6 @@
 
       .name {
         font-size: 32px;
-        color: #09265E;
         text-align: center;
         margin-top: 60px;
       }
@@ -489,6 +604,7 @@
 //     COMMERCIAL SERVICES
 
 .commercialServices {
+  padding-top: 60px;
   padding-bottom: 60px;
   background: $white;
 
@@ -498,21 +614,12 @@
   }
 
   .container {
-    gap: 15%;
+    gap: 7%;
 
     .part {
       display: flex;
       flex-direction: column;
       gap: 60px;
-
-      .content {
-        p {
-          color: $blue;
-          font-size: 24px;
-          margin-bottom: 15px;
-          line-height: 30px;
-        }
-      }
 
       .commercialCard {
         max-width: 550px;
@@ -528,12 +635,6 @@
         border-radius: 20px;
         padding: 40px;
         transition: .3s;
-
-        &.transformed {
-          margin-left: 14%;
-        }
-
-
         &:hover {
           box-shadow: 5px 5px 15px rgba(9, 38, 94, 0.35);
         }
@@ -578,7 +679,6 @@
     .else {
       padding: 11px 0 40px 38px;
     }
-
 
 
     .operator {
@@ -645,6 +745,7 @@
     }
   }
 }
+
 .or {
   display: flex;
   justify-content: left;
@@ -739,6 +840,7 @@
 //          LATEST    ARTICLES
 
 .latestArticles {
+  background-color: $white;
   padding-top: 60px;
   padding-bottom: 60px;
 
@@ -753,14 +855,9 @@
 
   .posts {
     width: 100%;
-
-    & > h2 {
-      margin-bottom: 30px;
-    }
-
     .self {
       gap: 10%;
-
+      margin-top: 30px;
     }
 
     .postItem {
@@ -818,3 +915,12 @@
     }
   }
 }
+
+
+@media screen and (max-width: 768px) {
+  .mainBanner{
+    background-image: none !important;
+  }
+}
+
+
