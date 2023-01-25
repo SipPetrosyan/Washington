@@ -36,6 +36,17 @@ export default function Two(props) {
         }
     };
 
+    const onVehicleChange = (e, i) => {
+        setVehicle((prev) => {
+            prev[i][e.target.name] = e.target.value || "";
+            return [...prev];
+        });
+        setErrors((prev) => {
+            prev[i][e.target.name] = e.target.value ? "" : "required";
+            return [...prev]
+        })
+    }
+
     const handleAddVehicle = () => {
         setVehicle([
             ...vehicle,
@@ -59,76 +70,33 @@ export default function Two(props) {
                     {vehicle.map((item, i) => (
                         <div key={i} className="vehicle flex-between">
                             <InputField
-                                label={<>
-                                    <span className="icon-Vehicle-Icon"></span> Vehicle <span
+                                error={errors[i].year}
+                                label={<> Vehicle <span
                                     className="icon-Gide-Icon"><span
                                     className="path1"></span><span className="path2"></span><span
                                     className="path3"></span></span>
                                 </>}
-                                error={errors[i].year}
-                                select={true}
-                                element={<Autocomplete
-                                    disablePortal
-                                    onChange={(e, year) => {
-                                        setVehicle((prev) => {
-                                            prev[i].year = year || "";
-                                            return [...prev];
-                                        });
-                                        setErrors((prev) => {
-                                            prev[i].year = year ? "" : "required";
-                                            return [...prev]
-                                        })
-                                    }}
-                                    value={vehicle[i].year}
-                                    id="year"
-                                    name="year"
-                                    options={["1994", "1985", "1989"]}
-                                    renderInput={(params) => <TextField {...params} label="Year"/>}
-                                />}
+                                onChange={(e) => onVehicleChange(e, i)}
+                                value={vehicle[i].year}
+                                id="year"
+                                name="year"
+                                placeholder="Year"
                             />
                             <InputField
-                                select={true}
                                 error={errors[i].make}
-                                element={<Autocomplete
-                                    disablePortal
-                                    onChange={(e, make) => {
-                                        setVehicle((prev) => {
-                                            prev[i].make = make;
-                                            return [...prev]
-                                        })
-                                        setErrors((prev) => {
-                                            prev[i].make = make ? "" : "required";
-                                            return [...prev]
-                                        })
-                                    }}
-                                    value={vehicle[i].make || null}
-                                    id="make"
-                                    name="make"
-                                    options={["make", "make1", "make2"]}
-                                    renderInput={(params) => <TextField {...params} label="Make"/>}
-                                />}
+                                onChange={(e) => onVehicleChange(e, i)}
+                                value={vehicle[i].make}
+                                id="make"
+                                name="make"
+                                placeholder="Make"
                             />
                             <InputField
-                                select={true}
                                 error={errors[i].model}
-                                element={<Autocomplete
-                                    disablePortal
-                                    onChange={(e, model) => {
-                                        setVehicle((prev) => {
-                                            prev[i].model = model;
-                                            return [...prev]
-                                        })
-                                        setErrors((prev) => {
-                                            prev[i].model = model ? "" : "required";
-                                            return [...prev]
-                                        })
-                                    }}
-                                    value={vehicle[i].model || null}
-                                    id="model"
-                                    name="model"
-                                    options={["model", "model2", "model3"]}
-                                    renderInput={(params) => <TextField {...params} label="Model"/>}
-                                />}
+                                onChange={(e) => onVehicleChange(e, i)}
+                                value={vehicle[i].model}
+                                id="model"
+                                name="model"
+                                placeholder="Model"
                             />
                         </div>
                     ))}
@@ -156,6 +124,7 @@ export default function Two(props) {
                                     value="1"
                                     type="radio"
                                     name="method"
+                                    checked={formik.values.method === "1"}
                                     onChange={formik.handleChange}
                                 />
                                 Open
@@ -165,6 +134,7 @@ export default function Two(props) {
                                     value="2"
                                     type="radio"
                                     name="method"
+                                    checked={formik.values.method === "2"}
                                     onChange={formik.handleChange}
                                 />
                                 Enclosed
@@ -186,6 +156,7 @@ export default function Two(props) {
                                     value="1"
                                     type="radio"
                                     name="operable"
+                                    checked={formik.values.operable === "1"}
                                     onChange={formik.handleChange}
                                 />
                                 Yes
@@ -195,6 +166,7 @@ export default function Two(props) {
                                     value="2"
                                     type="radio"
                                     name="operable"
+                                    checked={formik.values.operable === "2"}
                                     onChange={formik.handleChange}
                                 />
                                 No

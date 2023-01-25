@@ -12,90 +12,8 @@
   gap: 26px;
   padding-top: 50px;
   padding-bottom: 50px;
-  .MuiStepper-root {
-    .MuiStep-root {
-      padding-left: 20px;
-      padding-right: 20px;
 
-      &:not(&.active, &.active+.MuiStepConnector-root+.MuiStep-root){
-        display: none;
-      }
 
-      &.active+.MuiStepConnector-root+.MuiStep-root .indicator p{
-        display: none;
-      }
-
-      &.active+.MuiStepConnector-root{
-        display: block;
-      }
-
-      .indicator {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-
-        &.active {
-          & > span {
-            width: 80px;
-            height: 48px;
-            background: #E53E29;
-            border: 2px solid rgba(9, 38, 94, 0.6);
-            border-radius: 25px;
-            color: $white;
-          }
-
-          & > p {
-            color: $red;
-          }
-        }
-
-        & > span {
-          width: 80px;
-          height: 48px;
-          background: #FDFDFF;
-          border-radius: 25px;
-          color: $blue;
-          font-size: 24px;
-          font-weight: 900;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        & > p {
-          font-weight: 700;
-          font-size: 24px;
-          color: #FDFDFF;
-        }
-      }
-
-      &.Mui-completed {
-        .indicator {
-          & > span {
-            width: 80px;
-            height: 48px;
-            background: $red;
-            border: 2px solid rgba(9, 38, 94, 0.6);
-            border-radius: 25px;
-            color: $white;
-          }
-          & > p {
-            color: $red;
-          }
-        }
-        & + .MuiStepConnector-root span {
-          border-top: 2px solid $red;
-        }
-      }
-
-      & + .MuiStepConnector-root span {
-        border-top: 2px solid $blue;
-      }
-    }
-    .MuiStepConnector-root{
-      display: none;
-    }
-  }
 }
 
 .quoteForm {
@@ -187,6 +105,7 @@
   .time {
     display: flex;
     gap: 20px;
+
     .inputField .helper > span:first-of-type {
       font-size: 24px;
     }
@@ -464,7 +383,7 @@
     flex-direction: column;
     gap: 60px;
 
-    &.cards{
+    &.cards {
       width: 35%;
     }
 
@@ -637,6 +556,7 @@
         border-radius: 20px;
         padding: 40px;
         transition: .3s;
+
         &:hover {
           box-shadow: 5px 5px 15px rgba(9, 38, 94, 0.35);
         }
@@ -857,6 +777,7 @@
 
   .posts {
     width: 100%;
+
     .self {
       gap: 10%;
       margin-top: 30px;
@@ -920,8 +841,227 @@
 
 
 @media screen and (max-width: 768px) {
-  .mainBanner{
+  .mainBanner {
     background-image: none !important;
+    overflow: hidden;
+
+    .quoteStepper {
+      width: 100%;
+    }
+  }
+
+  .MuiStepper-root {
+    .MuiStep-root {
+      padding-left: 0;
+      padding-right: 10px;
+
+      &:not(&.active, &.active+.MuiStepConnector-root+.MuiStep-root) {
+        display: none;
+      }
+
+      &.active + .MuiStepConnector-root + .MuiStep-root {
+        margin-right: -55px;
+        margin-left: 10px;
+
+        .indicator p {
+          display: none;
+        }
+      }
+
+      &.active + .MuiStepConnector-root {
+        display: block;
+      }
+
+      .indicator {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &.active {
+          & > span {
+            background: #E53E29;
+            border-radius: 25px;
+            color: $white;
+          }
+
+          & > p {
+            color: $red;
+          }
+        }
+
+        & > span {
+          width: 58px;
+          height: 34px;
+          background: #FDFDFF;
+          border-radius: 25px;
+          color: $blue;
+          font-size: 24px;
+          font-weight: 900;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        & > p {
+          font-weight: 700;
+          font-size: 24px;
+          color: #FDFDFF;
+        }
+      }
+
+      &.Mui-completed {
+        .indicator {
+          & > span {
+            width: 80px;
+            height: 48px;
+            background: $red;
+            border: 2px solid rgba(9, 38, 94, 0.6);
+            border-radius: 25px;
+            color: $white;
+          }
+
+          & > p {
+            color: $red;
+          }
+        }
+
+        & + .MuiStepConnector-root span {
+          border-top: 2px solid $red;
+        }
+      }
+
+      & + .MuiStepConnector-root span {
+        border-top: 2px solid $blue;
+      }
+    }
+
+    .MuiStepConnector-root {
+      display: none;
+    }
+  }
+  .stepsController {
+    .inputs {
+      .formTitle {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .fromTo {
+        margin-top: 20px;
+      }
+
+      .inputField {
+        margin-bottom: 20px;
+
+        &.inputField, input {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+
+    .stepForm {
+      margin-top: 30px;
+
+      &.step2 {
+        .inputs {
+          padding-bottom: 0;
+        }
+
+        .vehicle-container {
+          max-height: 330px;
+
+          .vehicle {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+
+            .inputField {
+              max-width: 200px;
+              margin-bottom: 0;
+
+              .helper {
+                margin-left: 40px;
+              }
+            }
+          }
+
+          .addVehicle {
+            margin: 20px 0;
+          }
+        }
+
+        .time {
+          flex-direction: column;
+          padding: 0 20px 20px;
+
+          .method {
+            .title {
+              text-align: center;
+            }
+
+            .selectMethod {
+              justify-content: space-evenly;
+            }
+          }
+        }
+      }
+
+      &.confirmation {
+        .inputs {
+          padding: 10px 28px 0;
+
+          .headTitle {
+            align-items: center;
+
+            & > p {
+              font-size: 24px !important;
+            }
+
+            button {
+              padding: 0;
+            }
+
+            border-bottom: 1px solid $white;
+          }
+
+          .content {
+            flex-direction: column;
+            gap: 0;
+
+            .leftSide, .rightSide {
+              width: 100%;
+
+              .toInfoItem {
+                .helper {
+                  .to-icon {
+                    position: absolute;
+                    left: 6px;
+                    z-index: 0;
+                  }
+                }
+              }
+
+              .timeInfoItem {
+                .helper {
+                  span {
+                    font-size: 22px;
+                  }
+                }
+              }
+
+              .helper {
+                span {
+                  font-size: 28px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 

@@ -330,7 +330,12 @@ a {
   }
 }
 
-
+@media screen and (max-width: 768px) {
+  .m-padding{
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+}
 
 
 

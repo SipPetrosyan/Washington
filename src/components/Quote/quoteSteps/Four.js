@@ -9,7 +9,6 @@ export default function Four(props) {
         <div className="stepForm quoteForm step4">
             <div className="inputs">
                 <p className="formTitle">We get you the best <span>Quote</span> in the market !</p>
-                <div className="flex-between contacts">
                     <InputField
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
@@ -31,8 +30,7 @@ export default function Four(props) {
                         placeholder="example@domain.com"
                     />
 
-                </div>
-                <div className="time m-60">
+                <div className="time">
                     <InputField
                         label="Phone number"
                         className="phoneMask"

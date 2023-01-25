@@ -26,7 +26,8 @@ export default function One(props) {
     return (
         <div className="stepForm quoteForm">
             <div className="inputs">
-                <p className="formTitle">Get real <span>Quote</span> now : Car Shipping Cost</p>
+                <h2 className="formTitle">Get real <span>Quote</span> now : Car Shipping Cost</h2>
+                <p className="white bolder subtitle">Route Details</p>
                 <div className="fromTo">
                     <InputField
                         onChange={formik.handleChange}

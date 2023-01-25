@@ -14,6 +14,8 @@ import bgImg from "../../public/images/banner.png";
 import QuoteForm from "@/components/home/QuoteForm";
 import {useWindowSize} from "@/utils/hooks";
 import QuoteSteps from "@/components/quote/quoteSteps";
+import {Main} from "next/document";
+import MainBanner from "@/components/home/MainBanner";
 
 export default function Home() {
     const dispatch = useDispatch();
@@ -36,9 +38,7 @@ export default function Home() {
                 <link rel="stylesheet" href="/css/react-phone-number-input/style.css"/>
             </Head>
             <main className="page-main">
-                <div className="mainBanner m-padding" style={{backgroundImage: `url(${bgImg.src})`}}>
-                    {width <= 768 ? <QuoteSteps/> : <QuoteForm/>}
-                </div>
+                <MainBanner/>
                 <Reviews welcome={true}/>
                 <Transportation/>
                 <CalculationInfo/>

@@ -8,7 +8,7 @@ import {List, ListItemButton} from "@mui/joy";
 import {useWindowSize} from "@/utils/hooks";
 
 
-export default function Header() {
+export default function Header({quotePopup, setQuotePopUp}) {
     const {width} = useWindowSize();
     const [anchorEl, setAnchorEl] = useState(null);
     const [menu, setMenu] = useState(false);
@@ -25,7 +25,7 @@ export default function Header() {
 
     return (
         <>
-            <TopPanel/>
+            <TopPanel quotePopup={quotePopup} setQuotePopUp={setQuotePopUp} />
             <header>
                 <Link href="/" className="header-logo">
                     <img src="/images/logo.png" alt="logo"/>
