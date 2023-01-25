@@ -12,22 +12,20 @@ const Contact = () => {
                 <meta name="description" content="Contact"/>
             </Head>
             <main className='page-main m-padding contactPage'>
-                <div className='hrField'>
-                    <hr className="hr" />
-                </div>
+                <hr className="hr"/>
                 <h1 className='font-32 blue pageTitle'>Contact Us</h1>
                 <div className='contactsInfoBlock'>
-                    <ContactsInfo />
+                    <ContactsInfo/>
                 </div>
                 <div className='img'>
-                    <img src='/images/contact.png' alt='Contact-Us' />
+                    <img src='/images/contact.png' alt='Contact-Us'/>
                 </div>
                 <div className='contactFormBlock'>
                     <h1 className='font-36 bolder red'>Send Us a Message</h1>
-                    <SendMessageForm />
+                    <SendMessageForm/>
                 </div>
                 <div className='pricingSection'>
-                    <Pricing />
+                    <Pricing/>
                 </div>
             </main>
         </>

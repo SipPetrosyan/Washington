@@ -25,23 +25,25 @@ export default function Reviews({welcome}) {
                         business.</p>
                 </div>
                 <div className="reviewsContainer">
-                    <div className="common">
-                        <h1>4.8 / 5</h1>
-                        <Rating
-                            name="text-feedback"
-                            value={4.7}
-                            readOnly
-                            precision={0.5}
-                        />
-                        <p className="white font-32 bold">199 Review</p>
-                    </div>
-                    <div className="partial">
-                        <div className="graphics">
-                            <ReviewsGraphicItem from={177} total={5}/>
-                            <ReviewsGraphicItem from={9} total={4}/>
-                            <ReviewsGraphicItem from={6} total={3}/>
-                            <ReviewsGraphicItem from={0} total={2}/>
-                            <ReviewsGraphicItem from={7} total={1}/>
+                    <div className="flex-between stars">
+                        <div className="common">
+                            <h1>4.8 / 5</h1>
+                            <Rating
+                                name="text-feedback"
+                                value={4.7}
+                                readOnly
+                                precision={0.5}
+                            />
+                            <p className="white font-32 bold">199 Review</p>
+                        </div>
+                        <div className="partial">
+                            <div className="graphics">
+                                <ReviewsGraphicItem from={177} total={5}/>
+                                <ReviewsGraphicItem from={9} total={4}/>
+                                <ReviewsGraphicItem from={6} total={3}/>
+                                <ReviewsGraphicItem from={0} total={2}/>
+                                <ReviewsGraphicItem from={7} total={1}/>
+                            </div>
                         </div>
                     </div>
                     <div className="buttons">

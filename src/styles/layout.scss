@@ -263,13 +263,17 @@ footer {
     padding-bottom: 60px;
   }
 
+  .mobileContact{
+    display: none;
+  }
+
   .contentItem {
     h2 {
       margin-bottom: 30px;
       height: 28px;
     }
 
-    p, a {
+    p, & > a {
       margin-bottom: 15px;
       font-size: 20px;
       color: $white;
@@ -344,6 +348,7 @@ footer {
   justify-content: center;
   opacity: 0;
   transition: 0.6s;
+  z-index: -1;
 
   .icon-chevron-thin-right {
     transform: rotate(-90deg);
@@ -355,6 +360,7 @@ footer {
 
   &.available {
     opacity: 1;
+    z-index: 99;
   }
 }
 
@@ -416,7 +422,8 @@ footer {
         color: $red;
         font-size: 20px;
       }
-      .icon-cancel-circle{
+
+      .icon-cancel-circle {
         font-size: 24px;
       }
     }
@@ -426,28 +433,30 @@ footer {
   }
   .mobileMenuDrawer {
     .MuiBackdrop-root {
-      //top: 160px;
       background-color: transparent;
     }
 
     .MuiPaper-root {
       width: 50%;
       padding: 20px;
-      top: 160px;
+      top: 140px;
       background-color: $blue;
 
       nav.JoyList-root {
-        .icon-chevron-thin-right{
+        .icon-chevron-thin-right {
           color: $white;
           font-weight: 900;
           margin-left: 5px;
-          &.more{
+
+          &.more {
             transform: rotate(90deg);
           }
-          &.less{
+
+          &.less {
             transform: rotate(-90deg);
           }
         }
+
         & > .JoyListItemButton-root {
           padding-top: 20px;
           padding-bottom: 20px;
@@ -456,20 +465,85 @@ footer {
       }
     }
   }
+  footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .contentItem:not(.info), .bottomContent {
+      display: none;
+    }
+
+    .contentItem.info{
+      img{
+        width: 200px;
+      }
+      &>p, &>h2{
+        display: none;
+      }
+    }
+
+    .mobileContact{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      h2{
+        font-size: 24px;
+      }
+      a{
+        font-size: 20px;
+        color: $white;
+      }
+    }
+
+    .footerSocialPanel {
+      display: flex;
+      gap: 15px;
+      align-content: center;
+      a {
+        &:first-of-type, &:nth-of-type(2) {
+          span {
+            font-size: 32px;
+            &:after, &:before {
+              color: $white !important;
+            }
+          }
+        }
+        &:nth-of-type(3){
+          font-size: 26px;
+        }
+        &:nth-of-type(4), &:nth-of-type(5){
+          font-size: 22px;
+        }
+        &:nth-of-type(6), &:nth-of-type(7){
+          font-size: 28px;
+        }
+      }
+    }
+    .ending{
+      &>p{
+        text-align: center;
+        max-width: 296px;
+        line-height: 24px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
-  header{
+  header {
+    padding: 10px 6%;
+
     .operator {
       display: none;
     }
-    .mobileOperator{
+
+    .mobileOperator {
       display: flex;
       flex-direction: column;
       gap: 3px;
 
       align-items: center;
-      .icon-Operator-icon-2{
+
+      .icon-Operator-icon-2 {
         font-size: 22px;
       }
     }
@@ -487,17 +561,46 @@ footer {
       height: 100%;
       max-height: 100%;
       margin: 0;
-      .quoteStepper{
+
+      .quoteStepper {
         overflow: hidden;
         padding: 24px;
       }
     }
-    .MuiStepper-root .MuiStep-root .indicator > span{
+
+    .MuiStepper-root .MuiStep-root .indicator > span {
       background-color: $gray-bg;
     }
-    .top-panel{
-      .icon-chevron-thin-right{
+
+    .top-panel {
+      .icon-chevron-thin-right {
         transform: rotate(270deg);
+      }
+    }
+  }
+  footer{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .topContent{
+      flex-direction: column;
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      .contentItem.info{
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid $white;
+      }
+    }
+    .ending{
+      &>p{
+        max-width: 100%;
+      }
+      .links{
+        position: initial;
+        justify-content: space-evenly;
+        margin-top: 30px;
       }
     }
   }

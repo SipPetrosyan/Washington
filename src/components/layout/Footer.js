@@ -33,11 +33,26 @@ export default function Footer() {
                     <Link href="">Snowbird Auto Moving</Link>
                 </div>
                 <div className="contentItem info">
-                    <img src="/images/footer-logo.png" alt="footer-logo" />
+                    <img src="/images/footer-logo.png" alt="footer-logo"/>
                     <h2>WASHINGTON DC AUTO TRANSPORT</h2>
                     <p><a href="tel:( 202 ) 930 8005">( 202 ) 930 - 8005</a></p>
                     <p><a href="mailto:info@washingtondcautotransport.com">info@washingtondcautotransport.com</a></p>
+                    <div className="footerSocialPanel">
+                        <Link href=""><span className="icon-Facebbok-Icon"></span></Link>
+                        <Link href=""><span className="icon-Twiter-Icon"></span></Link>
+                        <Link href=""><span className="icon-Pinterest-Icon-1"></span></Link>
+                        <Link href=""><span className="icon-Vector-8"></span></Link>
+                        <Link href=""><span className="icon-Vector-9"></span></Link>
+                        <Link href=""><span className="icon-Yelp-Icon-1"></span></Link>
+                        <Link href=""><span className="icon-Yp-Icon-1"></span></Link>
+                    </div>
                 </div>
+                <div className="mobileContact">
+                    <h2>Contact Info</h2>
+                    <p><a href="tel:( 202 ) 930 8005">( 202 ) 930 - 8005</a></p>
+                    <p><a href="mailto:info@washingtondcautotransport.com">info@washingtondcautotransport.com</a></p>
+                </div>
+
             </div>
             <div className="bottomContent flex-between">
                 <div className="contentItem">

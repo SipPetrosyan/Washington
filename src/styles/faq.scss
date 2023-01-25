@@ -1,17 +1,18 @@
 @import "index";
 
 .faqPage {
-  .faqHeaders{
+  .faqHeaders {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 60px;
   }
+
   .faqsContainer {
     padding: 60px 15.75% 200px;
 
-    .expandIcon{
+    .expandIcon {
       width: 42px;
       height: 42px;
       display: flex;
@@ -20,7 +21,8 @@
       border-radius: 50%;
       background-color: aliceblue;
       border: 1px solid $blue-60;
-      span{
+
+      span {
         font-size: 32px;
       }
     }
@@ -28,10 +30,12 @@
     .MuiAccordion-root {
       margin-bottom: 60px;
       border-radius: 20px;
-      &::before{
+
+      &::before {
         display: none;
       }
-      &.Mui-expanded{
+
+      &.Mui-expanded {
         border-radius: 30px 30px 10px 10px;
       }
 
@@ -41,15 +45,86 @@
         border-radius: 20px;
         color: $blue;
 
-        &.Mui-expanded{
+        &.Mui-expanded {
           color: $white;
           background-color: $blue;
         }
       }
-      .MuiAccordionDetails-root{
+
+      .MuiAccordionDetails-root {
         padding: 30px 10.75%;
       }
     }
+  }
+}
 
+@media screen and (max-width: 1024px) {
+  .faqPage {
+    .faqsContainer {
+      padding-left: 4.75%;
+      padding-right: 4.75%;
+      padding-bottom: 60px;
+
+      .MuiAccordion-root {
+        margin-bottom: 40px;
+
+        .MuiAccordionSummary-root {
+          height: 80px !important;
+        }
+
+        .MuiAccordionDetails-root {
+          padding: 20px 40px;
+        }
+      }
+    }
+    .sendMessage{
+      .container{
+        flex-direction: column;
+        .postComment{
+          width: 100%;
+          max-width: 768px;
+        }
+        .pricing{
+          width: 100%;
+          padding-top: 60px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .faqPage {
+    .faqHeaders{
+      padding: 30px 4.75% 0;
+    }
+    .faqsContainer {
+      padding-top: 30px;
+      .MuiAccordion-root {
+        margin-bottom: 30px;
+        .MuiAccordionSummary-root {
+          height: 60px !important;
+          padding-left: 20px;
+          padding-right: 20px;
+          .expandIcon{
+            width: 32px;
+            height: 32px;
+          }
+        }
+
+        .MuiAccordionDetails-root {
+          padding: 10px 20px;
+        }
+      }
+    }
+    .sendMessage{
+      .container{
+        .postComment{
+          .MuiInputBase-root{
+            margin-top: 10px;
+          }
+        }
+      }
+    }
   }
 }

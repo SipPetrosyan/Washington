@@ -147,7 +147,7 @@ export default function Header({quotePopup, setQuotePopUp}) {
                                 <Link onClick={handleCloseMenu} href="faq" className="white font-22">FAQ</Link>
                             </ListItemButton>
                             <ListItemButton>
-                                <Link onClick={handleCloseMenu} href="contact" className="white font-22">contact</Link>
+                                <Link onClick={handleCloseMenu} href="contact" className="white font-22">Contact</Link>
                             </ListItemButton>
                         </List>
                     </div>

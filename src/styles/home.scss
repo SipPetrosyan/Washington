@@ -233,6 +233,7 @@
 
   .reviewsMain {
     display: flex;
+    gap: 20px;
     justify-content: space-between;
     align-items: center;
   }
@@ -256,6 +257,10 @@
   .reviewsContainer {
     display: flex;
     gap: 30px;
+
+    .stars {
+      gap: 30px;
+    }
 
     .common {
       display: flex;
@@ -840,6 +845,193 @@
 }
 
 
+
+@media screen and (max-width: 1536px) {
+  .reviewsBanner {
+    .welcomePart {
+      padding: 0 0 60px;
+
+      h1 {
+        font-size: 48px;
+      }
+    }
+
+    .reviewsContainer {
+      flex-direction: column;
+    }
+  }
+
+  .transportation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > .hr {
+      margin-bottom: 20px;
+    }
+
+    .mainContent {
+      flex-wrap: wrap;
+      gap: 20px;
+
+      .contentItem:not(.cards) {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        & > h1 {
+          text-align: center;
+          width: 100%;
+        }
+
+        & > h3 {
+          width: 45%;
+        }
+      }
+
+      .contentItem {
+        grid-column-gap: 10%;
+        grid-row-gap: 20px;
+
+        &.cards {
+          width: 45%;
+        }
+      }
+
+    }
+  }
+
+}
+
+@media screen and (max-width: 1380px) {
+  .latestArticles{
+    .container{
+      flex-direction: column;
+      .posts{
+        .self{
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .reviewsBanner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .welcomePart {
+      display: none;
+    }
+
+    .content {
+      h1 {
+        font-size: 20px;
+        max-width: 225px;
+        line-height: 36px;
+      }
+
+      p {
+        display: none;
+      }
+    }
+
+    & > .reviewsMain {
+      flex-direction: column;
+
+      .reviewsContainer {
+        .buttons {
+          flex-direction: row;
+          max-width: unset;
+          gap: 20px;
+
+          button {
+            margin-top: 0 !important;
+          }
+        }
+      }
+    }
+  }
+
+  .transportation {
+    .mainContent {
+      gap: 30px;
+
+      .contentItem:not(.cards) {
+        & > h3 {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      .contentItem {
+        width: 100% !important;
+        flex-direction: column !important;
+        align-items: center;
+        gap: 30px;
+
+        .transportCard {
+          padding: 25px 30px;
+        }
+      }
+    }
+  }
+
+  .checkOutReviews {
+    & > h1 {
+      font-size: 20px;
+    }
+
+    .socs {
+      gap: 20px;
+
+      .socItem {
+        & > div > span:first-of-type {
+          font-size: 42px;
+        }
+
+        .name {
+          margin-top: 10px;
+          font-size: 24px;
+        }
+      }
+
+      .MuiRating-root {
+        gap: 5px;
+      }
+    }
+
+    button {
+      display: none;
+    }
+  }
+
+  .commercialServices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    & > h1 {
+      margin-bottom: 40px;
+      margin-top: 20px;
+    }
+
+    .container .part .commercialCard {
+      padding: 25px;
+    }
+  }
+
+  .customersSection, .calculationInfo, .latestArticles {
+    display: none;
+  }
+
+}
+
+
 @media screen and (max-width: 768px) {
   .mainBanner {
     background-image: none !important;
@@ -848,6 +1040,68 @@
     .quoteStepper {
       width: 100%;
     }
+  }
+
+  .reviewsBanner {
+    .reviewsMain {
+      .reviewsContainer .stars, .buttons {
+        flex-direction: column !important;
+        align-items: center;
+      }
+
+      .reviewsContainer .stars .common {
+        align-items: center;
+        gap: 10px;
+
+        h1 {
+          font-size: 32px;
+        }
+
+        .MuiRating-root {
+          justify-content: center;
+          gap: 5px;
+
+          .MuiRating-decimal svg {
+            width: 16px;
+            height: 16px;
+          }
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .commercialServices {
+    .container {
+      flex-direction: column;
+
+      .part {
+        gap: 30px;
+
+        &:first-of-type {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+  .transportation {
+    .mainContent {
+      .contentItem {
+        &>h1{
+          font-size: 20px;
+        }
+        &>h3{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .checkOutReviews {
+    display: none;
   }
 
   .MuiStepper-root {
