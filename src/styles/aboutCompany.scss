@@ -25,15 +25,35 @@
         margin-bottom: 40px;
       }
     }
-
+  @media screen and (max-width: 1024px) {
+    p {
+      margin-bottom: 15px;
+      line-height: 30px;
+    }
+    .subTopic {
+      margin-top: 20px;
+      >h1 {
+        margin-bottom: 20px;
+      }
+    }
+  }
   }
   .titleSection {
     margin-bottom: 40px;
     .iconArrow {
       vertical-align: middle;
     }
-  }
 
+  }
+  @media screen and (max-width: 1024px) {
+    h1 {
+      margin: 20px 0;
+    }
+    .titleSection {
+      margin-bottom: 20px;
+      margin-top: 30px;
+    }
+  }
 }
 
 .pricingPart {
@@ -80,5 +100,13 @@
       letter-spacing: initial;
       margin-left: 10px;
     }
+  }
+  @media screen and (max-width: 1024px) {
+    gap: 15px;
+    min-width: unset;
+    width: 100%;
+  }
+  p {
+    line-height: 30px;
   }
 }

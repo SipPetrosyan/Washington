@@ -15,23 +15,31 @@
   .pageTitle {
     text-align: center;
     margin-bottom: 92px;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 35px;
+    }
   }
   .contactsInfoBlock {
     display: inline-block;
     width: 50%;
-
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
   .contacts {
     display: flex;
     flex-direction: row;
     align-items: start;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
     .contactGroup {
       h3 {
         margin-bottom: 10px;
         line-height: 48px;
       }
       >div {
+        display: flex;
         line-height: 24px;
         &:not(:last-of-type) {
           margin-bottom: 10px;
@@ -40,6 +48,9 @@
       &:first-of-type {
         h3 {
           margin-bottom: 22px;
+          @media screen and (max-width: 1024px) {
+            margin-bottom: 10px;
+          }
         }
       }
     }
@@ -54,6 +65,9 @@
       object-fit: contain;
       border-radius: 10px;
     }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
   .contactFormBlock {
     width: 43%;
@@ -62,6 +76,9 @@
     float: left;
     >h1 {
       margin-bottom: 40px;
+      @media screen and (max-width: 1024px) {
+        margin-bottom: 20px;
+      }
     }
     .sendMessageForm {
       max-width: 745px;
@@ -75,16 +92,36 @@
             padding-right: 0;
             >div {
                 margin-top: 38px;
+              @media screen and (max-width: 1024px) {
+                margin-top: 10px;
+              }
             }
           }
           .message {
             .JoyTextarea-root {
               height: 236px;
+              @media screen and (max-width: 1024px) {
+                height: 150px;
+              }
             }
           }
         }
         .buttonPart {
           justify-content: end;
+        }
+      }
+
+    }
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      float: unset;
+      margin-top: 35px;
+      .sendMessageForm {
+        max-width: unset;
+      }
+      .postComment {
+        h1 {
+          margin-bottom: 8px;
         }
       }
     }
@@ -105,5 +142,12 @@
         text-align: start;
       }
     }
+    @media screen and (max-width: 1024px) {
+      margin-left: 0;
+      width: 100%;
+      max-width: unset;
+      margin-top: 35px;
+    }
   }
+
 }
