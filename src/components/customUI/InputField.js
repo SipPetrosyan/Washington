@@ -12,7 +12,7 @@ export default function InputField({className, element,onBlur, select, value, on
                     name={name}
                     placeholder={placeholder}
                 />}
-                {select && <div className="indicator"><span className="icon-keyboard_arrow_down"></span></div>}
+                {/*{select && <div className="indicator"><span className="icon-keyboard_arrow_down"></span></div>}*/}
                 <p className="err-message">{error}</p>
             </label>
         </div>

@@ -2,7 +2,7 @@ import VehicleAdvertising from "@/components/quote/VehicleAdvertising";
 import CalculationInfo from "@/components/quote/CalculationInfo";
 import SendMessage from "@/components/quote/SendMessage";
 
-export  default function CommercialVehicleTransport () {
+export  default function SingleService () {
     return(
         <div className="page-main commercialVehicleTransportPage">
             <VehicleAdvertising/>

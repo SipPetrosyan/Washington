@@ -14,7 +14,7 @@ export const getHomeContent = createAsyncThunk(
     async () =>
         api({
             method: "GET",
-            url: `https://jsonplaceholder.typicode.com/posts`
+            url: `https://jsonplaceholder.typicode.com/photos?_start=0&_limit=10`
         })
 );
 

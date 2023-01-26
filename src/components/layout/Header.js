@@ -3,7 +3,7 @@ import LinkPopper from "@/components/customUI/LinkPopper";
 import {useState} from "react";
 import Link from "next/link";
 import {aboutSubLinks, commercialServicesSubLinks, servicesSubLinks} from "@/utils/helper";
-import {Collapse, Drawer, ListItemText} from "@mui/material";
+import {Collapse, Drawer} from "@mui/material";
 import {List, ListItemButton} from "@mui/joy";
 import {useWindowSize} from "@/utils/hooks";
 
@@ -103,7 +103,7 @@ export default function Header({quotePopup, setQuotePopUp}) {
                                     <span className="icon-chevron-thin-right more"></span>}
                             </ListItemButton>
                             <Collapse in={mobileSubmenu === 1} timeout="auto" unmountOnExit>
-                                <List onClick={handleCloseMenu} component="div" disablePadding>
+                                <List onClick={handleCloseMenu} component="div">
                                     {aboutSubLinks.map((el, i) => (
                                         <ListItemButton key={i} sx={{pl: 4}}>
                                             <Link href={el.slug} className="white font-22">{el.name}</Link>
@@ -119,7 +119,7 @@ export default function Header({quotePopup, setQuotePopUp}) {
                                     <span className="icon-chevron-thin-right more"></span>}
                             </ListItemButton>
                             <Collapse in={mobileSubmenu === 2} timeout="auto" unmountOnExit>
-                                <List onClick={handleCloseMenu} component="div" disablePadding>
+                                <List onClick={handleCloseMenu} component="div">
                                     {servicesSubLinks.map((el, i) => (
                                         <ListItemButton key={i} sx={{pl: 4}}>
                                             <Link href={el.slug} className="white font-22">{el.name}</Link>
@@ -135,7 +135,7 @@ export default function Header({quotePopup, setQuotePopUp}) {
                                     <span className="icon-chevron-thin-right more"></span>}
                             </ListItemButton>
                             <Collapse in={mobileSubmenu === 3} timeout="auto" unmountOnExit>
-                                <List onClick={handleCloseMenu} component="div" disablePadding>
+                                <List onClick={handleCloseMenu} component="div">
                                     {commercialServicesSubLinks.map((el, i) => (
                                         <ListItemButton key={i} sx={{pl: 4}}>
                                             <Link href={el.slug} className="white font-22">{el.name}</Link>
@@ -144,10 +144,10 @@ export default function Header({quotePopup, setQuotePopUp}) {
                                 </List>
                             </Collapse>
                             <ListItemButton>
-                                <Link onClick={handleCloseMenu} href="faq" className="white font-22">FAQ</Link>
+                                <Link onClick={handleCloseMenu} href="/faq" className="white font-22">FAQ</Link>
                             </ListItemButton>
                             <ListItemButton>
-                                <Link onClick={handleCloseMenu} href="contact" className="white font-22">Contact</Link>
+                                <Link onClick={handleCloseMenu} href="/contact" className="white font-22">Contact</Link>
                             </ListItemButton>
                         </List>
                     </div>

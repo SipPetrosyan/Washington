@@ -24,7 +24,7 @@
   //  left: 0;
   //  top: 0;
   //  //background-color: rgba(9, 38, 94, 0.3);
-  //  z-index: -1;
+  //  z-login: -1;
   //}
   .MuiStepper-root {
     .MuiStep-root {
@@ -141,10 +141,10 @@
     background-color: $gray-bg;
   }
 
-  .continueBtn {
+  .continueBtn.MuiButtonBase-root {
     width: 100%;
     max-width: 100%;
-    background-color: $red;
+    background-color: $red !important;
     height: 48px;
     border-radius:10px 10px;
   }

@@ -77,17 +77,20 @@
         }
       }
     }
-    .sendMessage{
-      .container{
-        flex-direction: column;
-        .postComment{
-          width: 100%;
-          max-width: 768px;
-        }
-        .pricing{
-          width: 100%;
-          padding-top: 60px;
-        }
+
+  }
+  .sendMessage {
+    .container {
+      flex-direction: column;
+
+      .postComment {
+        width: 100%;
+        max-width: 768px;
+      }
+
+      .pricing {
+        width: 100%;
+        padding-top: 60px;
       }
     }
   }
@@ -95,18 +98,22 @@
 
 @media screen and (max-width: 768px) {
   .faqPage {
-    .faqHeaders{
+    .faqHeaders {
       padding: 30px 4.75% 0;
     }
+
     .faqsContainer {
       padding-top: 30px;
+
       .MuiAccordion-root {
         margin-bottom: 30px;
+
         .MuiAccordionSummary-root {
           height: 60px !important;
           padding-left: 20px;
           padding-right: 20px;
-          .expandIcon{
+
+          .expandIcon {
             width: 32px;
             height: 32px;
           }
@@ -117,12 +124,12 @@
         }
       }
     }
-    .sendMessage{
-      .container{
-        .postComment{
-          .MuiInputBase-root{
-            margin-top: 10px;
-          }
+  }
+  .sendMessage {
+    .container {
+      .postComment {
+        .MuiInputBase-root {
+          margin-top: 10px;
         }
       }
     }

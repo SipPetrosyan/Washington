@@ -42,7 +42,7 @@ export default function Four(props) {
                                     phone: e
                                 })
                             }}
-                            limitMaxLength={12}
+                            limitMaxLength={true}
                             onBlur={formik.handleBlur}
                             value={formik.values.phone}
                             error={formik.touched.phone && formik.errors.phone}

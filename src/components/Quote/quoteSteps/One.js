@@ -1,5 +1,6 @@
 import {Autocomplete, Button, TextField} from "@mui/material";
 import InputField from "@/components/customUI/InputField";
+import InfoToolTip from "@/components/customUI/InfoToolTip";
 
 export default function One(props) {
     const {formik} = props;
@@ -37,10 +38,7 @@ export default function One(props) {
                         id="from"
                         name="from"
                         placeholder="City,State or ZIP"
-                        label={<>From <span className="icon-Gide-Icon"><span
-                            className="path1"></span><span className="path2"></span><span
-                            className="path3"></span></span>
-                        </>}
+                        label={<>From <InfoToolTip text="!!!!!! !!!!!!!!! !!!!!!!! !!!!!!!! !!!!!!!!!! !!!!! " /></>}
                     />
                     <InputField
                         onChange={formik.handleChange}
@@ -50,20 +48,14 @@ export default function One(props) {
                         id="to"
                         name="to"
                         placeholder="City,State or ZIP"
-                        label={<>To <span className="icon-Gide-Icon"><span
-                            className="path1"></span><span className="path2"></span><span
-                            className="path3"></span></span>
-                        </>}
+                        label={<>To <InfoToolTip text="!!!!!! !!!!!!!!! !!!!!!!! !!!!!!!! !!!!!!!!!! !!!!! " /></>}
                     />
                 </div>
                 <div className="time">
                     <InputField
                         className="inputField"
                         error={formik.touched.time && formik.errors.time}
-                        label={<>Time <span className="icon-Gide-Icon"><span
-                            className="path1"></span><span className="path2"></span><span
-                            className="path3"></span></span>
-                        </>}
+                        label={<>Time <InfoToolTip text="!!!!!! !!!!!!!!! !!!!!!!! !!!!!!!! !!!!!!!!!! !!!!! " /> </>}
                         select={true}
                         element={<Autocomplete
                             onChange={(e, time) => {

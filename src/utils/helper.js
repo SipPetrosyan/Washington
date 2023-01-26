@@ -1,89 +1,89 @@
 export const aboutSubLinks = [
     {
         name: "About Our Company",
-        slug: "about-our-company"
+        slug: "/about-our-company"
     },
     {
         name: "History",
-        slug: "history"
+        slug: "/history"
     },
     {
         name: "Reviews",
-        slug: "reviews"
+        slug: "/reviews"
     },
     {
         name: "Career",
-        slug: "career"
+        slug: "/career"
     },
     {
         name: "Terms And Conditions",
-        slug: "terms-and-conditions"
+        slug: "/terms-and-conditions"
     },
     {
         name: "Privacy Policy",
-        slug: "privacy-policy"
+        slug: "/privacy-policy"
     }
 ];
 
 export const servicesSubLinks = [
     {
         name: "All",
-        slug: "services"
+        slug: "/services"
     },
     {
         name: "Door to Door Car Shipping",
-        slug: ""
+        slug: "/services/door-to-door"
     },
     {
         name: "Enclosed Auto Shipping",
-        slug: ""
+        slug: "/services/door-to-door"
     },
     {
         name: "Expedited Auto Transport",
-        slug: ""
+        slug: "/services/door-to-door"
     },
     {
         name: "Exotic Vehicle Shipping",
-        slug: ""
+        slug: "/services/door-to-door"
     },
     {
         name: "Military Automobile Shipping",
-        slug: ""
+        slug: "/services/door-to-door"
     },
     {
         name: "Open Car Moving",
-        slug: ""
+        slug: "/services/door-to-door"
     },
     {
         name: "Snowbird Auto Moving",
-        slug: ""
+        slug: "/services/door-to-door"
     }
 ];
 
 export const commercialServicesSubLinks = [
     {
         name: "All",
-        slug: "commercial-services"
+        slug: "/commercial-services"
     },
     {
         name: "Auction Car Shipping",
-        slug: "commercial-services"
+        slug: "/commercial-services/auction-car-shipping"
     },
     {
         name: "Corporate Relocation",
-        slug: "commercial-services"
+        slug: "/commercial-services/auction-car-shipping"
     },
     {
         name: "Commercial Vehicle Transport   ",
-        slug: "commercial-services"
+        slug: "/commercial-services/auction-car-shipping"
     },
     {
         name: "Dealer Car Moving Services",
-        slug: "commercial-services"
+        slug: "/commercial-services/auction-car-shipping"
     },
     {
         name: "Military Heavy Equipment Shipping",
-        slug: "commercial-services"
+        slug: "/commercial-services/auction-car-shipping"
     },
 ]
 

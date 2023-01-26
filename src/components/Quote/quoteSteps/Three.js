@@ -18,10 +18,7 @@ export default function Three(props) {
                         <div className="infoItem">
                             <p className="helper"><span className="icon-location-icon"><span
                                 className="path1"></span><span
-                                className="path2"></span></span> <p>From</p> <span
-                                className="icon-Gide-Icon"><span
-                                className="path1"></span><span className="path2"></span><span
-                                className="path3"></span></span>
+                                className="path2"></span></span> <b>From</b>
                             </p>
                             <p className="white font-24 bold">{user.from}</p>
                         </div>
@@ -30,25 +27,19 @@ export default function Three(props) {
                                 className="path1"></span><span
                                 className="path2"></span></span>
                                 <span className="icon-location-icon"><span className="path1"></span><span
-                                    className="path2"></span></span><p>To</p> <span
-                                    className="icon-Gide-Icon"><span
-                                    className="path1"></span><span className="path2"></span><span
-                                    className="path3"></span></span>
+                                    className="path2"></span></span><b>To</b>
                             </p>
                             <p className="white font-24 bold">{user.to}</p>
                         </div>
                         <div className="infoItem timeInfoItem">
-                            <p className="helper"><span className="icon-Vector-3"></span> <p>Time</p> <span
-                                className="icon-Gide-Icon"><span
-                                className="path1"></span><span className="path2"></span><span
-                                className="path3"></span></span>
+                            <p className="helper"><span className="icon-Vector-3"></span> <b>Time</b>
                             </p>
                             <p className="white font-24 bold">{user.time}</p>
                         </div>
                     </div>
                     <div className="rightSide">
                         <div className="infoItem">
-                            <p className="helper"><span className="icon-Vehicle-Icon"></span> <p>Vehicle</p></p>
+                            <p className="helper"><span className="icon-Vehicle-Icon"></span> <b>Vehicle</b></p>
                             {vehicle.map((el, i) => (
                                 <p key={i} className="white font-24 bold">{el.make + " " + el.model + " " + el.year}</p>
                             ))}

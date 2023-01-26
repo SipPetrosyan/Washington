@@ -106,8 +106,8 @@
     display: flex;
     gap: 20px;
 
-    .inputField .helper > span:first-of-type {
-      font-size: 24px;
+    .MuiFormLabel-root.Mui-focused {
+      display: none;
     }
 
     .inputField {
@@ -131,6 +131,11 @@
 
         & > span:first-of-type {
           margin-right: 7px;
+          font-size: 18px;
+        }
+
+        & > span:not(:first-of-type) {
+          font-size: 20px;
         }
       }
 
@@ -268,6 +273,7 @@
       justify-content: space-between;
 
       h1 {
+        white-space: nowrap;
         font-size: 64px;
         color: $gold;
       }
@@ -845,7 +851,6 @@
 }
 
 
-
 @media screen and (max-width: 1536px) {
   .reviewsBanner {
     .welcomePart {
@@ -904,11 +909,12 @@
 }
 
 @media screen and (max-width: 1380px) {
-  .latestArticles{
-    .container{
+  .latestArticles {
+    .container {
       flex-direction: column;
-      .posts{
-        .self{
+
+      .posts {
+        .self {
           justify-content: center;
         }
       }
@@ -1042,6 +1048,25 @@
     }
   }
 
+  .transportation {
+    .mainContent {
+      .contentItem {
+        .transportCard {
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .commercialServices .container .part .commercialCard p {
+    font-size: 16px;
+    line-height: 24px;
+
+
+  }
+
   .reviewsBanner {
     .reviewsMain {
       .reviewsContainer .stars, .buttons {
@@ -1090,10 +1115,11 @@
   .transportation {
     .mainContent {
       .contentItem {
-        &>h1{
+        & > h1 {
           font-size: 20px;
         }
-        &>h3{
+
+        & > h3 {
           font-size: 14px;
         }
       }
@@ -1197,7 +1223,6 @@
     .inputs {
       .formTitle {
         font-size: 24px;
-        margin-bottom: 20px;
       }
 
       .fromTo {

@@ -6,8 +6,6 @@ import Three from "@/components/quote/quoteSteps/Three";
 import {useState} from "react";
 import Four from "@/components/quote/quoteSteps/Four";
 import * as yup from "yup"
-import {useFormik} from "formik";
-import {quoteInitialValues} from "@/utils/helper";
 
 export const quoteSchema = yup.object({
     from: yup.string().required("From is required"),
@@ -23,8 +21,6 @@ export const quoteSchema = yup.object({
 
 export default function QuoteSteps({formik, vehicle, setVehicle}) {
     const [activeStep, setActiveStep] = useState(0);
-
-
 
     const handleStepChange = (e) => {
         setActiveStep(e.activeStep - 1);

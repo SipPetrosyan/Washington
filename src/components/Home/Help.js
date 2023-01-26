@@ -80,7 +80,7 @@ export default function Help() {
                                     onChange={setPhone}
                                     international
                                     defaultCountry="US"
-                                    limitMaxLength={12}
+                                    limitMaxLength={true}
                                 />
                             </div>
                         </div>

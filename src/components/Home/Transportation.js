@@ -25,7 +25,7 @@ export default function Transportation() {
                     <TransportCard
                         title="Open Car Transport"
                         text="The most popular method of auto transport is Open Car Moving."
-                        link="/open"
+                        link="/services/open-car-transport"
                         icon={<span className="icon-Open-Hauler-Icon"><span className="path1"></span><span
                             className="path2"></span><span className="path3"></span><span
                             className="path4"></span><span className="path5"></span><span
@@ -38,23 +38,20 @@ export default function Transportation() {
                         }
                     />
                     <TransportCard
-                        title="Open Car Transport"
-                        text="The most popular method of auto transport is Open Car Moving."
-                        link="/open"
+                        title="Exotic Vehicle Shipping"
+                        text="Exotic vehicle shipping ensures your beloved car avoids any possible damage."
+                        link="/services/exotic-vehicle-shipping"
                         icon={<span className="icon-Exotic-Car-Transport-Icon"><span className="path1"></span><span
                             className="path2"></span><span className="path3"></span><span className="path4"></span><span
                             className="path5"></span></span>
                         }
                     />
-
                 </div>
-
                 <div className="contentItem cards">
-
                     <TransportCard
-                        title="Open Car Transport"
-                        text="The most popular method of auto transport is Open Car Moving."
-                        link="/open"
+                        title="Enclosed Car Transport"
+                        text="Enclosed car shipping is reserved for exotic or luxury automobiles."
+                        link="/services/enclosed-car-transport"
                         icon={<span className="icon-Enclosed-Hauler-Icon"><span className="path1"></span><span
                             className="path2"></span><span className="path3"></span><span className="path4"></span><span
                             className="path5"></span><span className="path6"></span><span className="path7"></span><span
@@ -65,15 +62,12 @@ export default function Transportation() {
                         }
                     />
                     <TransportCard
-                        title="Open Car Transport"
-                        text="The most popular method of auto transport is Open Car Moving."
-                        link="/open"
-                        icon={<span className="icon-Door-to-Door-Icon"></span>
-                        }
+                        title="Door to Door Car Transport"
+                        text="Washington DC Auto Transport’s standard shipping option is the door to door option."
+                        link="/services/door-to-door"
+                        icon={<span className="icon-Door-to-Door-Icon"></span>}
                     />
-
                 </div>
-
             </div>
         </div>
     )

@@ -9,7 +9,7 @@ export default function QuoteBanner () {
             <div className="filter"></div>
             <div className="stepIndexes">
             </div>
-            <QuoteSteps   />
+            {/*<QuoteSteps   />*/}
         </div>
     )
 }

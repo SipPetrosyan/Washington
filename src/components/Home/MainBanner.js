@@ -35,7 +35,10 @@ export default function MainBanner() {
     return (
         <div className="mainBanner m-padding" style={{backgroundImage: `url(${bgImg.src})`}}>
             {width <= 768 ? <QuoteSteps formik={formik} vehicle={vehicle} setVehicle={setVehicle}/> :
-                <QuoteForm formik={formik} vehicle={vehicle} setVehicle={setVehicle}/>
+                width > 768 ? <QuoteForm formik={formik} vehicle={vehicle} setVehicle={setVehicle}/> : ""
+                //  there are 2 conditions here, because under condition 1,
+                //  else will be displayed first,
+                //  then when window is available in Next.js, the first condition will work !!!
             }
         </div>
     )

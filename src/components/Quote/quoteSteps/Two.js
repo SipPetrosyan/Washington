@@ -1,6 +1,7 @@
 import {Autocomplete, Button, TextField} from "@mui/material";
 import { useState} from "react";
 import InputField from "@/components/customUI/InputField";
+import InfoToolTip from "@/components/customUI/InfoToolTip";
 
 export default function Two(props) {
     const {formik, vehicle, setVehicle} = props;
@@ -71,11 +72,7 @@ export default function Two(props) {
                         <div key={i} className="vehicle flex-between">
                             <InputField
                                 error={errors[i].year}
-                                label={<> Vehicle <span
-                                    className="icon-Gide-Icon"><span
-                                    className="path1"></span><span className="path2"></span><span
-                                    className="path3"></span></span>
-                                </>}
+                                label={<> Vehicle <InfoToolTip text="!!!!!! !!!!!!!!! !!!!!!!! !!!!!!!! !!!!!!!!!! !!!!! " /></>}
                                 onChange={(e) => onVehicleChange(e, i)}
                                 value={vehicle[i].year}
                                 id="year"
@@ -113,10 +110,7 @@ export default function Two(props) {
                 <div className="time">
                     <div className="method">
                         <p className="title font-18 white bold">
-                            <span>Shipping Method?</span>
-                            <span className="icon-Gide-Icon"><span
-                                className="path1"></span><span className="path2"></span><span
-                                className="path3"></span></span>
+                            <span>Shipping Method?</span><InfoToolTip text="!!!!!! !!!!!!!!! !!!!!!!! !!!!!!!! !!!!!!!!!! !!!!! " />
                         </p>
                         <div className="selectMethod flex-between">
                             <label>
@@ -142,13 +136,9 @@ export default function Two(props) {
                             <p className="err-message">{formik.touched.method && formik.errors.method}</p>
                         </div>
                     </div>
-
                     <div className="method">
                         <p className="title font-18 white bold">
-                            <span>Is It Operable?</span>
-                            <span className="icon-Gide-Icon"><span
-                                className="path1"></span><span className="path2"></span><span
-                                className="path3"></span></span>
+                            <span>Is It Operable?</span><InfoToolTip text="!!!!!! !!!!!!!!! !!!!!!!! !!!!!!!! !!!!!!!!!! !!!!! " />
                         </p>
                         <div className="selectMethod flex-between">
                             <label>

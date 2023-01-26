@@ -5,15 +5,12 @@ import {useState} from "react";
 import {useFormik} from "formik";
 import {quoteInitialValues} from "@/utils/helper";
 import {quoteSchema} from "@/components/quote/quoteSteps";
+import {Tooltip} from "@mui/joy";
+import InfoToolTip from "@/components/customUI/InfoToolTip";
 
 export default function QuoteForm({formik, vehicle, setVehicle}) {
     const [errors, setErrors] = useState([{}]);
     const [vehicleErrors, setVehicleErrors] = useState([]);
-    // const [vehicle, setVehicle] = useState([{
-    //     year: "",
-    //     make: "",
-    //     model: ""
-    // }]);
 
     const onVehicleChange = (e, i) => {
         setVehicle((prev) => {
@@ -41,26 +38,6 @@ export default function QuoteForm({formik, vehicle, setVehicle}) {
         ])
     }
 
-    // const formik = useFormik({
-    //     initialValues: quoteInitialValues,
-    //     onSubmit: (values, {resetForm}) => {
-    //         if(vehicleErrors.length === 0){
-    //             alert(JSON.stringify({
-    //                 ...values,
-    //                 vehicle
-    //             }));
-    //             resetForm(quoteInitialValues);
-    //             setVehicle([{
-    //                 year: "",
-    //                 make: "",
-    //                 model: ""
-    //             }]);
-    //             handleClose && handleClose();
-    //         }
-    //     },
-    //     validationSchema: quoteSchema
-    // });
-
     return (
         <form className="quoteForm homeQuoteForm">
             <p className="formTitle">Get real <span>Quote</span> now : Car Shipping Cost</p>
@@ -73,10 +50,7 @@ export default function QuoteForm({formik, vehicle, setVehicle}) {
                     id="from"
                     name="from"
                     placeholder="City,State or ZIP"
-                    label={<>From <span className="icon-Gide-Icon"><span
-                        className="path1"></span><span className="path2"></span><span
-                        className="path3"></span></span>
-                    </>}
+                    label={<>From <InfoToolTip text="!!!!!! !"/> </>}
                 />
 
                 <InputField
@@ -87,10 +61,7 @@ export default function QuoteForm({formik, vehicle, setVehicle}) {
                     id="to"
                     name="to"
                     placeholder="City,State or ZIP"
-                    label={<>To <span className="icon-Gide-Icon"><span
-                        className="path1"></span><span className="path2"></span><span
-                        className="path3"></span></span>
-                    </>}
+                    label={<>To <InfoToolTip text="!!!!!!  "/> </>}
                 />
             </div>
             <div className="vehicle-container">
@@ -98,10 +69,7 @@ export default function QuoteForm({formik, vehicle, setVehicle}) {
                     <div key={i} className="vehicle flex-between">
                         <InputField
                             error={errors[i].year}
-                            label={<> Vehicle <span
-                                className="icon-Gide-Icon"><span
-                                className="path1"></span><span className="path2"></span><span
-                                className="path3"></span></span>
+                            label={<> Vehicle <InfoToolTip text="!!!!!! !!!! !!!!!!!!!! !!!!! "/>
                             </>}
                             onChange={(e) => onVehicleChange(e, i)}
                             value={vehicle[i].year}
@@ -140,15 +108,10 @@ export default function QuoteForm({formik, vehicle, setVehicle}) {
             <div className="time">
                 <InputField
                     error={formik.touched.time && formik.errors.time}
-
                     className="inputField"
-                    label={<> Time <span className="icon-Gide-Icon"><span
-                        className="path1"></span><span className="path2"></span><span
-                        className="path3"></span></span>
-                    </>}
+                    label={<> Time <InfoToolTip text="!!!!!! ! "/> </>}
                     select={true}
                     element={<Autocomplete
-                        disablePortal
                         onChange={(e, time) => {
                             formik.setValues({
                                 ...formik.values,
@@ -159,16 +122,14 @@ export default function QuoteForm({formik, vehicle, setVehicle}) {
                         value={formik.values.time}
                         id="time"
                         name="time"
-                        options={["Shut", "Shat shut"]}
+                        options={["As soon as possible", "Within 1 week", "Within 2 weeks", "Within 30 days", "More than 30 days"]}
                         renderInput={(params) => <TextField {...params} label="Pick up Date"/>}
                     />}
                 />
                 <div className="method">
                     <p className="title font-18 white bold">
-                        <span>Shipping Method?</span>
-                        <span className="icon-Gide-Icon"><span
-                            className="path1"></span><span className="path2"></span><span
-                            className="path3"></span></span>
+                        <span>Shipping Method?</span><InfoToolTip
+                        text="!!!!! !! !!! ! "/>
                     </p>
                     <div className="selectMethod flex-between">
                         <label>
@@ -192,16 +153,12 @@ export default function QuoteForm({formik, vehicle, setVehicle}) {
                             Enclosed
                         </label>
                         <p className="err-message">{formik.touched.method && formik.errors.method}</p>
-
                     </div>
                 </div>
-
                 <div className="method">
                     <p className="title font-18 white bold">
-                        <span>Is It Operable?</span>
-                        <span className="icon-Gide-Icon"><span
-                            className="path1"></span><span className="path2"></span><span
-                            className="path3"></span></span>
+                        <span>Is It Operable?</span><InfoToolTip
+                        text="!!!!!! !!!!!!!!! !!!"/>
                     </p>
                     <div className="selectMethod flex-between">
                         <label>
@@ -262,7 +219,7 @@ export default function QuoteForm({formik, vehicle, setVehicle}) {
                                 phone: e
                             })
                         }}
-                        limitMaxLength={12}
+                        limitMaxLength={true}
                         onBlur={formik.handleBlur}
                         value={formik.values.phone}
                         error={formik.touched.phone && formik.errors.phone}

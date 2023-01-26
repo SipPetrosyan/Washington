@@ -71,6 +71,12 @@ header {
   //top: 0;
   //left: 0;
   //width: 100%;
+
+  .header-logo img {
+    width: 242px;
+    height: 68px;
+  }
+
   .header-nav {
     display: flex;
     justify-content: space-between;
@@ -160,6 +166,14 @@ header {
 //   GET QUOTE POPUP
 
 .getQuotePopUp {
+  .closePopUp{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: #e53e29;
+    font-size: 32px;
+    cursor: pointer;
+  }
   & > .MuiDialog-container > .MuiPaper-root {
     max-width: 760px;
     border-radius: 20px !important;
@@ -209,6 +223,7 @@ button.openGetQuote {
   width: 60px;
   min-width: 0;
   height: 175px;
+  margin-bottom: 60px;
 
 
   span {
@@ -263,7 +278,7 @@ footer {
     padding-bottom: 60px;
   }
 
-  .mobileContact{
+  .mobileContact {
     display: none;
   }
 
@@ -287,10 +302,16 @@ footer {
 
     &.info {
       img {
+        width: 243px;
+        height: 68px;
         margin-bottom: 30px;
         max-width: 348px;
       }
     }
+  }
+
+  .footerSocialPanel {
+    display: none;
   }
 
   .ending {
@@ -312,12 +333,21 @@ footer {
 
 //       SOCIAL  LINKS PANEL
 .socialPanel {
+  position: fixed;
+  top: 0;
+  right: 20px;
+  height: 100%;
+  z-index: 99;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  position: fixed;
-  top: 10%;
-  right: 20px;
+  justify-content: center;
+
+  .socialLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transform: translateY(-30px);
+  }
 
   a {
     transition: 0.3s;
@@ -336,8 +366,8 @@ footer {
 
 .btnToTop.MuiButtonBase-root {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 20px;
+  right: 25px;
   width: 50px;
   min-width: 50px;
   height: 50px;
@@ -373,6 +403,7 @@ footer {
 
     .header-logo img {
       width: 200px;
+      height: 60px;
     }
 
     .MuiButtonBase-root {
@@ -384,6 +415,34 @@ footer {
     .header-nav {
       gap: 20px;
     }
+  }
+  .socialPanel {
+    right: 10px;
+
+    .socialLinks {
+      gap: 10px;
+    }
+
+    .openGetQuote {
+      width: 50px;
+
+      .quoteIcon {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+      }
+    }
+
+    a {
+      text-align: right;
+
+      span {
+        font-size: 50px;
+      }
+    }
+  }
+  .btnToTop.MuiButtonBase-root {
+    right: 15px;
   }
 }
 
@@ -431,6 +490,17 @@ footer {
   .socialPanel {
     display: none;
   }
+  .btnToTop.MuiButtonBase-root {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    right: 24px;
+    bottom: 24px;
+
+    .icon-chevron-thin-right {
+      font-size: 20px;
+    }
+  }
   .mobileMenuDrawer {
     .MuiBackdrop-root {
       background-color: transparent;
@@ -443,6 +513,12 @@ footer {
       background-color: $blue;
 
       nav.JoyList-root {
+        & > .JoyListItemButton-root {
+          & > p, & > a {
+            font-size: 20px;
+          }
+        }
+
         .icon-chevron-thin-right {
           color: $white;
           font-weight: 900;
@@ -463,32 +539,41 @@ footer {
         }
 
       }
+
+      .JoyListItemButton-root a {
+        width: 100%;
+      }
     }
   }
   footer {
     padding-top: 40px;
     padding-bottom: 40px;
+
     .contentItem:not(.info), .bottomContent {
       display: none;
     }
 
-    .contentItem.info{
-      img{
+    .contentItem.info {
+      img {
+        height: 60px;
         width: 200px;
       }
-      &>p, &>h2{
+
+      & > p, & > h2 {
         display: none;
       }
     }
 
-    .mobileContact{
+    .mobileContact {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      h2{
+
+      h2 {
         font-size: 24px;
       }
-      a{
+
+      a {
         font-size: 20px;
         color: $white;
       }
@@ -497,29 +582,35 @@ footer {
     .footerSocialPanel {
       display: flex;
       gap: 15px;
-      align-content: center;
+      align-items: center;
+
       a {
         &:first-of-type, &:nth-of-type(2) {
           span {
-            font-size: 32px;
+            font-size: 34px;
+
             &:after, &:before {
               color: $white !important;
             }
           }
         }
-        &:nth-of-type(3){
+
+        &:nth-of-type(3) {
           font-size: 26px;
         }
-        &:nth-of-type(4), &:nth-of-type(5){
+
+        &:nth-of-type(4), &:nth-of-type(5) {
           font-size: 22px;
         }
-        &:nth-of-type(6), &:nth-of-type(7){
+
+        &:nth-of-type(6), &:nth-of-type(7) {
           font-size: 28px;
         }
       }
     }
-    .ending{
-      &>p{
+
+    .ending {
+      & > p {
         text-align: center;
         max-width: 296px;
         line-height: 24px;
@@ -540,9 +631,7 @@ footer {
       display: flex;
       flex-direction: column;
       gap: 3px;
-
       align-items: center;
-
       .icon-Operator-icon-2 {
         font-size: 22px;
       }
@@ -561,7 +650,6 @@ footer {
       height: 100%;
       max-height: 100%;
       margin: 0;
-
       .quoteStepper {
         overflow: hidden;
         padding: 24px;
@@ -578,14 +666,16 @@ footer {
       }
     }
   }
-  footer{
+  footer {
     padding-top: 30px;
     padding-bottom: 30px;
-    .topContent{
+
+    .topContent {
       flex-direction: column;
       padding-bottom: 30px;
       margin-bottom: 30px;
-      .contentItem.info{
+
+      .contentItem.info {
         padding-bottom: 20px;
         display: flex;
         flex-direction: column;
@@ -593,11 +683,13 @@ footer {
         border-bottom: 1px solid $white;
       }
     }
-    .ending{
-      &>p{
+
+    .ending {
+      & > p {
         max-width: 100%;
       }
-      .links{
+
+      .links {
         position: initial;
         justify-content: space-evenly;
         margin-top: 30px;

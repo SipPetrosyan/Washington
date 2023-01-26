@@ -29,7 +29,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #003b5659;
+  background-color: rgba(0, 59, 86, 0.72);
   backdrop-filter: blur(10px);
 
   .MuiCircularProgress-root {
@@ -96,7 +96,7 @@ a {
 }
 
 .white {
-  color: $white;
+  color: $white !important;
 }
 
 
@@ -195,7 +195,7 @@ a {
     max-width: 260px;
     padding: 12px 30px !important;
     background: #FDFDFF;
-    border: 2px solid rgba(5, 47, 90, 0.6);
+    border: none;
     border-radius: 10px;
     height: 48px !important;
     box-sizing: border-box;
@@ -233,27 +233,43 @@ a {
   }
 
   .MuiAutocomplete-clearIndicator {
-    margin-right: 20px;
+    margin-right: 40px;
   }
 
-  .indicator {
+  .MuiAutocomplete-popupIndicator{
+    background-color: $gray-bg;
     padding: 18px 13px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 0;
-    right: 0;
+    top: -10px;
+    right: -7px;
     height: 48px;
-    border: 3px solid rgba(9, 38, 94, 0.6);
-    background-color: #FFFFFF;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-
-    span {
-      font-size: 28px;
-      color: rgba(9, 38, 94, 0.6);
+    background-color: $gray-bg;
+    border-radius:  10px !important;
+    &:before{
+      content: "\e904";
+      font-family: 'icomoon' !important;
+      speak: never;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
+    svg{
+      display: none;
+    }
+  }
+}
+
+.JoyTooltip-root{
+  background-color: $white;
+  span{
+    color: $white;
   }
 }
 
@@ -281,15 +297,15 @@ a {
 //         MUI
 
 .MuiButtonBase-root {
-  text-transform: none;
+  text-transform: none !important;
 }
 
 
 @media screen and (max-width: 1536px) {
 
   .m-padding {
-    padding-left: 4.75%;
-    padding-right: 4.75%;
+    padding-left: 6%;
+    padding-right: 6%;
   }
 
   .font-36 {
@@ -327,6 +343,12 @@ a {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .m-padding {
+    padding-left: 4.75%;
+    padding-right: 4.75%;
+  }
+}
 @media screen and (max-width: 768px) {
   .m-padding{
     padding-left: 6%;
@@ -361,6 +383,45 @@ a {
   }
 
 }
+
+@media screen and (max-width: 540px) {
+  .m-padding{
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .font-36 {
+    font-size: 26px;
+  }
+
+  .font-32 {
+    font-size: 24px;
+  }
+
+  .font-30 {
+    font-size: 22px;
+  }
+
+  .font-28 {
+    font-size: 20px;
+  }
+
+  .font-24 {
+    font-size: 18px;
+  }
+
+  .font-22 {
+    font-size: 16px;
+  }
+  .font-20 {
+    font-size: 14px;
+  }
+  .font-18 {
+    font-size: 14px;
+  }
+
+}
+
 
 
 
