@@ -17,7 +17,7 @@ const PostsPage = ({title, latestTitle, postsData}) => {
                 </div>
                 <div className="blogPage">
                     <div>
-                        <h1 className='font-32 blue'>{title}</h1>
+                        <h1 className='font-24 blue'>{title}</h1>
                         <div className='postsList'>
                             {postsData.map((post, idx) => {
                                 return (

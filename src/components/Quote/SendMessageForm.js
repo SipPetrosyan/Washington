@@ -6,7 +6,7 @@ export default function SendMessageForm () {
 
     return(
         <div className='postComment sendMessageForm'>
-            <h1 className='font-32 blue bold'>If you need an any HELP, just let us know !</h1>
+            <h1 className='font-18 blue bold'>If you need an any HELP, just let us know !</h1>
             <form className='commentForm'>
                 <div className='inputs'>
                     <div>

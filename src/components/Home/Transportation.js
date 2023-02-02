@@ -7,17 +7,17 @@ export default function Transportation() {
             <hr className="hr mb-60"/>
             <div className="mainContent">
                 <div className="contentItem">
-                    <h1 className="font-32 blue">Auto Transport Made Easy</h1>
-                    <h3 className="font-22 blue">Washington DC Auto Transport can help move your car to the destination
+                    <h1 className="font-24 blue">Auto Transport Made Easy</h1>
+                    <h3 className="font-18 blue">Washington DC Auto Transport can help move your car to the destination
                         of your choice. Whether
                         you are moving to or from Washington DC, we ship cars nationwide. </h3>
-                    <h3 className="font-22 blue">Once you choose us as your vehicle transporter, you are assigned a
+                    <h3 className="font-18 blue">Once you choose us as your vehicle transporter, you are assigned a
                         personal coordinator to help
                         you through the paperwork, scheduling and billing processes.</h3>
-                    <h3 className="font-22 blue">Washington DC Auto Transport can help move your car to the destination
+                    <h3 className="font-18 blue">Washington DC Auto Transport can help move your car to the destination
                         of your choice. Whether
                         you are moving to or from Washington DC, we ship cars nationwide. </h3>
-                    <h3 className="font-22 blue">Once you choose us as your vehicle transporter, you are assigned a
+                    <h3 className="font-18 blue">Once you choose us as your vehicle transporter, you are assigned a
                         personal coordinator to help
                         you through the paperwork, scheduling and billing processes.</h3>
                 </div>

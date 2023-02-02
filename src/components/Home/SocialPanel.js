@@ -14,7 +14,9 @@ export default function SocialPanel({quotePopup, setQuotePopUp}) {
         year: "",
         make: "",
         model: ""
-    }])
+    }]);
+    const [errors, setErrors] = useState([{}]);
+
 
     const formik = useFormik({
         initialValues: quoteInitialValues,
@@ -67,9 +69,9 @@ export default function SocialPanel({quotePopup, setQuotePopUp}) {
                                 </Link>
                             </div>
                         </div>
-                        <QuoteSteps formik={formik} vehicle={vehicle} setVehicle={setVehicle}/>
+                        <QuoteSteps errors={errors} setErrors={setErrors} formik={formik} vehicle={vehicle} setVehicle={setVehicle}/>
                     </> : <>
-                        <QuoteForm formik={formik} vehicle={vehicle} setVehicle={setVehicle}/>
+                        <QuoteForm errors={errors} setErrors={setErrors} formik={formik} vehicle={vehicle} setVehicle={setVehicle}/>
                         <div className="closePopUp" onClick={handleClose}>
                             <span className="icon-cancel-circle"></span>
                         </div>

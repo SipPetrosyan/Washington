@@ -12,12 +12,12 @@ export default function PostItem({btnName, desc}) {
             </Link>
             <div className="content">
                 <div className="info">
-                    <span className="icon-calendar red font-20"></span>
-                    <span className="blue-60 bold font-20">JAN 05, 2023 </span>
+                    <span className="icon-calendar red font-16"></span>
+                    <span className="blue-60 bold font-16">JAN 05, 2023 </span>
                     <span className="blue-60">|</span>
                     <span className="red bold"> Blogs</span>
                 </div>
-                <h1 className="blue font-20 bold">
+                <h1 className="blue font-16 bold">
                     Ram Looks To Change The
                     Market With Brand New Electric
                     Pickup

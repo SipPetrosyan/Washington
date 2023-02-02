@@ -5,7 +5,7 @@ import {Textarea} from "@mui/joy";
 const PostComment = () => {
     return (
         <div className='postComment'>
-            <h1 className='font-32 blue'>Leave a Reply </h1>
+            <h1 className='font-24 blue'>Leave a Reply </h1>
             <form className='commentForm'>
                 <div className='inputs'>
                     <div className=''>
@@ -25,8 +25,8 @@ const PostComment = () => {
                 </div>
                 <div className='buttonPart'>
                     <div className='selectSave'>
-                        <input type="checkbox" name="checkbox" id="save" className='blue font-24'/>
-                        <label htmlFor="save"  className='blue font-24'>Save my name, email, and website in this browser for the next time I comment</label>
+                        <input type="checkbox" name="checkbox" id="save" className='blue font-18'/>
+                        <label htmlFor="save"  className='blue font-18'>Save my name, email, and website in this browser for the next time I comment</label>
                     </div>
                     <div className="btn">
                         <Button>Post Comment</Button>

@@ -5,10 +5,10 @@ export default function CommercialCard({title, text, link, className}) {
 
     return (
         <div className={`commercialCard ${className}`}>
-            <h1 className="font-24 red">{title}</h1>
-            <p className="font-20 blue">{text}</p>
+            <h1 className="font-18 red">{title}</h1>
+            <p className="font-16 blue">{text}</p>
             <Button>
-                <Link className="font-20 bold white" href={link}>
+                <Link className="font-16 bold white" href={link}>
                     Read More
                 </Link>
             </Button>

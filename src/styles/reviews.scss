@@ -1,9 +1,6 @@
 @import "index";
 
 .reviewsPage {
-
-
-
   .images {
     margin-top: 30px;
     display: flex;
@@ -28,7 +25,7 @@
     width: 60%;
 
     p, span {
-      font-size: 24px;
+      font-size: 18px;
       color: $blue;
       line-height: 38px;
       margin-bottom: 40px;
@@ -68,7 +65,7 @@
     }
 
     > p {
-      font-size: 20px;
+      font-size: 16px;
       line-height: 30px;
       color: #FDFDFF;
     }

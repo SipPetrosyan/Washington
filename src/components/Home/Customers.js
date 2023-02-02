@@ -7,7 +7,7 @@ export default function Customers() {
             <div className="customersSays">
                 <div className="content">
                     <hr className="hr"/>
-                    <h1 className="font-32 blue">What Our Customers Say About Us</h1>
+                    <h1 className="font-24 blue">What Our Customers Say About Us</h1>
                     <p>The most essential part of our auto shipping business is our clients. They are the reason the
                         wheels of our company keep on rolling. After all, without customers, a company cannot
                         succeed.</p>

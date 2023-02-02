@@ -46,11 +46,11 @@ export default function Three(props) {
                         </div>
                         <div className="infoItem">
                             <p className="helper"> Shipping Method? </p>
-                            <p className="red font-24 bold">{user.method === '1' ? "Open" : "Enclosed"}</p>
+                            <p className="red font-18 bold">{user.method === '1' ? "Open" : "Enclosed"}</p>
                         </div>
                         <div className="infoItem">
                             <p className="helper">Is It Operable? </p>
-                            <p className="red font-24 bold"> {user.operable === '1' ? "Yes" : "No"} </p>
+                            <p className="red font-18 bold"> {user.operable === '1' ? "Yes" : "No"} </p>
                         </div>
                     </div>
                 </div>

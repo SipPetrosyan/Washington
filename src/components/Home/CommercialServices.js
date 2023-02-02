@@ -5,7 +5,7 @@ export default function CommercialServices() {
     return (
         <div className="commercialServices m-padding">
             <hr className="hr"/>
-            <h1 className="font-32 blue">Commercial Services</h1>
+            <h1 className="font-24 blue bolder">Commercial Services</h1>
             <div className="flex-center container">
                 <div className="part">
                     <CommercialCard

@@ -6,7 +6,7 @@ export default function History() {
     return (
         <div className="m-padding page-main historyPage">
             <hr className="hr"/>
-            <h1 className="blue font-32 bolder">History</h1>
+            <h1 className="blue font-24 bolder">History</h1>
             <div className="content">
                 <p>The history of Washington DC Auto Transport stretches back more than a decade. Our story began in
                     2006 when we started this small, family-run company out of a garage. That’s right, talk about humble
@@ -25,7 +25,7 @@ export default function History() {
             </Button>
             <div className="description">
                 <div>
-                    <h2 className="blue font-24 bold">Contact us at Washington DC Auto Transport today and we’ll take
+                    <h2 className="blue font-20 bold">Contact us at Washington DC Auto Transport today and we’ll take
                         care of all your car shipping needs.</h2>
                     <div className="operator">
                         <a href="tel:( 202 ) 930 - 8005">

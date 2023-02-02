@@ -7,15 +7,15 @@ export default function SendMessage() {
 
     return (
         <div className="sendMessage m-padding">
-            <h1 className="red font-36 bolder">Submit Now</h1>
+            <h1 className="red font-24 bolder">Submit Now</h1>
             <div className="flex-between container">
                 <SendMessageForm/>
                 <div className="pricing">
-                    <h2 className="blue bolder font-32">Pricing</h2>
-                    <p className="font-24 blue">Our prices are very affordable. If you find a price lower than
+                    <h2 className="blue bolder font-22">Pricing</h2>
+                    <p className="font-18 blue">Our prices are very affordable. If you find a price lower than
                         Washington DC Auto Transports,
                         we’ll do our absolute best to match it.</p>
-                    <p className="offer blue bold font-24">We offer discounts for military, students, and senior citizens. You can request a
+                    <p className="offer blue bold font-18">We offer discounts for military, students, and senior citizens. You can request a
                         free quote online today and one of our agents will contact you shortly.</p>
                     <div className="or">
                         <hr/>

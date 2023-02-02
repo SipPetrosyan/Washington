@@ -19,7 +19,7 @@ export const quoteSchema = yup.object({
 });
 
 
-export default function QuoteSteps({formik, vehicle, setVehicle}) {
+export default function QuoteSteps({formik, vehicle, setVehicle, errors, setErrors}) {
     const [activeStep, setActiveStep] = useState(0);
 
     const handleStepChange = (e) => {
@@ -35,8 +35,8 @@ export default function QuoteSteps({formik, vehicle, setVehicle}) {
                 <Step label="Four" className={`${activeStep===3 && "active"}`} children={<div className={`indicator ${activeStep===3 && "active"}`}><span>4</span> <p>Finish</p></div>}/>
             </Stepper>
             <StepWizard className="stepsController" onStepChange={handleStepChange} >
-                <One formik={formik} setActive  />
-                <Two vehicle={vehicle} setVehicle={setVehicle} formik={formik} />
+                <One formik={formik} setActive />
+                <Two errors={errors} setErrors={setErrors} vehicle={vehicle} setVehicle={setVehicle} formik={formik} />
                 <Three vehicle={vehicle} user={formik.values}  />
                 <Four formik={formik} />
             </StepWizard>

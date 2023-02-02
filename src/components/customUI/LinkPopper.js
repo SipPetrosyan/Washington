@@ -22,7 +22,7 @@ export default function LinkPopper({link, subLinks}) {
                 aria-expanded={open ? 'true' : undefined}
                 onClick={handleClick}
             >
-                <span className="font-24 blue bold">{link}</span>
+                <span className="font-18 blue bold">{link}</span>
                 <span className="icon-keyboard_arrow_down"></span>
             </Button>
             <Menu

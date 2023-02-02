@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?ip1eg9');
-  src:  url('fonts/icomoon.eot?ip1eg9#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?ip1eg9') format('truetype'),
-    url('fonts/icomoon.woff?ip1eg9') format('woff'),
-    url('fonts/icomoon.svg?ip1eg9#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?xc5yjx');
+  src:  url('fonts/icomoon.eot?xc5yjx#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?xc5yjx') format('truetype'),
+    url('fonts/icomoon.woff?xc5yjx') format('woff'),
+    url('fonts/icomoon.svg?xc5yjx#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -168,6 +168,171 @@
   content: "\e93d";
   margin-left: -1em;
   color: none;
+}
+.icon-Arrow-5:before {
+  content: "\e93e";
+  color: #fdfdff;
+}
+.icon-Vehicle-Icon:before {
+  content: "\e90d";
+  color: #e53e29;
+}
+.icon-Vector-3:before {
+  content: "\e90e";
+  color: #e53e29;
+}
+.icon-Vector-21:before {
+  content: "\e959";
+  color: #fdfdff;
+}
+.icon-Gide-Icon .path1:before {
+  content: "\e906";
+  color: rgb(253, 253, 255);
+}
+.icon-Gide-Icon .path2:before {
+  content: "\e907";
+  margin-left: -1em;
+  color: rgb(9, 38, 94);
+}
+.icon-Gide-Icon .path3:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(9, 38, 94);
+}
+.icon-location-icon-1 .path1:before {
+  content: "\e90b";
+  color: rgb(229, 62, 41);
+  opacity: 0.85;
+}
+.icon-location-icon-1 .path2:before {
+  content: "\e90c";
+  margin-left: -0.7861328125em;
+  color: rgb(244, 244, 243);
+}
+.icon-location-icon .path1:before {
+  content: "\e909";
+  color: rgb(229, 62, 41);
+  opacity: 0.85;
+}
+.icon-location-icon .path2:before {
+  content: "\e90a";
+  margin-left: -0.7861328125em;
+  color: rgb(244, 244, 243);
+}
+.icon-Operator-icon-1 .path1:before {
+  content: "\e901";
+  color: rgb(244, 247, 251);
+  opacity: 0.8;
+}
+.icon-Operator-icon-1 .path2:before {
+  content: "\e902";
+  margin-left: -1em;
+  color: rgb(244, 247, 251);
+}
+.icon-Operator-icon-1 .path3:before {
+  content: "\e903";
+  margin-left: -1em;
+  color: rgb(244, 247, 251);
+}
+.icon-Operator-icon-2 .path1:before {
+  content: "\e953";
+  color: rgb(229, 62, 41);
+}
+.icon-Operator-icon-2 .path2:before {
+  content: "\e963";
+  margin-left: -1em;
+  color: rgb(253, 253, 255);
+}
+.icon-Operator-icon-2 .path3:before {
+  content: "\e964";
+  margin-left: -1em;
+  color: rgb(253, 253, 255);
+}
+.icon-Car .path1:before {
+  content: "\e952";
+  color: rgb(9, 38, 94);
+}
+.icon-Car .path2:before {
+  content: "\e965";
+  margin-left: -2em;
+  color: rgb(253, 253, 255);
+}
+.icon-Car .path3:before {
+  content: "\e966";
+  margin-left: -2em;
+  color: rgb(253, 253, 255);
+}
+.icon-Car .path4:before {
+  content: "\e967";
+  margin-left: -2em;
+  color: rgb(253, 253, 255);
+}
+.icon-Car .path5:before {
+  content: "\e968";
+  margin-left: -2em;
+  color: none;
+}
+.icon-Car .path6:before {
+  content: "\e969";
+  margin-left: -2em;
+  color: none;
+}
+.icon-Arrow-51:before {
+  content: "\e954";
+  color: #fdfdff;
+}
+.icon-Vector-2:before {
+  content: "\e957";
+  color: #fdfdff;
+}
+.icon-Gide-Icon1 .path1:before {
+  content: "\e958";
+  color: rgb(253, 253, 255);
+}
+.icon-Gide-Icon1 .path2:before {
+  content: "\e96a";
+  margin-left: -1em;
+  color: rgb(9, 38, 94);
+}
+.icon-Gide-Icon1 .path3:before {
+  content: "\e96b";
+  margin-left: -1em;
+  color: rgb(9, 38, 94);
+}
+.icon-location-icon-11 .path1:before {
+  content: "\e95b";
+  color: rgb(229, 62, 41);
+  opacity: 0.85;
+}
+.icon-location-icon-11 .path2:before {
+  content: "\e96c";
+  margin-left: -0.7861328125em;
+  color: rgb(244, 244, 243);
+}
+.icon-location-icon1 .path1:before {
+  content: "\e95a";
+  color: rgb(229, 62, 41);
+  opacity: 0.85;
+}
+.icon-location-icon1 .path2:before {
+  content: "\e96d";
+  margin-left: -0.7861328125em;
+  color: rgb(244, 244, 243);
+}
+.icon-Operator-icon-11 .path1:before {
+  content: "\e962";
+  color: rgb(244, 247, 251);
+  opacity: 0.8;
+}
+.icon-Operator-icon-11 .path2:before {
+  content: "\e96e";
+  margin-left: -1em;
+  color: rgb(244, 247, 251);
+}
+.icon-Operator-icon-11 .path3:before {
+  content: "\e96f";
+  margin-left: -1em;
+  color: rgb(244, 247, 251);
 }
 .icon-Door-to-Door-Icon:before {
   content: "\e920";
@@ -353,180 +518,6 @@
   margin-left: -1.6669921875em;
   color: none;
 }
-.icon-Arrow-5:before {
-  content: "\e93e";
-  color: #fdfdff;
-}
-.icon-Vehicle-Icon:before {
-  content: "\e90d";
-  color: #e53e29;
-}
-.icon-Vector-3:before {
-  content: "\e90e";
-  color: #e53e29;
-}
-.icon-Vector-21:before {
-  content: "\e959";
-  color: #fdfdff;
-}
-.icon-Gide-Icon .path1:before {
-  content: "\e906";
-  color: rgb(253, 253, 255);
-}
-.icon-Gide-Icon .path2:before {
-  content: "\e907";
-  margin-left: -1em;
-  color: rgb(9, 38, 94);
-}
-.icon-Gide-Icon .path3:before {
-  content: "\e908";
-  margin-left: -1em;
-  color: rgb(9, 38, 94);
-}
-.icon-location-icon-1 .path1:before {
-  content: "\e90b";
-  color: rgb(229, 62, 41);
-  opacity: 0.85;
-}
-.icon-location-icon-1 .path2:before {
-  content: "\e90c";
-  margin-left: -0.7861328125em;
-  color: rgb(244, 244, 243);
-}
-.icon-location-icon .path1:before {
-  content: "\e909";
-  color: rgb(229, 62, 41);
-  opacity: 0.85;
-}
-.icon-location-icon .path2:before {
-  content: "\e90a";
-  margin-left: -0.7861328125em;
-  color: rgb(244, 244, 243);
-}
-.icon-Operator-icon-1 .path1:before {
-  content: "\e901";
-  color: rgb(244, 247, 251);
-  opacity: 0.8;
-}
-.icon-Operator-icon-1 .path2:before {
-  content: "\e902";
-  margin-left: -1em;
-  color: rgb(244, 247, 251);
-}
-.icon-Operator-icon-1 .path3:before {
-  content: "\e903";
-  margin-left: -1em;
-  color: rgb(244, 247, 251);
-}
-.icon-Operator-icon-2 .path1:before {
-  content: "\e953";
-  color: rgb(229, 62, 41);
-}
-.icon-Operator-icon-2 .path2:before {
-  content: "\e963";
-  margin-left: -1em;
-  color: rgb(253, 253, 255);
-}
-.icon-Operator-icon-2 .path3:before {
-  content: "\e964";
-  margin-left: -1em;
-  color: rgb(253, 253, 255);
-}
-.icon-Car .path1:before {
-  content: "\e952";
-  color: rgb(9, 38, 94);
-}
-.icon-Car .path2:before {
-  content: "\e965";
-  margin-left: -2em;
-  color: rgb(253, 253, 255);
-}
-.icon-Car .path3:before {
-  content: "\e966";
-  margin-left: -2em;
-  color: rgb(253, 253, 255);
-}
-.icon-Car .path4:before {
-  content: "\e967";
-  margin-left: -2em;
-  color: rgb(253, 253, 255);
-}
-.icon-Car .path5:before {
-  content: "\e968";
-  margin-left: -2em;
-  color: none;
-}
-.icon-Car .path6:before {
-  content: "\e969";
-  margin-left: -2em;
-  color: none;
-}
-.icon-Close-Button:before {
-  content: "\e956";
-}
-.icon-Menu-Icon1:before {
-  content: "\e90f";
-}
-.icon-Menu-Icon:before {
-  content: "\e955";
-}
-.icon-Arrow-51:before {
-  content: "\e954";
-  color: #fdfdff;
-}
-.icon-Vector-2:before {
-  content: "\e957";
-  color: #fdfdff;
-}
-.icon-Gide-Icon1 .path1:before {
-  content: "\e958";
-  color: rgb(253, 253, 255);
-}
-.icon-Gide-Icon1 .path2:before {
-  content: "\e96a";
-  margin-left: -1em;
-  color: rgb(9, 38, 94);
-}
-.icon-Gide-Icon1 .path3:before {
-  content: "\e96b";
-  margin-left: -1em;
-  color: rgb(9, 38, 94);
-}
-.icon-location-icon-11 .path1:before {
-  content: "\e95b";
-  color: rgb(229, 62, 41);
-  opacity: 0.85;
-}
-.icon-location-icon-11 .path2:before {
-  content: "\e96c";
-  margin-left: -0.7861328125em;
-  color: rgb(244, 244, 243);
-}
-.icon-location-icon1 .path1:before {
-  content: "\e95a";
-  color: rgb(229, 62, 41);
-  opacity: 0.85;
-}
-.icon-location-icon1 .path2:before {
-  content: "\e96d";
-  margin-left: -0.7861328125em;
-  color: rgb(244, 244, 243);
-}
-.icon-Operator-icon-11 .path1:before {
-  content: "\e962";
-  color: rgb(244, 247, 251);
-  opacity: 0.8;
-}
-.icon-Operator-icon-11 .path2:before {
-  content: "\e96e";
-  margin-left: -1em;
-  color: rgb(244, 247, 251);
-}
-.icon-Operator-icon-11 .path3:before {
-  content: "\e96f";
-  margin-left: -1em;
-  color: rgb(244, 247, 251);
-}
 .icon-search:before {
   content: "\e905";
 }
@@ -559,4 +550,7 @@
 }
 .icon-cancel-circle:before {
   content: "\ea0d";
+}
+.icon-bin:before {
+  content: "\e9ac";
 }

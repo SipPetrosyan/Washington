@@ -13,7 +13,7 @@ const Contact = () => {
             </Head>
             <main className='page-main m-padding contactPage'>
                 <hr className="hr"/>
-                <h1 className='font-32 blue pageTitle'>Contact Us</h1>
+                <h1 className='font-24 blue pageTitle'>Contact Us</h1>
                 <div className='contactsInfoBlock'>
                     <ContactsInfo/>
                 </div>
@@ -21,7 +21,7 @@ const Contact = () => {
                     <img src='/images/contact.png' alt='Contact-Us'/>
                 </div>
                 <div className='contactFormBlock'>
-                    <h1 className='font-36 bolder red'>Send Us a Message</h1>
+                    <h1 className='font-24 bolder red'>Send Us a Message</h1>
                     <SendMessageForm/>
                 </div>
                 <div className='pricingSection'>

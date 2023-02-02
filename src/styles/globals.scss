@@ -70,8 +70,8 @@ a {
 }
 
 .m-padding {
-  padding-left: 10.5%;
-  padding-right: 10.5%;
+  padding-left: 13.15%;
+  padding-right: 13.15%;
 }
 
 //    Colors
@@ -116,27 +116,27 @@ a {
 }
 
 .font-36 {
-  font-size: 36px;
-}
-
-.font-32 {
-  font-size: 32px;
-}
-
-.font-30 {
-  font-size: 30px;
-}
-
-.font-28 {
-  font-size: 28px;
-}
-
-.font-24 {
   font-size: 24px;
 }
 
+.font-32 {
+  font-size: 24px;
+}
+
+.font-30 {
+  font-size: 24px;
+}
+
+.font-28 {
+  font-size: 24px;
+}
+
+.font-24 {
+  font-size: 18px;
+}
+
 .font-20 {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .font-18 {
@@ -179,7 +179,7 @@ a {
 .helper {
   display: flex;
   align-items: center;
-  font-size: 20px;
+  font-size: 16px;
   color: $white;
   margin-bottom: 5px;
   gap: 10px;
@@ -267,9 +267,9 @@ a {
 }
 
 .JoyTooltip-root{
-  background-color: $white;
+  background-color: $white !important;
   span{
-    color: $white;
+    color: $white !important;
   }
 }
 
@@ -307,40 +307,6 @@ a {
     padding-left: 6%;
     padding-right: 6%;
   }
-
-  .font-36 {
-    font-size: 32px;
-  }
-
-  .font-32 {
-    font-size: 30px;
-  }
-
-  .font-30 {
-    font-size: 28px;
-  }
-
-  .font-28 {
-    font-size: 26px;
-  }
-
-  .font-24 {
-    font-size: 22px;
-  }
-
-  .font-22 {
-    font-size: 20px;
-  }
-
-  .font-20 {
-    font-size: 18px;
-  }
-  .font-18 {
-    font-size: 18px;
-  }
-  .font-16 {
-    font-size: 16px;
-  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -356,23 +322,23 @@ a {
   }
 
   .font-36 {
-    font-size: 30px;
+    font-size: 22px;
   }
 
   .font-32 {
-    font-size: 28px;
+    font-size: 22px;
   }
 
   .font-30 {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   .font-28 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .font-24 {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .font-22 {
@@ -381,7 +347,6 @@ a {
   .font-18 {
     font-size: 16px;
   }
-
 }
 
 @media screen and (max-width: 540px) {

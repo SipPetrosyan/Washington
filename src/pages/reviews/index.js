@@ -19,7 +19,7 @@ export default function ReviewsPage() {
                 <div className="ourReviews m-padding flex-between">
                     <div className="content m-60">
                         <hr className="hr"/>
-                        <h1 className="blue bolder font-32 m-40">Our Reviews</h1>
+                        <h1 className="blue bolder font-24 m-40">Our Reviews</h1>
                         <p>The reason for our success over the years has been dependent on our loyal customers. They
                             appreciate the stellar service we’ve given them, and consequently, they’ve come back over
                             and

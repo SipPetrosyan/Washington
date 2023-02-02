@@ -2,14 +2,9 @@ import InputField from "@/components/customUI/InputField";
 import {Autocomplete, Button, TextField} from "@mui/material";
 import Input from "react-phone-number-input";
 import {useState} from "react";
-import {useFormik} from "formik";
-import {quoteInitialValues} from "@/utils/helper";
-import {quoteSchema} from "@/components/quote/quoteSteps";
-import {Tooltip} from "@mui/joy";
 import InfoToolTip from "@/components/customUI/InfoToolTip";
 
-export default function QuoteForm({formik, vehicle, setVehicle}) {
-    const [errors, setErrors] = useState([{}]);
+export default function QuoteForm({formik, vehicle, setVehicle, errors, setErrors}) {
     const [vehicleErrors, setVehicleErrors] = useState([]);
 
     const onVehicleChange = (e, i) => {
@@ -36,6 +31,19 @@ export default function QuoteForm({formik, vehicle, setVehicle}) {
             ...errors,
             {}
         ])
+    }
+
+    const deleteLastVehicle = () => {
+        if (vehicle.length > 1) {
+            setVehicle(prev => {
+                prev.pop();
+                return [...prev];
+            });
+            setErrors(prev => {
+                prev.pop();
+                return [...prev];
+            })
+        }
     }
 
     return (
@@ -68,17 +76,17 @@ export default function QuoteForm({formik, vehicle, setVehicle}) {
                 {vehicle.map((item, i) => (
                     <div key={i} className="vehicle flex-between">
                         <InputField
-                            error={errors[i].year}
+                            error={errors[i]?.year}
                             label={<> Vehicle <InfoToolTip text="!!!!!! !!!! !!!!!!!!!! !!!!! "/>
                             </>}
                             onChange={(e) => onVehicleChange(e, i)}
-                            value={vehicle[i].year}
+                            value={vehicle[i]?.year}
                             id="year"
                             name="year"
                             placeholder="Year"
                         />
                         <InputField
-                            error={errors[i].make}
+                            error={errors[i]?.make}
                             onChange={(e) => onVehicleChange(e, i)}
                             value={vehicle[i].make}
                             id="make"
@@ -86,7 +94,7 @@ export default function QuoteForm({formik, vehicle, setVehicle}) {
                             placeholder="Make"
                         />
                         <InputField
-                            error={errors[i].model}
+                            error={errors[i]?.model}
                             onChange={(e) => onVehicleChange(e, i)}
                             value={vehicle[i].model}
                             id="model"
@@ -97,12 +105,19 @@ export default function QuoteForm({formik, vehicle, setVehicle}) {
                 ))}
 
                 <div className="addVehicle">
+                    <div className="empty"></div>
                     <Button
+                        className="add"
                         onClick={handleAddVehicle}
                     >
                         <span className="icon-Vector-2 plusIcon"></span>
                         <span> Add Multiple Vehicle</span>
                     </Button>
+                    {vehicle.length > 1 ? <Button
+                        onClick={deleteLastVehicle}
+                        className="delete">
+                        <span className="icon-bin"></span>
+                    </Button> : <div></div>}
                 </div>
             </div>
             <div className="time">
@@ -127,7 +142,7 @@ export default function QuoteForm({formik, vehicle, setVehicle}) {
                     />}
                 />
                 <div className="method">
-                    <p className="title font-18 white bold">
+                    <p className="title font-16 white bold">
                         <span>Shipping Method?</span><InfoToolTip
                         text="!!!!! !! !!! ! "/>
                     </p>
@@ -156,7 +171,7 @@ export default function QuoteForm({formik, vehicle, setVehicle}) {
                     </div>
                 </div>
                 <div className="method">
-                    <p className="title font-18 white bold">
+                    <p className="title font-16 white bold">
                         <span>Is It Operable?</span><InfoToolTip
                         text="!!!!!! !!!!!!!!! !!!"/>
                     </p>

@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function TransportCard ({title, text, icon, link}) {
     return(
         <div className="transportCard">
-            <h1 className="font-24 bold blue">{title}</h1>
+            <h1 className="font-18 bold blue">{title}</h1>
             <p>{text}</p>
             <div className="flex-between align-center">
                 <Button>

@@ -4,13 +4,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 10.45% 20px 31.3%;
+  padding: 20px 13.15% 20px 31.3%;
   background-color: $gray-bg;
 
   .get-quote a {
     font-style: normal;
     font-weight: 900;
-    font-size: 20px;
+    font-size: 18px;
     color: $red;
     text-decoration: none;
     display: flex;
@@ -30,7 +30,7 @@
     a {
       color: $blue-60;
       font-weight: 700;
-      font-size: 20px;
+      font-size: 16px;
     }
   }
 
@@ -53,7 +53,7 @@
   .phone {
     color: $white;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 16px;
   }
 
 }
@@ -64,7 +64,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 10.5%;
+  padding: 15px 13.15%;
   background-color: $white;
   //      FOR    STICKY HEADER  !
   //position: sticky;
@@ -166,7 +166,7 @@ header {
 //   GET QUOTE POPUP
 
 .getQuotePopUp {
-  .closePopUp{
+  .closePopUp {
     position: absolute;
     right: 5px;
     top: 5px;
@@ -174,6 +174,7 @@ header {
     font-size: 32px;
     cursor: pointer;
   }
+
   & > .MuiDialog-container > .MuiPaper-root {
     max-width: 760px;
     border-radius: 20px !important;
@@ -203,65 +204,6 @@ header {
   }
 }
 
-button.openGetQuote {
-  border: none;
-  background-color: transparent !important;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 20px;
-  color: $red;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  vertical-align: top;
-  transform: rotate(7deg);
-  -ms-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  width: 60px;
-  min-width: 0;
-  height: 175px;
-  margin-bottom: 60px;
-
-
-  span {
-    cursor: pointer;
-    white-space: nowrap;
-  }
-
-  .quoteIcon {
-    min-width: 60px;
-    width: 60px;
-    height: 60px;
-    background-color: $red;
-    color: $white;
-    border-radius: 50%;
-    padding: 6px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s;
-
-    .MuiTouchRipple-root {
-      display: none;
-    }
-  }
-
-  .icon-chevron-thin-right {
-    font-size: 32px;
-  }
-
-  &:hover {
-    .quoteIcon {
-      box-shadow: 5px 0 15px $blue;
-      transform: scale(1.05);
-    }
-  }
-}
-
 
 //      FOOTER
 
@@ -286,11 +228,12 @@ footer {
     h2 {
       margin-bottom: 30px;
       height: 28px;
+      font-size: 18px;
     }
 
     p, & > a {
       margin-bottom: 15px;
-      font-size: 20px;
+      font-size: 16px;
       color: $white;
       display: block;
       transition: 0.3s;
@@ -332,10 +275,72 @@ footer {
 }
 
 //       SOCIAL  LINKS PANEL
+
+
+button.openGetQuote {
+  border: none;
+  background-color: transparent !important;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  color: $red;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  vertical-align: top;
+  transform: rotate(7deg);
+  -ms-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  width: 50px;
+  min-width: 0;
+  height: 175px;
+  margin-bottom: 55px;
+
+
+  span {
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .quoteIcon {
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    background-color: $red;
+    color: $white;
+    border-radius: 50%;
+    padding: 6px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+
+    .MuiTouchRipple-root {
+      display: none;
+    }
+  }
+
+  .icon-chevron-thin-right {
+    font-size: 24px;
+  }
+
+  &:hover {
+    .quoteIcon {
+      box-shadow: 5px 0 15px $blue;
+      transform: scale(1.05);
+    }
+  }
+}
+
+
 .socialPanel {
   position: fixed;
   top: 0;
-  right: 20px;
+  right: 10px;
   height: 100%;
   z-index: 99;
   display: flex;
@@ -345,7 +350,7 @@ footer {
   .socialLinks {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
     transform: translateY(-30px);
   }
 
@@ -354,7 +359,7 @@ footer {
     border-radius: 50%;
 
     span {
-      font-size: 60px;
+      font-size: 50px;
     }
 
     &:hover {
@@ -366,12 +371,12 @@ footer {
 
 .btnToTop.MuiButtonBase-root {
   position: fixed;
-  bottom: 20px;
-  right: 25px;
+  bottom: 10px;
+  right: 15px;
   width: 50px;
   min-width: 50px;
   height: 50px;
-  background-color: $red;
+  background-color: $red !important;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -399,8 +404,8 @@ footer {
     padding: 14px 10.5%;
   }
   header {
-    padding: 20px 4.75%;
-
+    padding-left: 10.5%;
+    padding-right: 10.5%;
     .header-logo img {
       width: 200px;
       height: 60px;
@@ -417,19 +422,14 @@ footer {
     }
   }
   .socialPanel {
-    right: 10px;
-
-    .socialLinks {
-      gap: 10px;
-    }
 
     .openGetQuote {
-      width: 50px;
+      width: 40px;
 
       .quoteIcon {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
       }
     }
 
@@ -437,12 +437,12 @@ footer {
       text-align: right;
 
       span {
-        font-size: 50px;
+        font-size: 40px;
       }
     }
   }
   .btnToTop.MuiButtonBase-root {
-    right: 15px;
+    right: 10px;
   }
 }
 
@@ -570,11 +570,11 @@ footer {
       gap: 20px;
 
       h2 {
-        font-size: 24px;
+        font-size: 18px;
       }
 
       a {
-        font-size: 20px;
+        font-size: 16px;
         color: $white;
       }
     }
@@ -632,6 +632,7 @@ footer {
       flex-direction: column;
       gap: 3px;
       align-items: center;
+
       .icon-Operator-icon-2 {
         font-size: 22px;
       }
@@ -650,6 +651,7 @@ footer {
       height: 100%;
       max-height: 100%;
       margin: 0;
+
       .quoteStepper {
         overflow: hidden;
         padding: 24px;

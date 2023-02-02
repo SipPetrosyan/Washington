@@ -5,7 +5,7 @@ export default function CalculationInfo() {
 
     return (
         <div className="m-padding calculationInfo">
-            <h2 className="mb-60 blue font-32 bolder">How we calculated your transport fee </h2>
+            <h2 className="mb-60 blue font-24 bolder">How we calculated your transport fee </h2>
             <div className="flex-between calculationPhases mb-60">
                 <div className="calculationPhase">
                     <div className="phaseIcon">
@@ -13,7 +13,7 @@ export default function CalculationInfo() {
                             className="path3"></span><span className="path4"></span><span className="path5"></span><span
                             className="path6"></span></span>
                     </div>
-                    <p className="blue bold font-24">The size and weight of your vehicle</p>
+                    <p className="blue bold font-18">The size and weight of your vehicle</p>
                 </div>
                 <div className="calculationPhase distancePhase">
                     <div className="phaseIcon">
@@ -23,7 +23,7 @@ export default function CalculationInfo() {
                         <span className="icon-location-icon"><span className="path1"></span><span
                             className="path2"></span></span>
                     </div>
-                    <p className="blue bold font-24">Distance between vehicle pickup and delivery </p>
+                    <p className="blue bold font-18">Distance between vehicle pickup and delivery </p>
                 </div>
                 <div className="calculationPhase">
                     <div className="phaseIcon">
@@ -35,7 +35,7 @@ export default function CalculationInfo() {
                             className="path12"></span><span className="path13"></span><span
                             className="path14"></span><span className="path15"></span></span>
                     </div>
-                    <p className="blue bold font-24">Choosing open or enclosed car transport</p>
+                    <p className="blue bold font-18">Choosing open or enclosed car transport</p>
                 </div>
                 <div className="calculationPhase">
                     <div className="phaseIcon">
@@ -43,7 +43,7 @@ export default function CalculationInfo() {
                             className="path2"></span><span className="path3 blue"></span><span className="path4"></span><span
                             className="path5"></span></span>
                     </div>
-                    <p className="blue bold font-24">The condition of your vehicle</p>
+                    <p className="blue bold font-18">The condition of your vehicle</p>
                 </div>
             </div>
             <div className="flex-center ">

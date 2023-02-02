@@ -1,11 +1,9 @@
-import {Autocomplete, Button, TextField} from "@mui/material";
-import { useState} from "react";
+import {Button} from "@mui/material";
 import InputField from "@/components/customUI/InputField";
 import InfoToolTip from "@/components/customUI/InfoToolTip";
 
 export default function Two(props) {
-    const {formik, vehicle, setVehicle} = props;
-    const [errors, setErrors] = useState([{}]);
+    const {formik, vehicle, setVehicle, errors, setErrors} = props;
     const {method, operable} = formik.values;
 
     const validate2 = () => {
@@ -63,6 +61,19 @@ export default function Two(props) {
         ])
     }
 
+    const deleteLastVehicle = () => {
+        if (vehicle.length > 1) {
+            setVehicle(prev => {
+                prev.pop();
+                return [...prev];
+            });
+            setErrors(prev => {
+                prev.pop();
+                return [...prev];
+            })
+        }
+    }
+
     return (
         <div className="stepForm quoteForm step2">
             <div className="inputs">
@@ -71,7 +82,7 @@ export default function Two(props) {
                     {vehicle.map((item, i) => (
                         <div key={i} className="vehicle flex-between">
                             <InputField
-                                error={errors[i].year}
+                                error={errors[i]?.year}
                                 label={<> Vehicle <InfoToolTip text="!!!!!! !!!!!!!!! !!!!!!!! !!!!!!!! !!!!!!!!!! !!!!! " /></>}
                                 onChange={(e) => onVehicleChange(e, i)}
                                 value={vehicle[i].year}
@@ -80,7 +91,7 @@ export default function Two(props) {
                                 placeholder="Year"
                             />
                             <InputField
-                                error={errors[i].make}
+                                error={errors[i]?.make}
                                 onChange={(e) => onVehicleChange(e, i)}
                                 value={vehicle[i].make}
                                 id="make"
@@ -88,7 +99,7 @@ export default function Two(props) {
                                 placeholder="Make"
                             />
                             <InputField
-                                error={errors[i].model}
+                                error={errors[i]?.model}
                                 onChange={(e) => onVehicleChange(e, i)}
                                 value={vehicle[i].model}
                                 id="model"
@@ -98,12 +109,18 @@ export default function Two(props) {
                         </div>
                     ))}
                     <div className="addVehicle">
+                        <div className="empty"></div>
                         <Button
                             onClick={handleAddVehicle}
                         >
                             <span className="icon-Vector-2 plusIcon"></span>
                             <span> Add Multiple Vehicle</span>
                         </Button>
+                        {vehicle.length > 1 ? <Button
+                            onClick={deleteLastVehicle}
+                            className="delete">
+                            <span className="icon-bin"></span>
+                        </Button> : <div></div>}
                     </div>
                 </div>
 

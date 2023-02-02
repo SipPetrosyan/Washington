@@ -10,13 +10,13 @@ export default function Reviews({welcome}) {
                 <h1>
                     <span className="red">Welcome to </span>
                     <span className="white">Washington DC Auto Transport </span>
-                    <span className="red font-36 bold"> #1 Car Shipper and Auto Mover in the US </span>
+                    <span className="red font-24 bold"> #1 Car Shipper and Auto Mover in the US </span>
                 </h1>
             </div>}
             <hr className="hr"/>
             <div className="reviewsMain">
                 <div className="content">
-                    <h1 className="white font-32">Washington DC Auto Transport Review</h1>
+                    <h1 className="white font-24">Washington DC Auto Transport Review</h1>
                     <p>As the most reliable name in the car shipping industry, Washington, DC Auto Transport is your
                         trusted
                         friend when moving your vehicle. Starting from the time you request a quote online or contact us

@@ -8,7 +8,7 @@ export default function Career() {
             <div className="ourReviews m-padding flex-between">
                 <div className="content m-60">
                     <hr className="hr"/>
-                    <h1 className="blue bolder font-32 m-40">Our Reviews</h1>
+                    <h1 className="blue bolder font-24 m-40">Career</h1>
                     <p>If you’re thinking about a career in the auto transportation industry, the car transport business
                         is a good place to start. First of all, the transport industry is growing rapidly. Secondly,
                         almost anyone can own a car, and because of this, the shipping of cars is becoming more common.
